@@ -1,213 +1,589 @@
-# Cheating at Design
-#### *Improving your designs with tactics instead of talent.*
+# CSS
 
-<hr>
+#### CSS stands for Cannot Stop Styling...
 
-Every web developer inevitably runs into situations where they need to make visual design decisions, whether they like it or not.
+> "CSS actually stands for CASCADING STYLE SHEETS"
 
-Maybe the company you work for doesn't have a full-time designer and you need to implement the UI for a new feature on your own. Or maybe you're hacking on a side-project and you want it to look better than *yet-another-Bootstrap-site.*
+because that's what you do with CSS, you style your website or application. By style, we mean you set the rules that are applied to the content of your site in order to change the default presentation.
 
-It's easy to throw your hands up and say, *"I'll never be able to make this look good, I'm not an artist!"* but it turns out there are a ton of tricks you can use to level up your work that don't require a background in graphic design.
+##### Imagine:
+Our application serves this data to the client at startup, a collection of 50 photos.
+```js
+{
+  count: 50,
+  photos: [{
+    _id: '47d2chdxb2s69d',
+    userId: 'we8gy74ho48b',
+    thumbnail: '/photos/thumb/47d2chdxb2s69d',
+    path: 'photos/47d2chdxb2s69d',
+    title: 'Super Stellar',
+    description: 'Lorem Ipsum...'
+  }, {1...}, ..., {49...}],
+  prev: null,
+  next: '/feed?limit=50&offset=50'
+}
+```
 
-Here are seven simple ideas you can use to improve your designs today*.*
+If we present the data without CSS then we could expect an outdated looking site.
 
-## Use color and weight to create hierarchy instead of size
+<style>
+.computer {
+  border: 25px solid grey;
+  border-radius: 5%;
+}
+.screen {
+  padding: 5px 20px;
+  width: inherit;
+  height: inherit;
+}
+.with {
+  background: #e3e3e3
+}
+.stand {
+  height: 80px;
+  width: 100px;
+  background: grey;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  margin: -5px auto 0;
+  box-shadow: -6px 5px black; 
+}
+.split {
+  height: inherit;
+  width: 5px;
+  background: white;
+  margin: auto;
+  border-radius: 50%;
+}
+.base {
+  width: 140px;
+  border: 3px solid grey;
+  margin: auto;
+}
+.d-flex {
+  display: flex;
+}
+.jc-between {
+  justify-content: space-between;
+}
+.w-75 {
+  width: 75%;
+}
+.w-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5%;
+  background: linear-gradient(130deg, #7047d7, #7047d7 40%, #3285db);
+  border: 10px solid #7047d7;
+  border-right: 2px solid #3285db;
+  border-bottom-color: #3285db;
+  border-top: none;
+}
+.card-header {
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+.card-img-top {
+  width:100%;
+  border-top-left-radius: calc(.25rem - 1px);          border-top-right-radius: calc(.25rem - 1px);
+  border-bottom-right-radius: 5%;
+  box-shadow: -5px 5px 5px black;
+}
+.w-card:hover .card-header {
+  font-size: 150%;
+}
+.w-card:hover .card-img-top {
+  box-shadow: -5px 0 5px 5px black; 
+}
+.underline {
+  padding-bottom: 5px;
+  border-bottom: 1px solid white;
+}
+.description {
+  width: 500px;
+  padding: 20px 5px 0;
+  border-left: 2px solid #7047d7;
+  margin-left: 5px;
+  background: white;
+}
+.bg-lighter img {
+  box-shadow: -3px -3px 5px;
+}
+.bg-lighter img:hover {
+  box-shadow: -3px -3px black, 3px 3px 5px grey;
+}
+</style>
+
+<div class="computer">
+  <div class="screen">
+    <div class="without-card">
+      <p>Super Stellar</p>
+      <img src="https://bcw.blob.core.windows.net/public/images/4727128894924242" width="300px">
+       <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." -Anon</p>
+    </div>
+  <hr />
+  <p class="d-flex jc-between w-75">| More photos <span>v</span></p>
+  </div>
+</div>
+<div class="stand">
+  <div class="split"></div>
+</div>
+<div class="base"></div>
+
+
+### vs 
+With CSS
+<div class="computer">
+  <div class="screen with">
+    <div class="d-flex">
+      <div class="w-card">
+        <p class="card-header">Sup<span class="underline">er St</span>ellar</p>
+        <img class="card-img-top" src="https://bcw.blob.core.windows.net/public/images/4727128894924242">
+      </div>
+      <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."<br />&#8195;-Anon</p>
+    </div>
+  <hr />
+  <div class="d-flex jc-between bg-lighter">
+    <img onclick="window.changeImg(this)" src="https://bcw.blob.core.windows.net/public/images/p478914857295285" width="75px">
+    <img onclick="window.changeImg(this)" src="https://bcw.blob.core.windows.net/public/images/p7209320183441112" width="75px">
+    <img onclick="window.changeImg(this)" src="https://bcw.blob.core.windows.net/public/images/3724683811841260" width="75px">
+    <img onclick="window.changeImg(this)" src="https://bcw.blob.core.windows.net/public/Atlas/5473640410071727" width="75px">
+    <img onclick="window.changeImg(this)" src="https://bcw.blob.core.windows.net/public//1297792852960579" width="75px">
+  </div>
+  </div>
+</div>
+<div class="stand">
+  <div class="split"></div>
+</div>
+<div class="base"></div>
+
+
+## &lt;Link> it up
+
+We'll cover three ways one could incorporate CSS into their project: 
+
+### 1. External Reference
+
+ Note, this is generally best practice.
+
+```html
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Tricks</title>
+  <!-- This is the external reference below -->
+  <link rel="stylesheet" href="assets/style.css">
+  <!-- -------------------------------------- -->
+</head>
+<body>...</body>
+</html>
+```
+Rembmer that our browser is reading code within the `index.html` file from top to bottom. None of our other files will have an affect on our site unless we explicity tell the browser to pull in those additional files.<br/>
+
+We utilize the `<link>` tag in order to have the browser read the specificed file, the value of the link tag's `href` attribute. Here we see that we are trying to load into our project a file called `style.css` that's located within a sibling folder to our `index.html`, namely `assets`.<br />
+
+This is generally the best practice because we adhere to the `S` in the `SOLID` principles - `Single Responsibility`. Our index.html is responsible for content and our style.css is responsible for how that content is presented. Our code is now easier to read and maintain resulting in quicker debugging and less bugs overall.
+
+### 2. Internal Style
+Note, this way will look familar when we start using the Vue framework and write in `.vue` files. (Further note that Vue is an exception to what's detailed below the code snippet.)
+
+```html
+<html lang="en">
+<head>...</head>
+<body>
+  <h1>Hello World</h1>
+</body>
+  <!-- This is the internal style below -->
+<style>
+body {
+  background: #f60;
+}
+h1 {
+  color: white;
+}
+</style>
+<!-- -------------------------------------- -->
+</html>
+```
+Although this practice works, it's not ideal because we broke the `Single Responsibility` principle. Instead of having all of our css rules organized away in their own file, we utilized the `<style>` tag to house our css rules. It's in between the `<style>` tags that the computer stops interpreting the lines as html and instead interprets them as CSS.<br />
+
+Note, that although we broke a `SOLID` principle, we didn't drastically increase the specificity<b>*</b> of a css rule, which is exactly the issue with using inline style as highlighted below.<br />
+
+<i> <b>*</b> More on css specificity in a moment. </i>
+
+### 3. Inline Styling
+Note, don't ever do this. **Seriously**.
+
+```html
+<html lang="en">
+<head>...</head>
+<body>
+  <!-- This is the inline style below -->
+  <h1 style="color: blue;">Hello World</h1>
+  <!-- -------------------------------- -->
+</body>
+</html>
+```
+Without diving fully into specificity, know that it's because inline styling increases the specificity of a rule to such an extremely high number that it's next to impossible to override.<br /> 
+
+Additionally, because the rule is applied to the element directly without the use of a selector, there's no way to quickly modify the value of a property and have the change reflected in multiple elements.<b>*</b>
+
+<i> <b>*</b> We'll discuss css rules and their components - selectors, properties, and values - in the next lesson. </i>
+
+
+<img src="https://bcw.blob.core.windows.net/public/images/2072033894553826" />
+
+## How to write CSS?
+
+### CSS Rules
+
+Let's look at a example template to get an understanding of what the syntax for a css rule looks like
+
+```css
+selector {
+  property: value;
+}
+```
+and immediately follow it up with a working css rule
+```css
+body {
+  background: #f60;
+}
+```
+
+### Selector {
+The selector is used to target specific elements on the DOM. In the second example we see that the selector was `body`. When a selector is just a name without any punctuation marks or symbols, eg., `.`, `#`, `[]`, then the rule is applied to any elements on the DOM with that `tagName`.
+
+In the above example we see that we are setting the background of our website to be the color orange. This is because the selector is targeting the `<body>` tag and all of our content is rendered within that tag.
+
+**Common Selectors**
+<table>
+  <tr>
+    <th>selector</th>
+    <th>elements targeted</th>
+  </tr>
+  <tr>
+    <td>example</td>
+    <td>every element with the tagName "example"</td>
+  </tr>
+  <tr>
+    <td>.example</td>
+    <td>every element with "example" in their classList</td>
+  </tr>
+  <tr>
+    <td>#example</td>
+    <td>the element with the id "example"</td>
+  </tr>
+  <tr>
+    <td>[required]</td>
+    <td>every element with the attribute `required` present<br/>- utilizing []'s is commonly combined with additional selectors eg., `.username[required]`</td>
+  </tr>
+  <tr>
+    <td>[href="#"]</td>
+    <td>every element with a `href` attribute whose value is "#"</td>
+  </tr>
+  <tr>
+    <td>example:hover</td>
+    <td>the element with the tagName "example" that is also at that same time being hovered over<br/>- this is an example of a `pseudo-selector`</td>
+  </tr>
+  <tr>
+    <td>and more...</td>
+    <td><a href="https://flukeout.github.io/" target="_blank">css diner</a></td>
+  </tr>
+</table>
+
+### Property:
+Just as selectors are used to specify which elements to target, properties are used to specify how to modify the presentation of the targeted element. In our example above we see that the `background` of the `body` is being modified, namely the background is being set to <span style="color: #f60;">orange</span>. 
+
+ **Common Properties**
+<table>
+  <tr>
+    <th>property</th>
+    <th>modification to element's presentation</th>
+  </tr>
+  <tr>
+    <td>color</td>
+    <td>font/text color</td>
+  </tr>
+  <tr>
+    <td>background</td>
+    <td>background presentation eg., color, gradient, image, etc.<br /> - this property has overloads available determined by number of values provided<br /> <i style="font-size: smaller;"> * more info on overloads in the Value section below</i></td>
+  </tr>
+  <tr>
+    <td>height<br />& width</td>
+    <td>these two properties set the size of the element</td>
+  </tr>
+  <tr>
+    <td>margin<br />& padding</td>
+    <td>space between edge of element and border, and edge of border and content respectively<br /> - these property have overloads available determined by number of values provided<br /> <i style="font-size: smaller;"> ** more info on overloads in the Value section below</i><br /> <i style="font-size: smaller;"> - study the box model!</i></td>
+  </tr>
+  <tr>
+    <td>display<br />& position</td>
+    <td>how and where the element should be rendered and if it is or isn't part of the default render process</td>
+  </tr>
+  <tr>
+    <td>and more...</td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference" target="_blank">common properties</a></td>
+  </tr>
+</table>
+
+### Value;
+After targeting both the element and the property of the element to modify, we use values to specify exactly how to modify the presentation. In the example above we see that the value used was `#f60`.  This is the hexcode value for the color <span style="color: #f60;">orange</span>. In this specific example we could have used other units of color to assign the presentation of the `background`, eg., rgba, name of the color, linear-gradient, etc. Depending on the property your assigning, there might be several different units that could be utilized by the value, eg., `px`, `em`, `rem`, `vh`, `vw`, `%`, etc.<br /><br />
+
+In some cases we might want the element to be modified in the same way as its parent element. In such cases we can use css value keywords, specifically `inherit`. Other keyword examples are `auto`, `initial`, `unset`, `none`.<br /><br />
+
+Some properties, like `background` and `margin` for example, allow for a variable amount of values to be assigned. This is <u>overloading</u>. Let's look at a specific example with `margin:`<br /><br />
+
+<table style="border-left: 2px double lightblue;">
+  <tr>
+    <td style="border-bottom: 2px solid lightblue;">10px;</td>
+    <td>10px of space applied to every side of the element</td>
+  </tr>
+  <tr>
+    <td style="border-bottom: 2px solid lightblue;">10px 5px;</td>
+    <td>10px of space applied to the top & bottom and 5px of space applied to the left & right</td>
+  </tr>
+  <tr>
+    <td style="border-bottom: 2px solid lightblue;">10px 3px 5px;</td>
+    <td>10px of space applied to the top, 3px applied to the left & right, 5px applied to the bottom</td>
+  </tr>
+  <tr>
+    <td>10px 3px 0px 5px;</td>
+    <td>10px of space applied to the top, 3px applied to the right, 0px applied to the bottom, 5px applied to the left</td>
+  </tr>
+</table>
 <br>
-
-![Image for post](https://miro.medium.com/max/4590/1*KYZikUrx9F02cJU9kpn_gQ.png)
-
-A common mistake when styling UI text is relying too much on font size to control your hierarchy.
-
-*"Is this text important? Let's make it bigger."*
-
-*"Is this text secondary? Let's make it smaller."*
-
-Instead of leaving all of the heavy lifting to font size alone, try using color or font weight to do the same job.
-
-*"Is this text important? **Let's make it bolder.**"*
-
-*"Is this text secondary? **Let's use a lighter color.**"*
-
-Try and stick to two or three colors:
-
--   A dark ([but not black](https://ianstormtaylor.com/design-tip-never-use-black/)) color for primary content *(like the headline of an article)*
--   A grey for secondary content *(like the date an article was published)*
--   A lighter grey for ancillary content *(maybe the copyright notice in a footer)*
-
-![Image for post](https://miro.medium.com/max/3150/1*2YuCOOCjdMEJxg-Lb6G2FA.png)
-
-Similarly, two font weights is usually enough for UI work:
-
--   A normal font weight *(400 or 500 depending on the font)* for most text
--   A heavier font weight *(600 or 700)* for text you want to emphasize
-
-![Image for post](https://miro.medium.com/max/3150/1*AHrVF0vTtj-yoyhmBNHNLA.png)
-
-Stay away from font weights under 400 for UI work; they can work for large headings but are too hard to read at smaller sizes. If you're considering using a lighter weight to de-emphasize some text, use a lighter color or smaller font size instead.
-
-## Don't use grey text on colored backgrounds
-<br>
-
-![Image for post](https://miro.medium.com/max/3150/1*ajjrhpp-l3GDG7ne7Am8fw.png)
-
-Making text a lighter grey is a great way to de-emphasize it on white backgrounds, but it doesn't look so great on colored backgrounds.
-
-That's because the effect we're actually seeing with grey on white is *reduced contrast*.
-
-Making the text closer to the background color is what actually helps create hierarchy, not making it light grey.
-
-![Image for post](https://miro.medium.com/max/3150/1*CNaej5BrPr9lWTMAfllfdw.png)
-
-There are two ways you can reduce contrast when working with colorful backgrounds:
-
-### 1. Reduce the opacity of white text
-<hr>
-
-Use white text and lower the opacity. This lets the background color bleed through a bit, de-emphasizing the text in a way that doesn't clash with the background.
-
-![Image for post](https://miro.medium.com/max/3150/1*OMntEW2V5jPXrZR6CjrBFQ.png)
-
-### 2. Hand-pick a color that's based on the background color
-<hr>
-
-This works better than reducing the opacity when your background is an image or pattern, or when reducing the opacity makes the text feel too dull or washed out.
-
-![Image for post](https://miro.medium.com/max/3150/1*d5Ft9yND08hTdmXgFTLQJw.png)
-
-Choose a color that's the same hue as the background, adjusting saturation and lightness until it looks right to you.
-
-## Offset your shadows
-<br>
-
-![Image for post](https://miro.medium.com/max/4590/1*LisFGBtYOvR-3cwFTzTDUw.png)
-
-Instead of using large blur and spread values to make box shadows more noticeable, add a vertical offset.
-
-It looks a lot more natural because it simulates a light source shining down from above like we're used to seeing in the real world.
-
-This applies to inset shadows like you might use on wells or form inputs too:
-
-![Image for post](https://miro.medium.com/max/3150/1*qWSsYovqBDKF87f1IVMHsQ.png)
-
-If you're interested in learning more about shadow design, the [Material Design Guidelines](https://material.io/guidelines/material-design/elevation-shadows.html) are a fantastic primer.
-
-## Use fewer borders
-<br>
-
-![Image for post](https://miro.medium.com/max/4590/1*fNm6hXxnBvIcHGp9DQRdRQ.png)
-
-When you need to create separation between two elements, try to resist immediately reaching for a border.
-
-While borders are a great way to distinguish two elements from one another, they aren't the *only* way, and using too many of them can make your design feel busy and cluttered.
-
-The next time you find yourself reaching for a border, try one of these ideas instead:
-
-## Use a box shadow
-<br>
-Box shadows do a great job of outlining an element like a border would, but can be more subtle and accomplish the same goal without being as distracting.
-
-![Image for post](https://miro.medium.com/max/3150/1*Pm5PyS0vZ65GuGu8erPRfA.png)
-
-## Use two different background colors
-<br>
-
-Giving adjacent elements slightly different background colors is usually all you need to create distinction between them. If you're already using different background colors in addition to a border, try removing the border; you might not need it.
-
-![Image for post](https://miro.medium.com/max/3150/1*9j89WYXMqsnb_A1v8heXaw.png)
-
-## Add extra spacing
-<br>
-
-What better way to create separation between elements than to simply increase the separation? Spacing things further apart is a great way to create distinction between groups of elements without introducing any new UI at all.
-
-![Image for post](https://miro.medium.com/max/4200/1*7CEsoYdtFPjMBqpDB58HqQ.png)
-
-## Don't blow up icons that are meant to be small
-<br>
-
-![Image for post](https://miro.medium.com/max/4590/1*57g05Gl-FjDtcCUtaPPOLw.png)
-
-If you're designing something that could use some large icons *(like maybe the "features" section of a landing page)*, you might instinctively grab a free icon set like [Font Awesome](https://fontawesome.com/) or [Zondicons](http://www.zondicons.com/) and bump up the size until they fit your needs.
-
-They're vector images after all, so the quality isn't going to suffer if you increase the size right?
-
-While it's true that vector images won't degrade in quality when you increase their size, icons that were drawn at 16--24px are never going to look very professional when you blow them up to 3x or 4x their intended size. They lack detail, and always feel disproportionately "chunky".
-
-![Image for post](https://miro.medium.com/max/4080/1*dJyk3SNvrxuTEuZa7fiY0g.png)
-
-If small icons are all you've got, try enclosing them inside another shape and giving the shape a background color:
-
-![Image for post](https://miro.medium.com/max/4080/1*Og6TmKmbZg7qauQymzhxBQ.png)
-
-This lets you keep the actual icon closer to its intended size, while still filling the larger space.
-
-If you have the budget, you could also use a premium icon set designed to be used at larger sizes, like [Heroicons](http://www.heroicons.com/) or [Iconic](https://useiconic.com/).
-
-## Use accent borders to add color to a bland design
-<br>
-
-
-![Image for post](https://miro.medium.com/max/4590/1*uwsVo34TWzKM91Gyqsh88Q.png)
-
-If you're not a graphic designer, how do you add that dash of visual flair to your UI that other designs get from beautiful photography or colorful illustrations?
-
-One simple trick that can make a big difference is to add colorful accent borders to parts of your interface that would otherwise feel a bit bland.
-
-For example, along the side of an alert message:
-
-![Image for post](https://miro.medium.com/max/1400/1*jEivJuYRI3PbrGYVccKkHA.png)
-
-...or to highlight active navigation items:
-
-![Image for post](https://miro.medium.com/max/1400/1*7Pf5gu0r3uPi7W5vR9dcWQ.png)
-
-...or even across the top of your entire layout:
-
-![Image for post](https://miro.medium.com/max/2800/1*YMrMBgjpbuTs_WqdbhymNg.png)
-
-It doesn't take any graphic design talent to add a colored rectangle to your UI, and it can go a long way towards making your site feel more "designed."
-
-*Have a hard time picking colors? Try choosing from a constrained palette like *[*Dribbble's color search*](https://dribbble.com/colors)* to avoid feeling overwhelmed by the endless possibilities of a traditional color picker.*
-
-## Not every button needs a background color
-<br>
-
-![Image for post](https://miro.medium.com/max/3060/1*SIfuJd-3ZFYyA_W1Nme1Yw.png)
-
-When there are multiple actions a user can take on a page, it's easy to fall into the trap of designing those actions based purely on semantics.
-
-Frameworks like Bootstrap sort of encourage this by giving you a menu of semantic styles to choose from whenever you're adding a new button:
-
-![Image for post](https://miro.medium.com/max/3124/1*2xkDfSjvq7Xyb_ceInrMpw.png)
-
-*"Is this a positive action? Make the button green."*
-
-*"Does this delete data? Make the button red."*
-
-Semantics are an important part of button design, but there's a more important dimension that's commonly forgotten: *hierarchy.*
-
-Every action on a page sits somewhere in a pyramid of importance. Most pages only have one true primary action, a couple of less important secondary actions, and a few seldom used tertiary actions.
-
-When designing these actions, it's important to communicate their place in the hierarchy.
-
--   Primary actions should be obvious. Solid, high contrast background colors work great here.
--   Secondary actions should be clear but not prominent. Outline styles or lower contrast background colors are great options.
--   Tertiary actions should be discoverable but unobtrusive. Styling these actions like links is usually the best approach.
-
-![Image for post](https://miro.medium.com/max/2800/1*_tq33tZkr3DZuZgP08Jcrw.png)
-
-*"What about destructive actions, shouldn't they always be red?"*
-
-Not necessarily! If the destructive action isn't the *primary* action on the page, it might be better to give it a secondary or tertiary button treatment.
-
-![Image for post](https://miro.medium.com/max/2800/1*1CxYaUc6Bk-pTRXH5TQonw.png)
-
-Save the big, red, and bold styling for when that negative action actually *is* the primary action in the interface, like in a confirmation dialog:
-
-![Image for post](https://miro.medium.com/max/2800/1*cuYcwjOO26sKHImHaY6yFA.png)
-
-<br>
-<br>
-<hr>
-<br>
-<small> Source:  Schoger, Adam Wathan &amp; Steve. 7 Practical Tips for Cheating at Design. 16 Jan. 2019, medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886. </small>
+**common units for values**
+<table>
+  <tr>
+    <th>modification</th>
+    <th>availbe units</th>
+  </tr>
+  <tr>
+    <td>spacial</td>
+    <td>px, em, rem, vh, vw, %<br /> - pixels are the least responsive of the units listed</td>
+  </tr>
+  <tr>
+    <td>color</td>
+    <td>literal name of the color, hex-code, rgba, linear-gradient</td>
+  </tr>
+  <tr>
+    <td>background</td>
+    <td>same units as color plus, url(), blur(), and others</td>
+  </tr>
+  <tr>
+    <td>and more...</td>
+    <td><a href="https://www.w3schools.com/cssref/css_units.asp" target="_blank">more units</a></td>
+  </tr>
+</table>
+
+Now that we know how to write CSS let's learn about specificity to ensure that our rules are, in fact, being applied as we think they should be.
+
+## CSS Specificity
+
+#### one rule to rule them all
+
+<u>Specificity</u> is built into css to determine which rule should be applied in the chance that multiple rules are targeting both the same element and property on that element, but assigning different values.
+
+In order to understand specificity, I hope your good at math. We'll start with this base understanding that y = x2 + C and that interval [a, b] if F(x)... 
+
+Only joking, don't be afraid! You actually only have to be able to pick out the largest number from a set.
+
+Let's look at some css to start understanding specificity!
+
+```css
+div {
+  background: red;
+}
+
+div {
+  background: green;
+}
+```
+
+Let's imagine that our div is simply a square on the page and that the css rules above are assigning the color of our square. Remembering that our code always runs top to bottom, what color will our square be?
+
+<style>
+* {
+  transition: all ease-in-out .5s;
+}
+.eg-container {
+  display: flex;
+  justify-content: center;
+}
+.one, .two, .three {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+}
+.one:hover .eg-prompt, .two:hover .eg-prompt, .three:hover .eg-prompt {
+  opacity: 0;
+}
+.one:hover {
+  background: green;
+}
+.two:hover {
+  background: red;
+}
+.three:hover {
+  background: purple;
+}
+</style>
+
+<div class="eg-container">
+  <div class="one">
+    <span class="eg-prompt">Hover to Display Answer</span>
+  </div>
+</div>
+<br />
+
+<h3 style="text-align: center;">Nice Work!</h3>
+Now let's imagine that our div also has "box" in its classList. Our css looks like this
+
+```css
+.box {
+  background: red;
+}
+
+div {
+  background: green;
+}
+```
+
+Still remembering that our code always runs top to bottom, what color will our square be now?
+
+<div class="eg-container">
+  <div class="two">
+    <span class="eg-prompt">Hover to Display Answer</span>
+  </div>
+</div>
+<br />
+
+<h3 style="text-align: center;">Gotcha!</h3>
+Our code still ran from top to bottom like it always does and yet the first rule remained in effect throughout the code's execution. This is a case of specificity overruling load order. Our first rule's selector is targeting an element with the class "box", whereas the second rule is targeting an element with the tagName "div". Well, tagName's are only worth 1 point and classes are worth 10, 10 is greater than 1, so the first rule is the one that produces the affect.
+
+Let's list out the values of different selectors:
+<table>
+  <tr>
+    <th>selector</th>
+    <th>example</th>
+  <th>value</th>
+  </tr>
+  <tr>
+    <td>tagName</td>
+    <td>span</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>class</td>
+    <td>.title</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>#app</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>attributes</td>
+    <td>[required]</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>some pseudo-elements</td>
+    <td>:after & :before</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>other pseudo-elements</td>
+    <td>:hover</td>
+    <td>10</td>
+  </tr>
+</table>
+
+Now that we're learned on the specificity value of selectors, let's look at another bit of css code still referrencing our colored square.
+
+```css
+div.box {
+  background: purple;
+}
+
+.box {
+  background: red;
+}
+
+div {
+  background: green;
+}
+```
+
+What color is our square now?
+
+<div class="eg-container">
+  <div class="three">
+    <span class="eg-prompt">Hover to Display Answer</span>
+  </div>
+</div>
+<br />
+
+<h3 style="text-align: center;">Tricky!</h3>
+We remember that tagName selectors are worth 1 and that class selectors are worth 10, so a selector that includes both a tagName and a class is worth 11! Every individual selector thats combined to target an element adds their value to the cummulative value for the complex selector.<br />
+
+Understanding this what is the specificity value of this selector?
+
+```css
+span#title.text-white:hover
+```
+
+>     One hundred and twenty one!
+
+Whoa, adding up the values of complex selectors can get difficult real quick. Luckily we have the <a href="https://specificity.keegan.st/" target="_blank">Specificity Calculator</a> to help us!
+
+**!important property and inline-style**
+
+Check out our last code example. We're using the same colored box.
+
+```css
+div.box {
+  background: purple;
+}
+
+.box {
+  background: red;
+}
+
+div {
+  background: green!important;
+}
+```
+
+Do you know the color of the box now?
+
+<div class="eg-container">
+  <div class="one">
+    <span class="eg-prompt">Hover to Display Answer</span>
+  </div>
+</div>
+<br />
+
+<h3 style="text-align: center;">Icky!</h3>
+"Though technically !important has nothing to do with specificity, it interacts directly with it. When an important rule is used on a style declaration, this declaration overrides any other declarations." - MDN<br />
+
+In like manner inline-style always overwrite any styles in external stylesheets <i>(except !important's)</i>.<br />
+
+Both of these avenues for styling are bad practices and should in almost all cases be avoided. You need to know about them, but that doesn't mean you should use them.
+
+#### Let's end on a bit of comic relief
+
+<div class="eg-container">
+  <img height="300px" src="https://bcw.blob.core.windows.net/public/cssUnit/4011155663073649">
+</div>
+<div style="text-align: center;"><b>Note</b> - This doesn't work and in seriousness don't use them!</div>
