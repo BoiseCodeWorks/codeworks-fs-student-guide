@@ -4,28 +4,34 @@
 ## HTML
 <hr>
 
-**HTML**: (Hyper Text Markdown Language) The language of web page layout 
+**HTML**: (Hyper Text Markdown Language) a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages. 
+
+ The \<html> tag represents the root of an HTML document.
+The \<html> tag is the container for all other HTML elements (except for the <!DOCTYPE> tag).
+Note: You should always include the lang attribute inside the \<html> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.
 
 
-**Head**: (Hyper Text Markdown Language) The language of web page layout 
+**Head**: the \<head> element is a container for metadata (data about data) and is placed between the \<html> tag and the \<body> tag. Metadata is data about the HTML document. Metadata is not displayed. Metadata typically define the document title, character set, styles, scripts, and other meta information.
 
 
-**Body**: (Hyper Text Markdown Language) The language of web page layout 
+**Body**: The \<body> tag defines the document's body. The \<body> element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. Note: There can only be one \<body> element in an HTML document.
 
-**Tag**: (Hyper Text Markdown Language) The language of web page layout 
+**Elements**: HTML elements are the building blocks of a HTML page. An HTML element is defined by a start tag, some content, and an end tag (\<tagname>content goes here \<tagname>)
 
-**Attribute**: (Hyper Text Markdown Language) The language of web page layout 
+**Attribute**: HTML attributes are a modifier of an HTML element type. An attribute either modifies the default functionality of an element type or provides functionality to certain element types unable to function correctly without them. In HTML syntax, an attribute is added to an HTML start tag.  Attribures are always defined in the start tag. 
 
-**HTML**: (Hyper Text Markdown Language) The language of web page layout
+**Script**: The \<script> tag is used to embed a client-side script (JavaScript).
+The \<script> element either contains scripting statements, or it points to an external script file through the src attribute.
+Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content.
 
-**HTML**: (Hyper Text Markdown Language) The language of web page layout 
-
-**HTML**: (Hyper Text Markdown Language) The language of web page layout 
-
-**HTML**: (Hyper Text Markdown Language) The language of web page layout 
 
 ## CSS
+<hr>
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+**CSS**: CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS files.
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+ Each CSS rule is made up of 3 elements: Selector, Property and Value.
+
+ **Selector**: The selector points to the HTML element you want to style.
+
+ **Propery**:
