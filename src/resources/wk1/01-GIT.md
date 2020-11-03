@@ -222,6 +222,8 @@ Congrats
 Now you know the basics of how to use Git!
 
 For more practice with github, check out [this tutorial from github](https://guides.github.com/activities/hello-world/)
-
+<br>
+<br>
 <hr>
 <small>Citation: Sridhar, Aditya. “An Introduction to Git: What It Is, and How to Use It.” FreeCodeCamp.org, FreeCodeCamp.org, 21 Oct. 2019, www.freecodecamp.org/news/what-is-git-and-how-to-use-it-c341b049ae61/ </small>
+<br>

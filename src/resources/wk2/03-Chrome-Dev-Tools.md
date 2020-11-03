@@ -5,7 +5,6 @@
 Many web browsers have built in developer tools available for software developers to use when creating web pages and apps. Developer tools are built to make designing web pages easier and debugging code more efficient. You can use them to directly manipulate the design of your webpage, debug  code by stepping through one line at a time, view error messages, view network requests, and much more. This unit will focus specifically on the Chrome developer tools (rather than ones found in alternative browsers, like FireFox or Safari) so if you are following along, be sure to use Chrome.
 
 ## Opening Chrome Developer Tools
-
 There are multiple ways to open your Chrome DevTools:
 
 *	Right click in the browser and click on the “Inspect” option
@@ -28,7 +27,6 @@ Once you have your DevTools open, you can navigate to the top right of the windo
 ![docking options](https://bcw.blob.core.windows.net/public//5800350199349)
 
 ## The Tabs
-
 Now that you have your DevTools open, you'll notice that there are multiple tabs at the top of the window:
 
 ![tabs](https://bcw.blob.core.windows.net/public//8915776849206207)
@@ -44,7 +42,6 @@ Out of these tabs, the ones you should become familiar with first are:
 Let's take some time to dive into each one of these tabs in closer detail.
 
 ## The Elements Tab
-
 Elements refers to the elements in the Document Object Model (DOM). While you’re in the elements tab you can view all of the HTML and CSS that makes up the page. You can also directly manipulate and edit elements on the page from this tab and immediately see what it will look like.
 
 From the Elements tab, you can navigate through the page's HTML and view each element in detail. You can view any applied classes and ID's, as well as any events being used. Additionally, you can view the specific properties and values being applied via CSS.
@@ -85,7 +82,6 @@ Manipulating your design through the use of the Chrome DevTools can be an extrem
 How neat is that?
 	
 ## Mobile View
-
 To the left of the Elements tab are two icons that can be helpful to use in tandem with the Elements tab. The first one that is immediately left of the Elements tab allows you to change the size of your view to that of a mobile screen so that you can simulate what it will look like on a user's phone.
 
 
@@ -98,7 +94,6 @@ Once you enter mobile view, an additional menu bar will appear above the mobile 
 ![phone sizing](https://bcw.blob.core.windows.net/public//5829121870587934)
 
 ## Element Selector
-
 The other option that is the second icon from the left of the Elements tab is the one that looks like a cursor in a box. 
 
   ![element selector](https://bcw.blob.core.windows.net/public//9828335037565174)
@@ -106,13 +101,11 @@ The other option that is the second icon from the left of the Elements tab is th
 When you select this option, it allows you to hover on the page and directly select an element you would like to view in greater detail in the Elements tab. It’s almost the reverse of hovering on an element in the Element’s tab – which when you do that, it highlights it in the page; when you use this tool and you hover on the page, it highlights it in the Elements tab. This is helpful because it allows you to directly select the item on the page you want to inspect.
 
 ## Color Selector
-
 The color selector tool (also known as the color picker tool) allows you to select a color on a page and get the exact HEX, RGBA, or HSLA value. You can access it by selecting any color box in the Styles tab. Once you activate it and you move the cursor on the page, you will see a round, magnified view near your cursor – this magnification actually allows you to choose the color down to the pixel, for greater precision. 
 
 ![color picker](https://bcw.blob.core.windows.net/public//6087065581430928)
 
 ## The Console
-
 If you click on the Console tab in your DevTools window, you'll have access to a built in REPL - a "Read Evaluate Print Loop" - known as the Console. The Console is an extremely helpful tool, you can use it to:
 
 * Evaluate conditonal statements
@@ -126,7 +119,6 @@ If you have a lot of code, errors, or printed messages in your console, you can 
 
 
 ## Printing to the Console
-
 Printing to the Console can be particularly helpful when debugging. Using print statements from within your project can help you see when and where something is happening, as well as the value of a variable at the time the `console.log()` method is called. 
 
 The Console is also where errors are printed. When you recieve an error from an API that appears in pink and red, that is the result of a method called `console.error('error.message')`. 
@@ -140,7 +132,6 @@ To the right of your error will be a clickable link. If it's an error status cod
 Before we look at the Network tab, let's discuss the Sources tab.
 
 ## The Sources Tab 
-
 The Sources tab is incredibly helpful for:
 * Viewing the folders and files in your project
 * Creating code snippets

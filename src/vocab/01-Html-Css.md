@@ -6,9 +6,7 @@
 
 **HTML**: (Hyper Text Markdown Language) The language of web page layout 
 
-
 **Head**: (Hyper Text Markdown Language) The language of web page layout 
-
 
 **Body**: (Hyper Text Markdown Language) The language of web page layout 
 

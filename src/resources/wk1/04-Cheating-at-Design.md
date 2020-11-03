@@ -209,5 +209,5 @@ Save the big, red, and bold styling for when that negative action actually *is*
 <br>
 <br>
 <hr>
-<br>
 <small> Source:  Schoger, Adam Wathan &amp; Steve. 7 Practical Tips for Cheating at Design. 16 Jan. 2019, medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886. </small>
+<br>

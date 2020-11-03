@@ -143,5 +143,5 @@ Even though we've just scratched the surface of Flexbox, these commands should b
 <br>
 <br>
 <hr>
-<br>
 <small> Source: freeCodeCamp.org. How Flexbox Works - Explained with Big, Colorful, Animated Gifs. 19 Jan. 2017, www.freecodecamp.org/news/an-animated-guide-to-flexbox-d280cf6afc35/. </small>
+<br>
