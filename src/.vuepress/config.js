@@ -48,7 +48,7 @@ module.exports = {
     ],
     sidebar: {
       '/vocab/': [...getSideBar('vocab', 'Vocabulary')],
-      '/resources/': [...getSideBar('resources', 'Student Resources'), ...getSideBar('resources/wk1', 'Building Blocks Of Web Development'), ...getSideBar('resources/wk2', 'Intro To Js'), ...getSideBar('resources/wk3', 'Advancing with Javascript')]
+      '/resources/': [...getSideBar('resources', 'Student Resources'), ...getSideBar('resources/wk1', 'Building Blocks Of Web Development'), ...getSideBar('resources/wk2', 'Intro To Js'), ...getSideBar('resources/wk3', 'Advancing with Javascript'), ...getSideBar('resources/wk4', 'Asynchronous Code')]
     }
   },
 

@@ -12,6 +12,7 @@
 ## Javascript 
 - Eloquent Javascript, The Art of Programming: [https://eloquentjavascript.net/](https://eloquentjavascript.net/)
 - Coding Challenges: [https://edabit.com/challenges/javascript](https://edabit.com/challenges/javascript)
+- RESTful Conventions: [https://restfulapi.net/](https://restfulapi.net/)
 ## Node 
 
 ## Vue 
