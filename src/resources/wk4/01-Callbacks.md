@@ -263,3 +263,9 @@ Regardless of the method you choose, always **handle every error** and **keep
 ### Remember, only *you* can prevent callback hell and forest fires
 
 You can find the source for this [on github](http://github.com/maxogden/callback-hell).
+
+<br>
+<br>
+<hr>
+<small>Ogden, Max. Callback Hell, 4 Feb. 2016, callbackhell.com </small>
+<br>
