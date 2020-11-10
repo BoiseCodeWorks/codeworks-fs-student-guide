@@ -207,6 +207,7 @@ An advantage this model has is that additional comments will not grow the origin
 
 The third approach is a hybrid of the two above. Basically, it tries to balance the rigidity of the embedding strategy with the flexibility of the linking strategy. For this example, we will split the comments into buckets with a maximum of 50 comments in each bucket.
 
+Figure: An example Blog Post document
 ```javascript
 {
   _id: 1,
@@ -217,7 +218,6 @@ The third approach is a hybrid of the two above. Basically, it tries to balance 
 
 ```
 
-Figure: An example Blog Post document
 
 ```javascript
 {
@@ -242,8 +242,6 @@ Figure: An example Blog Post document
 }
 
 ```
-
-Figure: Some example Comment buckets
 
 The main benefit of using buckets in this case is that we can perform a single read to fetch 50 comments at a time, allowing for efficient pagination.
 
@@ -290,8 +288,6 @@ In `Two Way Embedding` we will include the *Book* `foreign keys` under the�
 
 ```
 
-Figure: Some example Author documents
-
 Mirroring the *Author* document, for each *Book* we include the *Author* `foreign keys` under the *Author* field.
 
 ```javascript
@@ -310,11 +306,10 @@ Mirroring the *Author* document, for each *Book* we include the *Author* `
 
 ```
 
-Figure: Some example Book documents
-
 ### Queries
 
-```
+Example 1: Fetch books by a specific author
+```javascript
 var db = db.getSisterDB("library");
 var booksCollection = db.books;
 var authorsCollection = db.authors;
@@ -324,19 +319,17 @@ var books = booksCollection.find({_id: {$in: author.books}}).toArray();
 
 ```
 
-Example 1: Fetch books by a specific author
 
-```
+Example 2: Fetch authors by a specific book
+```javascript
 var db = db.getSisterDB("library");
 var booksCollection = db.books;
 var authorsCollection = db.authors;
 
 var book = booksCollection.findOne({title: "A tale of two space ships"});
 var authors = authorsCollection.find({_id: {$in: book.authors}}).toArray();
-
 ```
 
-Example 2: Fetch authors by a specific book
 
 As can be seen, we have to perform two queries in both directions. The first is to find either the author or the book and the second is to perform a $in query to find the books or authors.
 
@@ -359,7 +352,6 @@ The One Way Embedding strategy chooses to optimize the read performance of a *N
   _id: 1,
   name: "drama"
 }
-
 ```
 
 Figure: A Category document
@@ -371,7 +363,6 @@ Figure: A Category document
   categories: [1],
   authors: [1, 2]
 }
-
 ```
 
 Figure: A Book with Foreign Keys for Categories
@@ -380,35 +371,33 @@ The reason we choose to embed all the references to categories in the books is d
 
 ### Queries
 
-```
+Example 3: Fetch categories for a specific book
+```javascript
 var db = db.getSisterDB("library");
 var booksCol = db.books;
 var categoriesCol = db.categories;
 
 var book = booksCol.findOne({title: "A tale of two space ships"});
 var categories = categoriesCol.find({_id: {$in: book.categories}}).toArray();
-
 ```
 
-Example 3: Fetch categories for a specific book
 
-```
+Example 4: Fetch books for a specific category
+```javascript
 var db = db.getSisterDB("library");
 var booksCollection = db.books;
 var categoriesCollection = db.categories;
 
 var category = categoriesCollection.findOne({name: "drama"});
 var books = booksCollection.find({categories: category.id}).toArray();
-
 ```
 
-Example 4: Fetch books for a specific category
 
-##### TIP
-
-`Establish Relationship Balance`
-
-Establish the maximum size of `N` and the size of `M`. For example if `N` is a maximum of 3 categories for a book and `M` is a maximum of 500000 books in a category you should pick One Way Embedding. If `N` is a maximum of 3 and `M` is a maximum of 5 then Two Way Embedding might work well.
+> TIP
+>
+>`Establish Relationship Balance`
+>
+>Establish the maximum size of `N` and the size of `M`. For example if `N` is a maximum of 3 categories for a book and `M` is a maximum of 500000 books in a category you should pick One Way Embedding. If `N` is a maximum of 3 and `M` is a maximum of 5 then Two Way Embedding might work well.
 
 <br>
 <br>
