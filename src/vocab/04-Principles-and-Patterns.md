@@ -9,7 +9,7 @@
 
 **Polymorphism**:  Polymorphism gives us a way to use a class exactly like its parent so there is no confusion with mixing types.
 
-## Principiles
+## Principles
 <hr>
 
 **SOLID**
