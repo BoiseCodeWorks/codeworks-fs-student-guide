@@ -163,3 +163,19 @@ do {
 **break :** If you want to exit a loop before all the iterations have been completed, you can use the break statement. a break statement will immediately exit the loop and make the browser move on to any code that follows it.
 
 **continue :** The continue statement works in a similar manner to break, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop.
+
+
+## Classes
+<hr>
+
+**Classes** are a template for creating objects. They encapsulate data with code to work on that data.
+
+### Make up of a Class
+
+**Declaration**: One way to define a class is using a class declaration. To declare a class, you use the class keyword with the name of the class.  A class expression is another way to define a class. Class expressions can be named or unnamed
+
+**Constructor**: The constructor method is a special method for creating and initializing an object created with a class. There can only be one special method with the name "constructor" in a class.
+
+**Methods**: methods are actions that can be performed on objects.  Think of it like a function that exists on the class.  To access this method we will first have to access the an object with the class this method exists.
+
+**This**: a keyword used to reference the instance of the object in which this exists.
