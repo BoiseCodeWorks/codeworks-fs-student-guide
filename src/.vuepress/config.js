@@ -55,6 +55,7 @@ module.exports = {
         ...getSideBar('resources/wk3', 'Advancing with Javascript'),
         ...getSideBar('resources/wk4', 'Asynchronous Code'),
         ...getSideBar('resources/wk5', 'Servers with Node/Express'),
+        ...getSideBar('resources/wk6', 'Frontend Frameworks with Vue3')
       ]
     }
   },

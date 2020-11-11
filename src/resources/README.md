@@ -14,7 +14,9 @@
 - Coding Challenges: [https://edabit.com/challenges/javascript](https://edabit.com/challenges/javascript)
 - RESTful Conventions: [https://restfulapi.net/](https://restfulapi.net/)
 ## Node 
-
+- Expressjs Documentation: [https://expressjs.com/](https://expressjs.com/)
 ## Vue 
-
+- Vue3 Documentation: [https://v3.vuejs.org/guide/introduction.html](https://v3.vuejs.org/guide/introduction.html)
+- Vue Router: [https://next.router.vuejs.org/guide](https://next.router.vuejs.org/guide)
+- Vue Eslint Rules: [https://eslint.vuejs.org/rules/](https://eslint.vuejs.org/rules/)
 ## Dotnet 
