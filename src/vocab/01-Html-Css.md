@@ -32,6 +32,17 @@ Common uses for JavaScript are image manipulation, form validation, and dynamic 
 
  Each CSS rule is made up of 3 elements: Selector, Property and Value.
 
- **Selector**: The selector points to the HTML element you want to style.
+ **Selector**: The selector points to the HTML element you want to style. (body, .card, #myElement)
 
- **Propery**:
+ **Propery**: This part of the rule determines which attribute of the element will change. (width, height, opacity, font-color)
+
+ **Value**: this part of the rule sets the value of the property. (12px, 5em, blue)
+ 
+ <style>
+ img{
+   border-radius: 5px
+   }
+   </style>
+ <img src="https://www.w3schools.com/css/selector.gif" width="600px">
+
+ 
