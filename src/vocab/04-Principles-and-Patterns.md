@@ -1,4 +1,4 @@
-# Pillars of POOP
+# Pillars of OOP
 **Encapsulation**: The bundling of data and the methods that act on that data such that access to that data is restricted from outside the bundle.  This means that an object stores its state privately, and only the object’s methods have access to change it.
 
 **Abstraction**:  Abstraction is an extension of encapsulation. It is the process of selecting data from a larger pool to show only the relevant details to the object.
