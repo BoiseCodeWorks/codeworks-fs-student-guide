@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mongoose 101: Working with subdocuments | Codeworks Workbook</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Resource for Codeworks Immersive FullStack Students">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.264007ef.css" as="style"><link rel="preload" href="/assets/js/app.b782f0d7.js" as="script"><link rel="preload" href="/assets/js/2.41bf532a.js" as="script"><link rel="preload" href="/assets/js/36.43aaf9ee.js" as="script"><link rel="prefetch" href="/assets/js/10.c00206a1.js"><link rel="prefetch" href="/assets/js/11.f542a317.js"><link rel="prefetch" href="/assets/js/12.efa1befe.js"><link rel="prefetch" href="/assets/js/13.8b1067d9.js"><link rel="prefetch" href="/assets/js/14.937c2d2e.js"><link rel="prefetch" href="/assets/js/15.dae2e62d.js"><link rel="prefetch" href="/assets/js/16.7e851baa.js"><link rel="prefetch" href="/assets/js/17.d2dcfab7.js"><link rel="prefetch" href="/assets/js/18.d5a413dd.js"><link rel="prefetch" href="/assets/js/19.8185ecc0.js"><link rel="prefetch" href="/assets/js/20.ae812b93.js"><link rel="prefetch" href="/assets/js/21.a8406ff6.js"><link rel="prefetch" href="/assets/js/22.911e1a9c.js"><link rel="prefetch" href="/assets/js/23.1076e5c0.js"><link rel="prefetch" href="/assets/js/24.97f70575.js"><link rel="prefetch" href="/assets/js/25.7392de28.js"><link rel="prefetch" href="/assets/js/26.d8b500b8.js"><link rel="prefetch" href="/assets/js/27.5fda3c20.js"><link rel="prefetch" href="/assets/js/28.c2c81496.js"><link rel="prefetch" href="/assets/js/29.98c0d56a.js"><link rel="prefetch" href="/assets/js/3.bc041b8a.js"><link rel="prefetch" href="/assets/js/30.1c9c59b4.js"><link rel="prefetch" href="/assets/js/31.d2c040b6.js"><link rel="prefetch" href="/assets/js/32.d2073d33.js"><link rel="prefetch" href="/assets/js/33.807531ec.js"><link rel="prefetch" href="/assets/js/34.42aaf6c1.js"><link rel="prefetch" href="/assets/js/35.9c63d92c.js"><link rel="prefetch" href="/assets/js/37.1b0d1188.js"><link rel="prefetch" href="/assets/js/38.12c3a395.js"><link rel="prefetch" href="/assets/js/39.1f6dc2fb.js"><link rel="prefetch" href="/assets/js/4.7a538b72.js"><link rel="prefetch" href="/assets/js/40.67ee77cd.js"><link rel="prefetch" href="/assets/js/41.13eb906d.js"><link rel="prefetch" href="/assets/js/42.541fb8eb.js"><link rel="prefetch" href="/assets/js/43.da908e4d.js"><link rel="prefetch" href="/assets/js/5.7189ec79.js"><link rel="prefetch" href="/assets/js/6.40ece6a5.js"><link rel="prefetch" href="/assets/js/7.36978bb5.js"><link rel="prefetch" href="/assets/js/8.1831ce67.js"><link rel="prefetch" href="/assets/js/9.33a217fd.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.264007ef.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Codeworks Workbook</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/resources/" class="nav-link router-link-active">
+  Resources
+</a></div><div class="nav-item"><a href="/vocab/" class="nav-link">
+  Vocab
+</a></div><div class="nav-item"><a href="https://boisecodeworks.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Codeworks
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/resources/" class="nav-link router-link-active">
+  Resources
+</a></div><div class="nav-item"><a href="/vocab/" class="nav-link">
+  Vocab
+</a></div><div class="nav-item"><a href="https://boisecodeworks.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Codeworks
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Student Resources</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Building Blocks Of Web Development</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Intro To Js</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Advancing with Javascript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Asynchronous Code</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Servers with Node/Express</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/resources/wk5/01-QueryParameters.html" class="sidebar-link">Using Query Parameters</a></li><li><a href="/resources/wk5/02-Relationships.html" class="sidebar-link">MongoDb Relationships</a></li><li><a href="/resources/wk5/03-SubDocuments.html" aria-current="page" class="active sidebar-link">Mongoose 101: Working with subdocuments</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/resources/wk5/03-SubDocuments.html#what-s-a-subdocument" class="sidebar-link">What's a subdocument</a></li><li class="sidebar-sub-header"><a href="/resources/wk5/03-SubDocuments.html#updating-characterschema" class="sidebar-link">Updating characterSchema</a></li><li class="sidebar-sub-header"><a href="/resources/wk5/03-SubDocuments.html#creating-documents-that-contain-subdocuments" class="sidebar-link">Creating documents that contain subdocuments</a></li><li class="sidebar-sub-header"><a href="/resources/wk5/03-SubDocuments.html#updating-array-subdocuments" class="sidebar-link">Updating array subdocuments</a></li><li class="sidebar-sub-header"><a href="/resources/wk5/03-SubDocuments.html#updating-a-single-subdocument" class="sidebar-link">Updating a single subdocument</a></li></ul></li><li><a href="/resources/wk5/04-Virtuals.html" class="sidebar-link">Virtuals in Mongoose</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Frontend Frameworks with Vue3</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mongoose-101-working-with-subdocuments"><a href="#mongoose-101-working-with-subdocuments" class="header-anchor">#</a> Mongoose 101: Working with subdocuments</h1> <h2 id="what-s-a-subdocument"><a href="#what-s-a-subdocument" class="header-anchor">#</a> What's a subdocument</h2> <p>In Mongoose, subdocuments are documents that are nested in other documents. You can spot a subdocument when a schema is nested in another schema.</p> <p>Note: MongoDB calls subdocuments embedded documents.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> childSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> String
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> parentSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment">// Single subdocument</span>
+  child<span class="token operator">:</span> childSchema<span class="token punctuation">,</span>
+
+  <span class="token comment">// Array of subdocuments</span>
+  children<span class="token operator">:</span> <span class="token punctuation">[</span> childSchema <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>In practice, you don't have to create a separate <code>childSchema</code> like the example above. Mongoose helps you create nested schemas when you nest an object in another object.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// This code is the same as above</span>
+<span class="token keyword">const</span> parentSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment">// Single subdocument</span>
+  child<span class="token operator">:</span> <span class="token punctuation">{</span> name<span class="token operator">:</span> String <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Array of subdocuments</span>
+  children<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>name<span class="token operator">:</span> String <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="updating-characterschema"><a href="#updating-characterschema" class="header-anchor">#</a> Updating characterSchema</h2> <p>Let's say we want to create a character called Ryu. Ryu has three special moves.</p> <ol><li>Hadoken</li> <li>Shinryuken</li> <li>Tatsumaki Senpukyaku</li></ol> <p>Ryu also has one ultimate move called:</p> <ol><li>Shinku Hadoken</li></ol> <p>We want to save the names of each move. We also want to save the keys required to execute that move.</p> <p>Here, each move is a subdocument.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> characterSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token punctuation">{</span> type<span class="token operator">:</span> String<span class="token punctuation">,</span> unique<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// Array of subdocuments</span>
+  specials<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    name<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    keys<span class="token operator">:</span> String
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token comment">// Single subdocument</span>
+  ultimate<span class="token operator">:</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    keys<span class="token operator">:</span> String
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>You can also use the childSchema syntax if you wish to. It makes the Character schema easier to understand.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> moveSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> String<span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> String
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> characterSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token punctuation">{</span> type<span class="token operator">:</span> String<span class="token punctuation">,</span> unique<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// Array of subdocuments</span>
+  specials<span class="token operator">:</span> <span class="token punctuation">[</span>moveSchema<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token comment">// Single subdocument</span>
+  ultimate<span class="token operator">:</span> moveSchema
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="creating-documents-that-contain-subdocuments"><a href="#creating-documents-that-contain-subdocuments" class="header-anchor">#</a> Creating documents that contain subdocuments</h2> <p>There are two ways to create documents that contain subdocuments:</p> <ol><li>Pass a nested object into <code>new Model</code></li> <li>Add properties into the created document.</li></ol> <h3 id="method-1-passing-the-entire-object"><a href="#method-1-passing-the-entire-object" class="header-anchor">#</a> Method 1: Passing the entire object</h3> <p>For this method, we construct a nested object that contains both Ryu's name and his moves.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ryu <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Ryu'</span><span class="token punctuation">,</span>
+  specials<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'Hadoken'</span><span class="token punctuation">,</span>
+    keys<span class="token operator">:</span> <span class="token string">'↓ ↘ → P'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'Shoryuken'</span><span class="token punctuation">,</span>
+    keys<span class="token operator">:</span> <span class="token string">'→ ↓ ↘ → P'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'Tatsumaki Senpukyaku'</span><span class="token punctuation">,</span>
+    keys<span class="token operator">:</span> <span class="token string">'↓ ↙ ← K'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  ultimate<span class="token operator">:</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'Shinku Hadoken'</span><span class="token punctuation">,</span>
+    keys<span class="token operator">:</span> <span class="token string">'↓ ↘ → ↓ ↘ → P'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Then, we pass this object into <code>new Character</code>.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> char <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Character</span><span class="token punctuation">(</span>ryu<span class="token punctuation">)</span>
+<span class="token keyword">const</span> doc <span class="token operator">=</span> <span class="token keyword">await</span> char<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>doc<span class="token punctuation">)</span>
+
+</code></pre></div><p><img src="https://zellwk.com/images/2019/mongoose-subdocuments/ryu.png" alt="Image of Ryu's document."></p> <h3 id="method-2-adding-subdocuments-later"><a href="#method-2-adding-subdocuments-later" class="header-anchor">#</a> Method 2: Adding subdocuments later</h3> <p>For this method, we create a character with <code>new Character</code> first.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ryu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Character</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'Ryu'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>Then, we edit the character to add special moves:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ryu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Character</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'Ryu'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> ryu<span class="token punctuation">.</span>specials <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Hadoken'</span><span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> <span class="token string">'↓ ↘ → P'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Shoryuken'</span><span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> <span class="token string">'→ ↓ ↘ → P'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Tatsumaki Senpukyaku'</span><span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> <span class="token string">'↓ ↙ ← K'</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span>
+
+</code></pre></div><p>Then, we edit the character to add the ultimate move:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ryu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Character</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'Ryu'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Adds specials</span>
+<span class="token keyword">const</span> ryu<span class="token punctuation">.</span>specials <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Hadoken'</span><span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> <span class="token string">'↓ ↘ → P'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Shoryuken'</span><span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> <span class="token string">'→ ↓ ↘ → P'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Tatsumaki Senpukyaku'</span><span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> <span class="token string">'↓ ↙ ← K'</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span>
+
+<span class="token comment">// Adds ultimate</span>
+ryu<span class="token punctuation">.</span>ultimate <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Shinku Hadoken'</span><span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> <span class="token string">'↓ ↘ → ↓ ↘ → P'</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>Once we're satisfied with <code>ryu</code>, we run <code>save</code>.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ryu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Character</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'Ryu'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Adds specials</span>
+<span class="token keyword">const</span> ryu<span class="token punctuation">.</span>specials <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Hadoken'</span><span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> <span class="token string">'↓ ↘ → P'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Shoryuken'</span><span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> <span class="token string">'→ ↓ ↘ → P'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Tatsumaki Senpukyaku'</span><span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> <span class="token string">'↓ ↙ ← K'</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span>
+
+<span class="token comment">// Adds ultimate</span>
+ryu<span class="token punctuation">.</span>ultimate <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Shinku Hadoken'</span><span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> <span class="token string">'↓ ↘ → ↓ ↘ → P'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> doc <span class="token operator">=</span> <span class="token keyword">await</span> ryu<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>doc<span class="token punctuation">)</span>
+
+</code></pre></div><p><img src="https://zellwk.com/images/2019/mongoose-subdocuments/ryu.png" alt="Image of Ryu's document."></p> <h2 id="updating-array-subdocuments"><a href="#updating-array-subdocuments" class="header-anchor">#</a> Updating array subdocuments</h2> <p>The easiest way to update subdocuments is:</p> <ol><li>Use <code>findOne</code> to find the document</li> <li>Get the array</li> <li>Change the array</li> <li>Run <code>save</code></li></ol> <p>For example, let's say we want to add <code>Jodan Sokutou Geri</code> to Ryu's special moves. The keys for <code>Jodan Sokutou Geri</code> are <code>↓ ↘ → K</code>.</p> <p>First, we find Ryu with <code>findOne</code>.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ryu <span class="token operator">=</span> <span class="token keyword">await</span> Characters<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'Ryu'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>Mongoose documents behave like regular JavaScript objects. We can get the <code>specials</code> array by writing <code>ryu.specials</code>.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ryu <span class="token operator">=</span> <span class="token keyword">await</span> Characters<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'Ryu'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> specials <span class="token operator">=</span> ryu<span class="token punctuation">.</span>specials
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>specials<span class="token punctuation">)</span>
+
+</code></pre></div><p><img src="https://zellwk.com/images/2019/mongoose-subdocuments/specials.png" alt="Log of specials."></p> <p>This <code>specials</code> array is a normal JavaScript array.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ryu <span class="token operator">=</span> <span class="token keyword">await</span> Characters<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'Ryu'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> specials <span class="token operator">=</span> ryu<span class="token punctuation">.</span>specials
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>specials<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+
+</code></pre></div><p>We can use the <code>push</code> method to add a new item into <code>specials</code>,</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ryu <span class="token operator">=</span> <span class="token keyword">await</span> Characters<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'Ryu'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+ryu<span class="token punctuation">.</span>specials<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Jodan Sokutou Geri'</span><span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> <span class="token string">'↓ ↘ → K'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>After updating <code>specials</code>, we run <code>save</code> to save Ryu to the database.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ryu <span class="token operator">=</span> <span class="token keyword">await</span> Characters<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'Ryu'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+ryu<span class="token punctuation">.</span>specials<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Jodan Sokutou Geri'</span><span class="token punctuation">,</span>
+  keys<span class="token operator">:</span> <span class="token string">'↓ ↘ → K'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> updated <span class="token operator">=</span> <span class="token keyword">await</span> ryu<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>updated<span class="token punctuation">)</span>
+
+</code></pre></div><p><img src="https://zellwk.com/images/2019/mongoose-subdocuments/ryu-updated.png" alt="Ryu updated with Jodan Sokutou Geri"></p> <h2 id="updating-a-single-subdocument"><a href="#updating-a-single-subdocument" class="header-anchor">#</a> Updating a single subdocument</h2> <p>It's even easier to update single subdocuments. You can edit the document directly like a normal object.</p> <p>Let's say we want to change Ryu's ultimate name from Shinku Hadoken to Dejin Hadoken. What we do is:</p> <ol><li>Use <code>findOne</code> to get Ryu.</li> <li>Change the <code>name</code> in <code>ultimate</code></li> <li>Run <code>save</code></li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ryu <span class="token operator">=</span> <span class="token keyword">await</span> Characters<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'Ryu'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+ryu<span class="token punctuation">.</span>ultimate<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Dejin Hadoken'</span>
+
+<span class="token keyword">const</span> updated <span class="token operator">=</span> <span class="token keyword">await</span> ryu<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>updated<span class="token punctuation">)</span>
+
+</code></pre></div><p><img src="https://zellwk.com/images/2019/mongoose-subdocuments/ryu-3.png" alt="Ryu document with Dejin Hadoken."></p> <br> <br> <hr> <small>Liew, Z. (2019, December 18). Mongoose 101: Working with subdocuments. Retrieved November 10, 2020, from https://zellwk.com/blog/mongoose-subdocuments/</small> <br></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/resources/wk5/02-Relationships.html" class="prev">
+        MongoDb Relationships
+      </a></span> <span class="next"><a href="/resources/wk5/04-Virtuals.html">
+        Virtuals in Mongoose
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.b782f0d7.js" defer></script><script src="/assets/js/2.41bf532a.js" defer></script><script src="/assets/js/36.43aaf9ee.js" defer></script>
+  </body>
+</html>
