@@ -39,12 +39,12 @@ variable keywords are used to declare the value of a variable.
 <li><b>const</b> declares a variable with a local scope, however the it's value cannot be changed after declaration.</li>
 </ul>
 
-## Opperators
+## Operators
 <hr>
 
-**Opperators** are used to assign values, compare values, perform arithmetic operations, and more. 
+**Operators** are used to assign values, compare values, perform arithmetic operations, and more. 
 
-### Arithmetic Opperators
+### Arithmetic Operators
 used to perform arithmetic between variables and/or values.
 
 <ul>
@@ -59,7 +59,7 @@ used to perform arithmetic between variables and/or values.
 </ul>
 
 
-### Assignment Opperators
+### Assignment Operators
 used to assign values to variables
 
 <ul>
@@ -71,7 +71,7 @@ used to assign values to variables
 <li><b>%=</b></li>
 </ul>
 
-### Comparison Opperators
+### Comparison Operators
 
 these opperators are used to determine a 'truthy' or 'falsy' value.  these can be used in conjunction with other statements to run or not run certain lines of code under certain conditions.
 <ul>
@@ -84,7 +84,7 @@ these opperators are used to determine a 'truthy' or 'falsy' value.  these can b
 <li><= less than or equal too</li>
 </ul>
 
-### Logical Opperators
+### Logical Operators
 Logical operators are used to determine the logic between variables or values.
 
 <ul>
