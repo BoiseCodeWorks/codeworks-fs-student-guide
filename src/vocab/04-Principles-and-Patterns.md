@@ -1,6 +1,4 @@
-## Pillars
-<hr>
-
+# Pillars of POOP
 **Encapsulation**: The bundling of data and the methods that act on that data such that access to that data is restricted from outside the bundle.  This means that an object stores its state privately, and only the object’s methods have access to change it.
 
 **Abstraction**:  Abstraction is an extension of encapsulation. It is the process of selecting data from a larger pool to show only the relevant details to the object.
@@ -10,7 +8,6 @@
 **Polymorphism**:  Polymorphism gives us a way to use a class exactly like its parent so there is no confusion with mixing types.
 
 ## Principles
-<hr>
 
 **SOLID**
 
@@ -24,7 +21,6 @@
 
 
 ## Patterns
-<hr>
 
 **MVC**:
 The MVC (Model-View-Controller) is an architectural pattern that separates an application into three main logical components: the model, the view, and the controller. This is done to separate internal representations of information from the ways information is presented to and accepted from the user

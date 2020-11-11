@@ -5,7 +5,6 @@
 
 
 ## Data and Structure types
-<hr>
 
 **Number**: 1, 75, 1000000, 0.99, -13
 
@@ -27,7 +26,6 @@
 [2,4,6,8], ['Mark','Jake', 'D$']
 
 ## Variables
-<hr>
  
  **Variables** are containers for storing data values.  variables are given a named reference to a value. That way an unpredictable value can be accessed through a predetermined name.
 
@@ -40,7 +38,6 @@ variable keywords are used to declare the value of a variable.
 </ul>
 
 ## Operators
-<hr>
 
 **Operators** are used to assign values, compare values, perform arithmetic operations, and more. 
 
@@ -94,7 +91,6 @@ Logical operators are used to determine the logic between variables or values.
 </ul>
 
 ## Functions 
-<hr>
 
 **Functions** are one of the fundamental building blocks in JavaScript. A function is a reusable set of statements to perform a task or calculate a value. Functions can be passed one or more values and can return a value at the end of their execution. 
 
@@ -103,7 +99,6 @@ Logical operators are used to determine the logic between variables or values.
 **Function Return**: Functions return (pass back) values using the return keyword. return ends function execution and returns the specified value to the location where it was called.
 
 ## Conditional Statements
-<hr>
 
 **Conditional Statements**  are used to perform different actions based on different conditions. 
 
@@ -116,7 +111,6 @@ Logical operators are used to determine the logic between variables or values.
 
 
 ## Loops
-<hr>
 
 **Loops** are blocks of code used to do the same thing, over and over again.  Often refferd to as **iteration**.  A loop will usually have one or more of the following elements:
 
@@ -166,7 +160,6 @@ do {
 
 
 ## Classes
-<hr>
 
 **Classes** are a template for creating objects. They encapsulate data with code to work on that data.
 
