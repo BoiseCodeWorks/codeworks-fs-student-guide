@@ -11,6 +11,8 @@
 
 **String**: "whatevs", "Banana", "x0Xl33tH4x3rX0x"
 
+**Symbol**: 
+
 **Boolean**: true, false
 
 **undefined**: 
@@ -24,8 +26,52 @@
 **Array**: Arrays are a collection of 'elements'. each element can be of any data type (including arrays) and these elements are accessed by their 'index' or their position in the array.  these indexes start at 0 and increase for each element in the array.  
 [2,4,6,8], ['Mark','Jake', 'D$']
 
+## Variables
+<hr>
+ 
+ **Variables** are containers for storing data values.  variables are given a named reference to a value. That way an unpredictable value can be accessed through a predetermined name.
 
-## Comparison Opperators
+### Variable keywords
+variable keywords are used to declare the value of a variable.
+<ul>
+<li><b>var</b> declares a varible with global scope</li>
+<li><b>let</b> declares a variable with a local scope</li>
+<li><b>const</b> declares a variable with a local scope, however the it's value cannot be changed after declaration.</li>
+</ul>
+
+## Opperators
+<hr>
+
+**Opperators** are used to assign values, compare values, perform arithmetic operations, and more. 
+
+### Arithmetic Opperators
+used to perform arithmetic between variables and/or values.
+
+<ul>
+<li><b>+  </b>Addition</li>
+<li><b>- </b>Subtraciton</li>
+<li><b>* </b>Multiplication</li>
+<li><b>** </b>Exponentiation</li>
+<li><b>/ </b>Division</li>
+<li><b>% </b>Modulus (division remainder)</li>
+<li><b>++ </b>Increment</li>
+<li><b>-- </b>Decrement</li>
+</ul>
+
+
+### Assignment Opperators
+used to assign values to variables
+
+<ul>
+<li><b>= </b></li>
+<li><b>+= </b></li>
+<li><b>-=</b></li>
+<li><b>*=</b></li>
+<li><b>/=</b></li>
+<li><b>%=</b></li>
+</ul>
+
+### Comparison Opperators
 
 these opperators are used to determine a 'truthy' or 'falsy' value.  these can be used in conjunction with other statements to run or not run certain lines of code under certain conditions.
 <ul>
@@ -36,3 +82,84 @@ these opperators are used to determine a 'truthy' or 'falsy' value.  these can b
 <li>< less than</li>
 <li>>= greater than or equal too</li>
 <li><= less than or equal too</li>
+</ul>
+
+### Logical Opperators
+Logical operators are used to determine the logic between variables or values.
+
+<ul>
+<li><b>&&</b> and</li>
+<li><b>||</b> or</li>
+<li><b>!</b> not</li>
+</ul>
+
+## Functions 
+<hr>
+
+**Functions** are one of the fundamental building blocks in JavaScript. A function is a reusable set of statements to perform a task or calculate a value. Functions can be passed one or more values and can return a value at the end of their execution. 
+
+**Function Parameters**: An input to the function when the funciton is declared or defined.  Parameters are used as variables inside the functions body.  When this a function is call these parameters will have the value of whatever is passed in as ***arguments***
+
+**Function Return**: Functions return (pass back) values using the return keyword. return ends function execution and returns the specified value to the location where it was called.
+
+## Conditional Statements
+<hr>
+
+**Conditional Statements**  are used to perform different actions based on different conditions. 
+
+<ul>
+<li><b>if</b> is used to specity a block of code to executed, <i>if</i> a condition is 'truthy' </li>
+<li><b>else</b>is used to specify a block of code to executed, if the same condition of a proceeding <i>if</i> statement is 'falsy'</li>
+<li><b>else if</b> is used to specify a new condition to test if the first condition is false</li>
+<li><b>switch</b> this is used to specify many alternative conditions and cooresponding blocks of code to be executed</li>
+</ul>
+
+
+## Loops
+<hr>
+
+**Loops** are blocks of code used to do the same thing, over and over again.  Often refferd to as **iteration**.  A loop will usually have one or more of the following elements:
+
+**Initializer**: this is the starting point of the loop, and generally will count as each new itteration of the loop runs.
+
+**Condition**: A conditional statement used to determine wheter the loop continues to run, or stops.
+
+**Final-expression**: this generally increments the ***initializer*** with each successive loop until the ***condition*** is no longer true.
+
+### Types of Loops
+
+**for loop** :
+
+```js
+for (initializer; condition; final-expression) {
+  // code to run
+}
+```
+
+**while loop**:
+
+```js
+initializer
+while (condition) {
+  // code to run
+
+  final-expression
+}
+```
+
+**do while** :
+
+```js
+initializer
+do {
+  // code to run
+
+  final-expression
+} while (condition)
+```
+
+### Loop Statements
+
+**break :** If you want to exit a loop before all the iterations have been completed, you can use the break statement. a break statement will immediately exit the loop and make the browser move on to any code that follows it.
+
+**continue :** The continue statement works in a similar manner to break, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop.
