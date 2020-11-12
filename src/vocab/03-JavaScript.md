@@ -36,10 +36,11 @@ let x = null
 x == null
 ```
 
-**Symbol**: A Symbol is used as a unique identifier for a value.  
+**Symbol**: Every symbol value returned from Symbol() is unique.  A symbol value may be used as an identifier for object properties; this is the data type's primary purpose, although other use-cases exist.  
 ```js
 let myName = Symbol('Mark')
-//no other 'Symbol' can now have the value of 'Mark'
+let yourName= Symbol('Mark')
+yourName === myName  // => false 
 ```
 
 **Object**: Objects can be seen as a collection of properties.  Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using key values. A key value is either a String or a Symbol value.
