@@ -43,6 +43,7 @@ module.exports = config({
     repo: 'BoiseCodeWorks/codeworks-fs-student-guide',
     repoLabel: 'Contribute!',
     docsDir: 'src',
+    docsBranch: 'main',
     darkmode: "switch",
     themeColor: {
       blue: "#2196f3",
