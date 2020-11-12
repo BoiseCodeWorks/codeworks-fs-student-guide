@@ -26,8 +26,8 @@ var listB = new List<int>(listA); // listB: 8 3 2
 Creates a list with specified capacity.
 ```csharp
 var list = new List<int>(16); 
-//list.Count:	0
-//list.Capacity:	16
+// list.Count:	0
+// list.Capacity:	16
 ```
 
 ## List[index]
@@ -250,7 +250,7 @@ Returns index of the last item which matches the specified predicate. It searche
 ```
 Returns index of the last item which matches the specified predicate in the range specified by count and the end index surprisingly called startIndex.
 ```csharp
-//list:	2 4 6 3 8
+// list:	2 4 6 3 8
  int index = list.FindLastIndex( startIndex: 2, count: 2, match: x => x < 5); 
 //index:	1
 ```
@@ -317,144 +317,149 @@ Inserts items of another list (or object implementing IEnumerable) into the list
 ## List.LastIndexOf
 Returns the zero-based index of the last occurrence of the item in the list.
 ```csharp
-//list:	8 3 2 6 8
+// list:	8 3 2 6 8
  int index = list.LastIndexOf(8); 
 //index:	4
 ```
 Returns the index of the last occurrence of the item in the list. It searches the list from the beginning of the list to the specified index.
 ```csharp
-//list:	8 3 2 6 8
+// list:	8 3 2 6 8
  int index = list.LastIndexOf( item: 8, index: 3); 
 //index:	0
 ```
 Returns the index of the last occurrence of the item in the list. It searches in the range specified by count and the end index.
 ```csharp
-//list:	8 3 2 6 8
+// list:	8 3 2 6 8
  int index = list.LastIndexOf( item: 6, index: 3, count: 2); 
 //index:	3
 ```
 Returns -1 if the item is not found in the specified range.
 ```csharp
-//list:	8 3 2 6 8
+// list:	8 3 2 6 8
  int index = list.LastIndexOf( item: 8, index: 3, count: 2); 
 //index:	-1
 ```
 ## List.Remove
 Removes the first occurence of the specified item from the list.
 ```csharp
-//list:	8 4 2 4
+// list:	8 4 2 4
  list.Remove(item: 4); 
-//list:	8 2 4
+// list:	8 2 4
 ```
 ##List.RemoveAll
 Removes all items matching the specified predicate.
 ```csharp
-//list:	8 3 6 2
+// list:	8 3 6 2
  list.RemoveAll(x => x < 4); 
-//list:	8 6
+// list:	8 6
 ```
 ## List.RemoveAt
 Removes the item at the specified index.
 ```csharp
-//list:	8 3 6 2
+// list:	8 3 6 2
  list.RemoveAt(index: 2); 
-//list:	8 3 2
+// list:	8 3 2
 ```
 ## List.RemoveRange
 Removes items from the specified range.
-
-//list:	8 3 6 2 4 5
+```csharp
+// list:	8 3 6 2 4 5
  list.RemoveRange(index: 2, count: 3); 
-//list:	8 3 5
-List.Reverse
+// list:	8 3 5
+```
+## List.Reverse
 Reverses the order of all items in the list.
-
-//list:	8 3 2
+```csharp
+// list:	8 3 2
  list.Reverse(); 
-list:	2 3 8
+// list:	2 3 8
+```
 Reverses the order of the items in the specified range.
-
-//list:	8 3 6 2
+```csharp
+// list:	8 3 6 2
  list.Reverse(index: 1, count: 2); 
-//list:	8 6 3 2
-List.Sort
+// list:	8 6 3 2
+```
+## List.Sort
 Sorts all items in the list.
 
 This List<T> method works only if the type T implements IComparable<T> or IComparable interface.
-
-//list:	8 3 6 2
+```csharp
+// list:	8 3 6 2
  list.Sort(); 
-list:	2 3 6 8
+// list:	2 3 6 8
+```
 Sorts list using comparison delegate.
-
-//list:	8 3 6 2
+```csharp
+// list:	8 3 6 2
  list.Sort((x, y) => x.CompareTo(y)); 
-list:	2 3 6 8
+// list:	2 3 6 8
+```
 Sorts list using comparison delegate (in descending order).
-
-//list:	8 3 6 2
+```csharp
+// list:	8 3 6 2
  list.Sort((x, y) => y.CompareTo(x)); 
-//list:	8 6 3 2
+// list:	8 6 3 2
+```
 Sorts the list using custom comparer.
-
-//list:	8 3 6 2
+```csharp
+// list:	8 3 6 2
  list.Sort(new MyComparer()); 
-list:	2 3 6 8
+// list:	2 3 6 8
+```
 Sorts the specified range of the list using custom comparer.
-
-//list:	8 3 6 2 4 5
+```csharp
+// list:	8 3 6 2 4 5
  list.Sort(index: 2, count: 3, comparer: new MyComparer()); 
-//list:	8 3 2 4 6 5
-  
+// list:	8 3 2 4 6 5
+
 public class MyComparer : IComparer<int>
 {
     public int Compare(int x, int y) { return x.CompareTo(y); }
 }
-List.ToArray
+```
+## List.ToArray
 Creates new array and copies all items into it.
-
-//list:	8 3 2
+```csharp
+// list:	8 3 2
  int[] array = list.ToArray(); 
-array:	8 3 2
+// array:	8 3 2
+```
 Returns empty array for empty list.
-
-list:	(empty)
+```csharp
+// list:	(empty)
  int[] array = list.ToArray(); 
-array:	(empty)
-List.TrimExcess
+// array:	(empty)
+```
+## List.TrimExcess
 Trims the list capacity to reduce memory usage if it's reasonable. It sets Capacity to the same value as Count but only if the Count is less than about 90 % of Capacity.
-
-list:	1 2 3 4 5
-list.Count:	5
-list.Capacity:	8
+```csharp
+// list:	1 2 3 4 5
+// list.Count:	5
+// list.Capacity:	8
  list.TrimExcess(); 
-list.Count:	5
-list.Capacity:	5
+// list.Count:	5
+// list.Capacity:	5
+```
 If the Count is almost the same as the list Capacity it does nothing.
-
-list:	1 2 3 4 5 6 7
-list.Count:	7
-list.Capacity:	8
- list.TrimExcess(); 
-list.Count:	7
-list.Capacity:	8
-List.TrueForAll
+```csharp
+// list:	1 2 3 4 5 6 7
+// list.Count:	7
+// list.Capacity:	8
+list.TrimExcess(); 
+// list.Count:	7
+// list.Capacity:	8
+```
+## List.TrueForAll
 Returns true if all items in the list match the specified predicate.
-
-//list:	8 3 2
+```csharp
+// list:	8 3 2
  bool result = list.TrueForAll(x => x < 10); 
-result:	true
+//result:	true
+```
 Returns false if not all items in the list match the specified predicate.
-
-//list:	8 3 2
+```csharp
+// list:	8 3 2
  bool result = list.TrueForAll(x => x < 5); 
-result:	false
-
-See also
-MSDN List<T> - List<T> class documentation
-C# Foreach - how foreach and IEnumerable works debuggable online
-C# Switch - switch statement examples debuggable online
-C# Using - using statement examples debuggable online
-Tips
-[C#] String Format for DateTime – format date and time popular
-[C#] String Format for Double – format float numbers popular
+// result:	false
+```
