@@ -78,7 +78,8 @@ module.exports = config({
         ...getSideBar('resources/wk5', 'Servers with Node/Express'),
         ...getSideBar('resources/wk6', 'Frontend Frameworks with Vue3'),
         ...getSideBar('resources/wk8-9', 'Working In a Professional Environment'),
-        ...getSideBar('resources/wk10', 'Foundations of C#')
+        ...getSideBar('resources/wk10', 'Foundations of C#'),
+        ...getSideBar('resources/wk11', 'Dotnet WebApi\'s')
       ]
     }
   },
