@@ -344,5 +344,5 @@ INSERT INTO dogs (id, name, breed, age, temperment)
 VALUES (2, "Riley", "German Shepherd", 11, "Calm");
 
 INSERT INTO dogs (id, name, breed, age, temperment)
-VALUES (3, "Winston", "Husky", 1, "Loving");
+VALUES (3, "Winston", "Husky", 1, "Mischevious");
 ```
