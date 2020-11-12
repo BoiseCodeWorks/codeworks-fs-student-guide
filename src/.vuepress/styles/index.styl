@@ -41,9 +41,6 @@ html
     background #f5f2f0 !important
 
 
-.home .hero img
-  max-width 80vw !important
-
 img
   cursor pointer
   &[alt=small]  
@@ -74,3 +71,19 @@ blockquote
 @media screen and (max-width: 600px) 
   .flex-wrap
     flex-wrap wrap
+
+#app
+  .theme-default-content:not(.custom) 
+    h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child 
+      margin-top: unset !important 
+      padding-top: unset !important 
+    .home 
+      .hero img
+        max-width 200px !important
+      .features 
+        .feature   
+          flex-basis: calc(50% - 5rem)
+          p
+            text-align left
+          a
+            text-decoration none

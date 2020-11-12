@@ -72,7 +72,7 @@ module.exports = config({
         ...getSideBar('resources', 'Student Resources'),
         ...getSideBar('resources/wk1', 'Building Blocks Of Web Development'),
         ...getSideBar('resources/wk2', 'Intro To Js'),
-        ...getSideBar('resources/wk3', 'Advancing with Javascript'),
+        ...getSideBar('resources/wk3', 'Advancing with JS'),
         ...getSideBar('resources/wk4', 'Asynchronous Code'),
         ...getSideBar('resources/wk5', 'Servers with Node/Express'),
         ...getSideBar('resources/wk6', 'Frontend Frameworks with Vue3')
@@ -86,7 +86,6 @@ module.exports = config({
    */
   plugins: [
     '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
     ["@mr-hope/sitemap",{ hostname: 'https://codeworksacademy.com/fs-student-guide' }],
   ]
 })
