@@ -6,24 +6,53 @@
 
 ## Data and Structure types
 
-**Number**: 1, 75, 1000000, 0.99, -13
+**Number**:  JavaScript has only one type of number. Unlike many other programming languages, JavaScript does not define different types of numbers, like integers, short, long, floating-point etc.
+```js
+ 1, 75, 1000000, 0.99, -13
+ ```
 
-**String**: "whatevs", "Banana", "x0Xl33tH4x3rX0x"
+**String**: A string (or a text string) is a series of characters
+```js
+"John Doe", "whatevs", "Banana", "x0Xl33tH4x3rX0x"
+```
 
-**Symbol**: 
 
-**Boolean**: true, false
+**Boolean**: A Boolean has one of two values, true or false
+```js
+true, false
+```
 
-**undefined**: 
 
-**Null**: the value of no value. 
+**undefined**: undefined is the value of a variable with no value.  This variable will also be the type of undefined.
+```js
+let x
+x == undefined
+```
+
+
+**Null**: the value of nothing. It is supposed to be something that doesn't exist. 
+```js
+let x = null
+x == null
+```
+
+**Symbol**: A Symbol is used as a unique identifier for a value.  
+```js
+let myName = Symbol('Mark')
+//no other 'Symbol' can now have the value of 'Mark'
+```
 
 **Object**: Objects can be seen as a collection of properties.  Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using key values. A key value is either a String or a Symbol value.
-{key: value}, 
+```js
+{key: value} 
 {myNumber: 12, myName: 'Mark'}
+```
 
-**Array**: Arrays are a collection of 'elements'. each element can be of any data type (including arrays) and these elements are accessed by their 'index' or their position in the array.  these indexes start at 0 and increase for each element in the array.  
-[2,4,6,8], ['Mark','Jake', 'D$']
+**Array**: Arrays are a collection of 'elements'. each element can be of any data type (including arrays) and these elements are accessed by their 'index' or their position in the array.  these indexes start at 0 and increase for each element in the array.
+```js  
+[2,4,6,8]
+['Mark','Jake', 'D$']
+```
 
 ## Variables
  
