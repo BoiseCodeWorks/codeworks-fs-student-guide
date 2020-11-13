@@ -12,11 +12,11 @@ In C#, these data types are categorized based on how they store their value in t
 
 A data type is a value type if it holds a data value within its own memory space. It means the variables of these data types directly contain values.
 
->TIP: All the value types derive from *System.ValueType*, which in-turn, derives from *System.Object*.
+>TIP: All the value types derive from *System.ValueType*, which in-turn, derives from *System.Object*.
 
-For example, consider integer variable `int i = 100;`
+For example, consider integer variable `int i = 100;`
 
-The system stores 100 in the memory space allocated for the variable `i`. The following image illustrates how 100 is stored at some hypothetical location in the memory (0x239110) for 'i':
+The system stores 100 in the memory space allocated for the variable `i`. The following image illustrates how 100 is stored at some hypothetical location in the memory (0x239110) for 'i':
 
 [![Memory Allocation of Value Type Variable](https://www.tutorialsteacher.com/Content/images/csharp/value-type-memory-allocation.png)](https://www.tutorialsteacher.com/Content/images/csharp/value-type-memory-allocation.png)
 
@@ -66,7 +66,7 @@ static void Main(string[] args)
 
 ```
 
-In the above example, variable `i` in the `Main()` method remains unchanged even after we pass it to the `ChangeValue()` method and change it's value there.
+In the above example, variable `i` in the `Main()` method remains unchanged even after we pass it to the `ChangeValue()` method and change it's value there.
 
 ## Reference Type
 
@@ -80,7 +80,7 @@ The following image shows how the system allocates the memory for the above stri
 
 [![Memory Allocation of Reference Type Variable](https://www.tutorialsteacher.com/Content/images/csharp/raference-type-memory-allocation.png)](https://www.tutorialsteacher.com/Content/images/csharp/raference-type-memory-allocation.png)
 
-As you can see in the above image, the system selects a random location in memory `(0x803200)` for the variable `s`. The value of a variable `s` is `0x600000`, which is the memory address of the actual data value. Thus, reference type stores the address of the location where the actual value is stored instead of the value itself.
+As you can see in the above image, the system selects a random location in memory `(0x803200)` for the variable `s`. The value of a variable `s` is `0x600000`, which is the memory address of the actual data value. Thus, reference type stores the address of the location where the actual value is stored instead of the value itself.
 
 The followings are reference type data types:
 <ul style="columns: 2">
@@ -115,15 +115,15 @@ static void Main(string[] args)
 ```
 Output: `Steve`
 
-In the above example, we pass the `Student` object `std1` to the `ChangeReferenceType()` method. Here, it actually pass the memory address of `std1`. Thus, when the `ChangeReferenceType()` method changes `StudentName`, it is actually changing `StudentName` of `std1` object, because `std1` and `std2` are both pointing to the same address in memory.
+In the above example, we pass the `Student` object `std1` to the `ChangeReferenceType()` method. Here, it actually pass the memory address of `std1`. Thus, when the `ChangeReferenceType()` method changes `StudentName`, it is actually changing `StudentName` of `std1` object, because `std1` and `std2` are both pointing to the same address in memory.
 
 ## Null
 
-The default value of a reference type variable is `null` when they are not initialized. `Null` means not refering to any object.
+The default value of a reference type variable is `null` when they are not initialized. `Null` means not refering to any object.
 
 [![Null Reference Type](https://www.tutorialsteacher.com/Content/images/csharp/null.png)](https://www.tutorialsteacher.com/Content/images/csharp/null.png)
 
-A value type variable cannot be null because it holds value, not a memory address. C# 2.0 introduced [nullable types](https://www.tutorialsteacher.com/csharp/csharp-nullable-types), using which you can assign null to a value type variable or declare a value type variable without assigning a value to it.
+A value type variable cannot be null because it holds value, not a memory address. C# 2.0 introduced [nullable types](https://www.tutorialsteacher.com/csharp/csharp-nullable-types), using which you can assign null to a value type variable or declare a value type variable without assigning a value to it.
 
 
 <br>
