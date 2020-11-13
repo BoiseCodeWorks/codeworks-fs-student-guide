@@ -1,4 +1,4 @@
-# C# Generics
+# C# Data Types
 
 ### Value Types, Reference Types, and Pointer Types
 
