@@ -39,31 +39,24 @@ Sanitize your input, but test to verify your mitigations are successful. A usefu
 Let's look at a basic SQL injection attack. Suppose you've built a web application that lets customers enter their customer IDs and retrieve their customer profiles. The web application front end passes the user-entered customer ID to the back-end database. The database runs an SQL query and returns the results to the web application, which displays the results to the end user.
 
 The back-end database query might look something like this:
-
-           SELECT *
-
-           FROM customers
-
-           WHERE customer_id = '1234567'
-
+```sql
+SELECT *
+FROM customers
+WHERE customer_id = '1234567'
+```
 Suppose a user entered the following customer_id in a web form field:
-
+```sql
            1234567; DELETE * customers WHERE '1' = '1
-
+```
 The back-end database would then obediently execute the following SQL:
-
-           SELECT *
-
-           FROM customers
-
-           WHERE customer_id = '1234567';
-
-           DELETE *
-
-           FROM customers
-
-           WHERE 'x' = 'x'
-
+```sql
+SELECT *
+FROM customers
+WHERE customer_id = '1234567';
+DELETE *
+FROM customers
+WHERE 'x' = 'x'
+```
 Remember, databases will happily execute multiple SQL statements in a row if separated by a semicolon. Failure to sanitize the user input for the single quote "'" character makes it possible for an attacker to delete the entire table. Hope you had good backups. Right? Right...?
 
 This was a deliberately simple example, and there are many different SQL injection attack vectors, but all work on the same principle: A web application's failure to sanitize input leads to remote SQL code execution.
