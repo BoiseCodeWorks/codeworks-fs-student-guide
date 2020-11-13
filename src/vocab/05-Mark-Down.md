@@ -1,29 +1,12 @@
-Markdown Cheatsheet
-===================
+# Markdown
+**Markdown**  is a lightweight markup language that you can use to add formatting elements to plaintext text documents. 
 
-Adam Pritchard edited this page on May 29, 2017 - [96 revisions](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet/_history)
 
-This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
 
-Note that there is also a [Cheatsheet specific to Markdown Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet) if that's what you're looking for. You can also check out [more Markdown tools](https://github.com/adam-p/markdown-here/wiki/Other-Markdown-Tools).
 
-##### [](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#table-of-contents)Table of Contents
 
-[Headers](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers)\
-[Emphasis](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis)\
-[Lists](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists)\
-[Links](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)\
-[Images](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images)\
-[Code and Syntax Highlighting](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)\
-[Tables](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables)\
-[Blockquotes](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#blockquotes)\
-[Inline HTML](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#html)\
-[Horizontal Rule](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#hr)\
-[Line Breaks](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines)\
-[YouTube Videos](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#videos)
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers)Headers
------------------------------------------------------------------------------------
+## Headers
 
 ```
 # H1
@@ -43,30 +26,28 @@ Alt-H2
 
 ```
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h1)H1
+H1
 =========================================================================
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h2)H2
+H2
 -------------------------------------------------------------------------
 
-### [](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h3)H3
+### H3
 
-#### [](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h4)H4
+#### H4
 
-##### [](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h5)H5
+##### H5
 
-###### [](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h6)H6
+###### H6
 
 Alternatively, for H1 and H2, an underline-ish style:
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#alt-h1)Alt-H1
+Alt-H1
 =================================================================================
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#alt-h2)Alt-H2
----------------------------------------------------------------------------------
+Alt-H2
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis)Emphasis
--------------------------------------------------------------------------------------
+## Emphasis
 
 ```
 Emphasis, aka italics, with *asterisks* or _underscores_.
@@ -87,8 +68,7 @@ Combined emphasis with asterisks and *underscores*.
 
 Strikethrough uses two tildes. ~~Scratch this.~~
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists)Lists
--------------------------------------------------------------------------------
+## Lists
 
 (In this example, leading and trailing spaces are shown with with dots: ⋅)
 
@@ -135,8 +115,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 -   Or pluses
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)Links
--------------------------------------------------------------------------------
+## Links
 
 There are two ways to create links.
 
@@ -181,8 +160,7 @@ URLs and URLs in angle brackets will automatically get turned into links. [http
 
 Some text to show that the reference links can follow later.
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images)Images
----------------------------------------------------------------------------------
+## Images
 
 ```
 Here's our logo (hover to see the title text):
@@ -203,8 +181,7 @@ Inline-style: ![alt text](https://github.com/adam-p/markdown-here/raw/master/sr
 
 Reference-style: ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2")
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code-and-syntax-highlighting)Code and Syntax Highlighting
------------------------------------------------------------------------------------------------------------------------------
+## Code and Syntax Highlighting
 
 Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and *Markdown Here* -- support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. *Markdown Here* supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the [highlight.js demo page](http://softwaremaniacs.org/media/soft/highlight/test.html).
 
@@ -251,8 +228,7 @@ But let's throw in a <b>tag</b>.
 
 ```
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables)Tables
----------------------------------------------------------------------------------
+## Tables
 
 Tables aren't part of the core Markdown spec, but they are part of GFM and *Markdown Here* supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.
 
@@ -291,8 +267,7 @@ There must be at least 3 dashes separating each header cell. The outer pipes (|)
 | *Still* | `renders` | nicely |
 | 1 | 2 | 3 |
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#blockquotes)Blockquotes
--------------------------------------------------------------------------------------------
+## Blockquotes
 
 ```
 > Blockquotes are very handy in email to emulate reply text.
@@ -310,8 +285,7 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* Markdown into a blockquote.
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#inline-html)Inline HTML
--------------------------------------------------------------------------------------------
+## Inline HTML
 
 You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
 
@@ -334,8 +308,7 @@ Markdown in HTML
 
 Does *not* work **very** well. Use HTML *tags*.
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#horizontal-rule)Horizontal Rule
----------------------------------------------------------------------------------------------------
+## Horizontal Rule
 
 ```
 Three or more...
@@ -368,8 +341,7 @@ Asterisks
 
 Underscores
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#line-breaks)Line Breaks
--------------------------------------------------------------------------------------------
+## Line Breaks
 
 My basic recommendation for learning how line breaks work is to experiment and discover -- hit <Enter> once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend.
 
@@ -394,7 +366,7 @@ This line is only separated by a single newline, so it's a separate line in the�
 
 (Technical note: *Markdown Here* uses GFM line breaks, so there's no need to use MD's two-space line breaks.)
 
-[](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#youtube-videos)YouTube Videos
+## YouTube Videos
 -------------------------------------------------------------------------------------------------
 
 They can't be added directly but you can add an image with a link to the video like this:
@@ -416,5 +388,11 @@ Or, in pure Markdown, but losing the image sizing and border:
 Referencing a bug by #bugID in your git commit links it to the slip. For example #1.
 
 * * * * *
+
+Adam Pritchard edited this page on May 29, 2017 - [96 revisions](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet/_history)
+
+This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
+
+Note that there is also a [Cheatsheet specific to Markdown Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet) if that's what you're looking for. You can also check out [more Markdown tools](https://github.com/adam-p/markdown-here/wiki/Other-Markdown-Tools).
 
 License: [CC-BY](https://creativecommons.org/licenses/by/3.0/)
