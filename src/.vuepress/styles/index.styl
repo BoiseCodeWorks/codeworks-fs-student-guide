@@ -74,9 +74,15 @@ blockquote
 
 #app
   .theme-default-content:not(.custom) 
+    text-align: unset;
+    white-space: pre-line;
+    word-break: break-word;
+    padding: .75
     h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child 
       margin-top: unset !important 
       padding-top: unset !important 
+    p
+      text-align left
     .home 
       .hero img
         max-width 200px !important
@@ -87,3 +93,4 @@ blockquote
             text-align left
           a
             text-decoration none
+  
