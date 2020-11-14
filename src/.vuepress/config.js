@@ -81,9 +81,11 @@ module.exports = config({
         ...getSideBar('resources/wk10', 'Foundations of C#'),
         ...getSideBar('resources/wk11', 'Dotnet WebApi\'s')
       ]
-    }
+    },
   },
-
+  markdown:{
+    lineNumbers:true
+  },
 
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/

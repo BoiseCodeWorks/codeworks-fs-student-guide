@@ -12,6 +12,10 @@ html
   -webkit-font-smoothing antialiased
   font-family "Fira Code", monospace
   .content__default
+    text-align left
+    white-space pre-line
+    word-break break-word
+    padding .75rem
     a, p, ul
       font-size 14pt
       font-family "Fira Code", monospace
@@ -19,14 +23,21 @@ html
     h1, h2, h3, h4, h5, h6 
       font-family "Roboto Slab", serif
   a:not(.btn):hover
-    color: var(--accent-color-l10)
+    color var(--accent-color-l10)
+  .copy-code-button
+    background var(--accent-color-d10)
+    transition all .15s linear
+    &:hover
+      background var(--accent-color-l10)
+    svg 
+      filter: drop-shadow(1px 2px 7px grey);
 
 .site-name
   display none !important
 
 .navbar 
-  display: flex;
-  align-items: center;
+  display flex;
+  align-items center;
   .site-name
     display none
   .logo
@@ -39,6 +50,13 @@ html
       color #aaaaaa
   pre[class*='language-']
     background #f5f2f0 !important
+
+
+
+
+
+div[class*='language-'].line-numbers-mode .line-numbers-wrapper
+ color var(--accent-color) !important
 
 
 img
@@ -72,12 +90,9 @@ blockquote
   .flex-wrap
     flex-wrap wrap
 
-#app
-  .theme-default-content:not(.custom) 
-    text-align unset
-    white-space pre-line
-    word-break break-word
-    padding .75
+html body #app
+  .theme-default-content
+    padding .75 !important
     h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child 
       margin-top unset !important 
       padding-top unset !important 
@@ -93,4 +108,4 @@ blockquote
             text-align left
           a
             text-decoration none
-  
+
