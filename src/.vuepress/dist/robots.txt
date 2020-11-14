@@ -1,5 +1,0 @@
-
-User-agent:*
-Disallow:
-
-Sitemap: https://codeworksacademy.com/fs-student-guidesitemap.xml
