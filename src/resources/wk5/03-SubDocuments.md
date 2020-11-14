@@ -2,9 +2,9 @@
 
 ## What's a subdocument
 
-In Mongoose, subdocuments are documents that are nested in other documents. You can spot a subdocument when a schema is nested in another schema.
+In Mongoose, subdocuments are documents that are nested in other documents. You can spot a subdocument when a schema is nested in another schema.
 
-Note: MongoDB calls subdocuments embedded documents.
+Note: MongoDB calls subdocuments embedded documents.
 
 ```javascript
 const childSchema = new Schema({
@@ -20,7 +20,7 @@ const parentSchema = new Schema({
 });
 ```
 
-In practice, you don't have to create a separate `childSchema` like the example above. Mongoose helps you create nested schemas when you nest an object in another object.
+In practice, you don't have to create a separate `childSchema` like the example above. Mongoose helps you create nested schemas when you nest an object in another object.
 
 ```javascript
 // This code is the same as above
@@ -87,7 +87,7 @@ const characterSchema = new Schema({
 
 There are two ways to create documents that contain subdocuments:
 
-1.  Pass a nested object into `new Model`
+1.  Pass a nested object into `new Model`
 2.  Add properties into the created document.
 
 ### Method 1: Passing the entire object
@@ -114,7 +114,7 @@ const ryu = {
 }
 ```
 
-Then, we pass this object into `new Character`.
+Then, we pass this object into `new Character`.
 
 ```javascript
 const char = new Character(ryu)
@@ -127,7 +127,7 @@ console.log(doc)
 
 ### Method 2: Adding subdocuments later
 
-For this method, we create a character with `new Character` first.
+For this method, we create a character with `new Character` first.
 
 ```javascript
 const ryu = new Character({ name: 'Ryu' })
@@ -176,7 +176,7 @@ ryu.ultimate = {
 
 ```
 
-Once we're satisfied with `ryu`, we run `save`.
+Once we're satisfied with `ryu`, we run `save`.
 
 ```javascript
 const ryu = new Character({ name: 'Ryu' })
@@ -210,21 +210,21 @@ console.log(doc)
 
 The easiest way to update subdocuments is:
 
-1.  Use `findOne` to find the document
+1.  Use `findOne` to find the document
 2.  Get the array
 3.  Change the array
-4.  Run `save`
+4.  Run `save`
 
-For example, let's say we want to add `Jodan Sokutou Geri` to Ryu's special moves. The keys for `Jodan Sokutou Geri` are `↓ ↘ → K`.
+For example, let's say we want to add `Jodan Sokutou Geri` to Ryu's special moves. The keys for `Jodan Sokutou Geri` are `↓ ↘ → K`.
 
-First, we find Ryu with `findOne`.
+First, we find Ryu with `findOne`.
 
 ```javascript
 const ryu = await Characters.findOne({ name: 'Ryu' })
 
 ```
 
-Mongoose documents behave like regular JavaScript objects. We can get the `specials` array by writing `ryu.specials`.
+Mongoose documents behave like regular JavaScript objects. We can get the `specials` array by writing `ryu.specials`.
 
 ```javascript
 const ryu = await Characters.findOne({ name: 'Ryu' })
@@ -235,7 +235,7 @@ console.log(specials)
 
 ![Log of specials.](https://zellwk.com/images/2019/mongoose-subdocuments/specials.png)
 
-This `specials` array is a normal JavaScript array.
+This `specials` array is a normal JavaScript array.
 
 ```javascript
 const ryu = await Characters.findOne({ name: 'Ryu' })
@@ -244,7 +244,7 @@ console.log(Array.isArray(specials)) // true
 
 ```
 
-We can use the `push` method to add a new item into `specials`,
+We can use the `push` method to add a new item into `specials`,
 
 ```javascript
 const ryu = await Characters.findOne({ name: 'Ryu' })
@@ -255,7 +255,7 @@ ryu.specials.push({
 
 ```
 
-After updating `specials`, we run `save` to save Ryu to the database.
+After updating `specials`, we run `save` to save Ryu to the database.
 
 ```javascript
 const ryu = await Characters.findOne({ name: 'Ryu' })
@@ -277,9 +277,9 @@ It's even easier to update single subdocuments. You can edit the document direct
 
 Let's say we want to change Ryu's ultimate name from Shinku Hadoken to Dejin Hadoken. What we do is:
 
-1.  Use `findOne` to get Ryu.
-2.  Change the `name` in `ultimate`
-3.  Run `save`
+1.  Use `findOne` to get Ryu.
+2.  Change the `name` in `ultimate`
+3.  Run `save`
 
 ```javascript
 const ryu = await Characters.findOne({ name: 'Ryu' })

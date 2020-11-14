@@ -22,7 +22,7 @@ Ready to lift the lid on the wonderful world of wireframes? Off we go!
 
 Let's start with the obvious question: what is a wireframe?
 
-Not dissimilar to an architectural blueprint, a wireframe is a two-dimensional skeletal outline of a webpage or app. Wireframes provide a clear overview of the page structure, layout, information architecture, user flow, functionality, and intended behaviors. As a wireframe usually represents the initial product concept, styling, color, and graphics are kept to a minimum. Wireframes can be drawn by hand or created digitally, depending on how much detail is required.
+Not dissimilar to an architectural blueprint, a wireframe is a two-dimensional skeletal outline of a webpage or app. Wireframes provide a clear overview of the page structure, layout, information architecture, user flow, functionality, and intended behaviors. As a wireframe usually represents the initial product concept, styling, color, and graphics are kept to a minimum. Wireframes can be drawn by hand or created digitally, depending on how much detail is required.
 
 Wireframing is a practice most commonly used by UX designers. This process allows all stakeholders to agree on where the information will be placed before the developers build the interface out with code.
 
@@ -41,7 +41,7 @@ The wireframing process tends to take place during the exploratory phase of the 
 
 Wireframes serve three key purposes:
 
-### Wireframes keep the concept user-focused 
+### Wireframes keep the concept user-focused 
 
 Wireframes are effectively used as communication devices; they facilitate feedback from the users, instigate conversations with the stakeholders, and generate ideas between the designers. Conducting user testing during the early wireframing stage allows the designer to harbor honest feedback, and identify key pain points that help to establish and develop the product concept.
 
@@ -53,7 +53,7 @@ When communicating your ideas to clients, they may not have the technical lexico
 
 Seeing the features on a wireframe will also allow you to visualize how they all work together---and may even prompt you to decide to remove a few if you feel they're not quite working with the rest of the page's elements. The wireframing stage is when stakeholders can be brutal!
 
-### Wireframes are quick and cheap to create 
+### Wireframes are quick and cheap to create 
 
 The best part about wireframes? They're incredibly cheap and easy to create. In fact, if you have a pen and paper to hand, you can quickly sketch out a wireframe without spending a penny. The abundance of tools available means you can also build a digital wireframe within minutes (we'll talk more about that a little later on!).
 
@@ -72,11 +72,11 @@ Low-fidelity wireframes are basic visual representations of the webpage and usua
 
 ![](https://d33wubrfki0l68.cloudfront.net/c759f6065c8cc4dd9b24559f6db0131f7feba1a4/da33e/en/blog/uploads/low-fid-wireframe.png)
 
-Low fidelity wireframes are useful for starting conversations, deciding on navigation layout, and mapping the user flow. In short, low-fidelity wireframes are ideal if you've got stakeholders or clients in the room and you want to sketch something up with a pen mid-meeting. They're also incredibly useful for designers who have multiple product concepts and want to quickly decide which direction to go down.
+Low fidelity wireframes are useful for starting conversations, deciding on navigation layout, and mapping the user flow. In short, low-fidelity wireframes are ideal if you've got stakeholders or clients in the room and you want to sketch something up with a pen mid-meeting. They're also incredibly useful for designers who have multiple product concepts and want to quickly decide which direction to go down.
 
-### Mid-fidelity wireframes 
+### Mid-fidelity wireframes 
 
-The most commonly used wireframe of the three, mid-fidelity wireframes feature more accurate representations of the layout. While they still avoid distractions such as images or typography, more detail is assigned to specific components, and features are clearly differentiated from each other. Varying text weights might also be used to separate headings and body content. Though still black and white, designers can use different shades of grey to communicate the visual prominence of individual elements. Although they are still relevant in a product's early stages, mid-fidelity wireframes are usually created using a digital wireframing tool, such as [Sketch](https://www.sketch.com/) or [Balsamiq](https://balsamiq.com/).
+The most commonly used wireframe of the three, mid-fidelity wireframes feature more accurate representations of the layout. While they still avoid distractions such as images or typography, more detail is assigned to specific components, and features are clearly differentiated from each other. Varying text weights might also be used to separate headings and body content. Though still black and white, designers can use different shades of grey to communicate the visual prominence of individual elements. Although they are still relevant in a product's early stages, mid-fidelity wireframes are usually created using a digital wireframing tool, such as [Sketch](https://www.sketch.com/) or [Balsamiq](https://balsamiq.com/).
 
 ![Sequence of four low fidelity app wireframes](https://d33wubrfki0l68.cloudfront.net/930ca362a6ba3ce3ae19aebc866bde8c83967be0/57781/en/blog/uploads/mid-fidelity-wireframe-for-a-mobile-app-1.jpg "Sequence of four low fidelity app wireframes")
 
@@ -125,17 +125,17 @@ To give you an idea of the variety of ways wireframes can be created (and to pro
 
 ![A screenshot of three wireframes, showing the transition from low fidelity wireframe to high fidelity wireframe, right through to the final UI design](https://d33wubrfki0l68.cloudfront.net/0c7220edad9ea2193728db3d6d4c9c16387e901b/adb29/en/blog/uploads/low-to-final.png "What is a wireframe? A collection of low and high fidelity wireframes")
 
-[Monica Galvan](https://www.youtube.com/watch?v=TlMWH_5BmvY) shows us the transition from low-fidelity wireframe to high-fidelity wireframe, right through to the final UI for her Impossible project.
+[Monica Galvan](https://www.youtube.com/watch?v=TlMWH_5BmvY) shows us the transition from low-fidelity wireframe to high-fidelity wireframe, right through to the final UI for her Impossible project.
 
 ![A photo of some hand-drawn wireframes from a UX design project](https://d33wubrfki0l68.cloudfront.net/76d31a915b7230441a1732f6181a672be1673446/47b75/en/blog/uploads/elvira-hellenpart-1.jpg "What is a wireframe? Hand-drawn wireframes from a CareerFoundry student's UX design project")
 
-[Elvira Hellenpart's wireframes for the VocabApp project](https://careerfoundry.com/en/portfolios/elvira-hellenpart-1/), created as part of the CareerFoundry UX Fundamentals Program. 
+[Elvira Hellenpart's wireframes for the VocabApp project](https://careerfoundry.com/en/portfolios/elvira-hellenpart-1/), created as part of the CareerFoundry UX Fundamentals Program. 
 
 ![A collection of low-fidelity ink-on-paper wireframes taken from a CareerFoundry student's UX design project](https://d33wubrfki0l68.cloudfront.net/7afdae9c2d65c12e6f0f0702b452cef1c9f3746e/9477b/en/blog/uploads/inktank-iterativewireframes.png "What is a wireframe? A collection of low-fidelity paper wireframes")
 
-"Starting with low-fidelity ink-on-paper wireframes and a mobile-first design approach, I began to iterate my way to a higher-fidelity prototype" says UX alumnus [Aaron Akbari Mort about his Inktank project](https://www.aaronakbarimort.com/inktank). 
+"Starting with low-fidelity ink-on-paper wireframes and a mobile-first design approach, I began to iterate my way to a higher-fidelity prototype" says UX alumnus [Aaron Akbari Mort about his Inktank project](https://www.aaronakbarimort.com/inktank). 
 
-## Conclusion 
+## Conclusion 
 ---------------
 
 So there we have it: everything you need to know (and then some) about wireframes. They may seem basic enough to be overlooked, but wireframes will enable you to get vital user, client, and stakeholder approval when it comes to the layout and navigation of the product's key pages. Armed with this approval, you can move forward with the confidence that you're designing something that your clients and users will love. The bonus? Wireframes save heaps of time and money in the long run!

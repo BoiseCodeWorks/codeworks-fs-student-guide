@@ -10,11 +10,11 @@ When designing an application, you will often need to use interfaces and abstrac
 
 ## What are interfaces?
 
-First off, let's get an understanding of interfaces and why they are needed in programming. An interface is strictly a contract; it doesn't have any implementation. An interface contains only member declarations. You can have method declarations but not definitions. The members declared in an interface should be implemented in the types (classes and structs) that extend or implement the interface. An interface cannot contain fields. An interface cannot be serialized because it cannot have data members. As I said, an interface can have only declarations and not definitions.  
+First off, let's get an understanding of interfaces and why they are needed in programming. An interface is strictly a contract; it doesn't have any implementation. An interface contains only member declarations. You can have method declarations but not definitions. The members declared in an interface should be implemented in the types (classes and structs) that extend or implement the interface. An interface cannot contain fields. An interface cannot be serialized because it cannot have data members. As I said, an interface can have only declarations and not definitions.  
 
-## Avoid making changes to interfaces 
+## Avoid making changes to interfaces 
 
-A class or a struct that extends an interface should implement all of its members. If the implementation changes, your code will still work. However, if the contract, i.e., the interface, changes, then you'll have to change the implementations of all types that extend the interface. In other words, any change to the interface will impact all of the types that extend the interface. The types extending the interface must adhere to the contract. So, use interfaces only when you rarely need to change them. Also, it's generally better to create a new interface than change an existing one. 
+A class or a struct that extends an interface should implement all of its members. If the implementation changes, your code will still work. However, if the contract, i.e., the interface, changes, then you'll have to change the implementations of all types that extend the interface. In other words, any change to the interface will impact all of the types that extend the interface. The types extending the interface must adhere to the contract. So, use interfaces only when you rarely need to change them. Also, it's generally better to create a new interface than change an existing one. 
 
 ## Program to an interface, not to an implementation
 
@@ -22,7 +22,7 @@ You might have heard the words "program to an interface and not to an implementa
 
 When you are programming to an interface you use the most generic abstraction (an interface or an abstract class) instead of a concrete implementation. Since interfaces guarantee uniformity, programming to an interface implies that you can handle similar objects in a uniform manner. In doing so, you're decoupled from the implementation --- i.e., your implementations can vary. This adds flexibility to your designs as well.
 
-The following code snippet illustrates programming to an interface. Consider an interface named IRepository that contains the declaration of a few methods. The ProductRepository and CustomerRepository classes extend the IRepository interface and implement the methods declared in the IRepository interface, as shown below.
+The following code snippet illustrates programming to an interface. Consider an interface named IRepository that contains the declaration of a few methods. The ProductRepository and CustomerRepository classes extend the IRepository interface and implement the methods declared in the IRepository interface, as shown below.
 ```csharp
 public  interface  IRepository
 {
@@ -49,7 +49,7 @@ When you program to an implementation, this uniformity is lost. Instead, you wil
 
 ## Avoid overuse of interfaces
 
-Associating every class with an interface is not a good practice. Overuse of interfaces in this manner creates unnecessary complexity, introduces redundancy of code, violates [YAGNI](https://martinfowler.com/bliki/Yagni.html), and reduces the readability and maintainability of the code base. Interfaces are used to group together objects that have identical behavior. If the objects don't have identical behavior, there is no need for this grouping. Using interfaces when you aren't going to have multiple implementations of it is an example of interface overuse.
+Associating every class with an interface is not a good practice. Overuse of interfaces in this manner creates unnecessary complexity, introduces redundancy of code, violates [YAGNI](https://martinfowler.com/bliki/Yagni.html), and reduces the readability and maintainability of the code base. Interfaces are used to group together objects that have identical behavior. If the objects don't have identical behavior, there is no need for this grouping. Using interfaces when you aren't going to have multiple implementations of it is an example of interface overuse.
 
 Creating an interface for a class that matches the public members of the class is quite common. In doing so you don't add any value at all --- you merely duplicate the interface of the class without adding any real abstraction.
 
@@ -77,7 +77,7 @@ Clearly, we don't need the IProduct interface, as the interface and its implemen
 
 Let's look at another example. The following code snippet shows an interface named IProductManager having the declaration of two methods, namely Save and Update.
 ```csharp
- public  interface  IProductManager
+ public  interface  IProductManager
 {
   void  Save(IProduct product);
   void  Update(IProduct product);
@@ -85,7 +85,7 @@ Let's look at another example. The following code snippet shows an interface nam
 ```
 The IProductManager interface contains the declarations of the public methods of the ProductManager class. Here's what the ProductManager class looks like.
 ```csharp
- public  class  ProductManager  :  IProductManager
+ public  class  ProductManager  :  IProductManager
 {
   public  void  Save(IProduct product)
   {

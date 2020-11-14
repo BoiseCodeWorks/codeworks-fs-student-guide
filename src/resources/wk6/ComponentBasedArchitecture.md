@@ -20,7 +20,7 @@ Lastly, components are reusable. This is a major selling point for applications 
 
 ## How CBA Differs From MVC
 
-While MVC splits responsibilities *horizontally,*CBA splits them *vertically*. What does this mean?
+While MVC splits responsibilities *horizontally,*CBA splits them *vertically*. What does this mean?
 
 Essentially, if you're using a client-side MVC framework like Ember.js, and to a lesser extent, Angular, you have templates that present the UI, routes that determine which templates to render, and services that define helper functions. Even if a template has routes and associated methods, all of these exist at different levels of an application's architecture.
 
@@ -28,7 +28,7 @@ In the case of CBA, responsibility is split on a component-by-component basis. T
 
 ## Potential Issues with CBA
 
-While CBA encourages reusability and single-responsibility, it can often lead to bloated and polluted views. The purpose of MVC is ensure that each level of an application has it's own separate responsibility, while the purpose of CBA is the encapsulate all of those responsibilities within one space. When using many components, there is the possibility that readability might actually become degraded.
+While CBA encourages reusability and single-responsibility, it can often lead to bloated and polluted views. The purpose of MVC is ensure that each level of an application has it's own separate responsibility, while the purpose of CBA is the encapsulate all of those responsibilities within one space. When using many components, there is the possibility that readability might actually become degraded.
 
 One of CBA's most glaring issues is a propensity towards over-engineering. In the case of React.js, the library was created with the intention of being used in applications wherever needed. Essentially, you can "sprinkle" React components across several different parts of your UI. However, many developers treat React.js as a framework and engineer every. single. aspect of their UI as a component. This is unnecessary and self-indulgent. CBA should only be use in specific instances and does not need to dictate the entire structure of your application.
 

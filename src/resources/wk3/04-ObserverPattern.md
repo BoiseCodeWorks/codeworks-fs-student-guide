@@ -28,7 +28,7 @@ EventObserver
 
 After I flesh out the observer pattern I'll add a word count that uses it. The word count component will take this observer and bring it all together.
 
-To initialize the `EventObserver` do:
+To initialize the `EventObserver` do:
 
 ```javascript
 class EventObserver {
@@ -38,7 +38,7 @@ class EventObserver {
 }
 ```
 
-Start with an empty list of observed events, and do this for every new instance. From now on, let's add more methods inside `EventObserver` to flesh out the design pattern.
+Start with an empty list of observed events, and do this for every new instance. From now on, let's add more methods inside `EventObserver` to flesh out the design pattern.
 
 ### The Subscribe Method
 
@@ -66,7 +66,7 @@ observer.subscribe(fn);
 assert.strictEqual(observer.observers.length, 1);
 ```
 
-I use [Node assertions](https://nodejs.org/api/assert.html) to test this component in Node. The exact same assertions exist as [Chai assertions](http://chaijs.com/api/assert/) too.
+I use [Node assertions](https://nodejs.org/api/assert.html) to test this component in Node. The exact same assertions exist as [Chai assertions](http://chaijs.com/api/assert/) too.
 
 Note the list of observed events consists of humble callbacks. We then check the length of the list and assert that the callback is on the list.
 
@@ -110,9 +110,9 @@ broadcast(data) {
 }
 ```
 
-This iterates through the list of observed events and executes all callbacks. With this, you get the necessary one-to-many relationship to the subscribed events. You pass in the `data` parameter which makes the callback data bound.
+This iterates through the list of observed events and executes all callbacks. With this, you get the necessary one-to-many relationship to the subscribed events. You pass in the `data` parameter which makes the callback data bound.
 
-ES6 makes the code more effective with an arrow function. Note the `(subscriber) => subscriber(data)` function that does most of the work. This one-liner arrow function benefits from this short ES6 syntax. This is a definite improvement in the JavaScript programming language.
+ES6 makes the code more effective with an arrow function. Note the `(subscriber) => subscriber(data)` function that does most of the work. This one-liner arrow function benefits from this short ES6 syntax. This is a definite improvement in the JavaScript programming language.
 
 To test this broadcast method, do:
 
@@ -133,11 +133,11 @@ assert(subscriberHasBeenCalled);
 
 ```
 
-Use `let` instead of a `const` so we can change the value of the variable. This makes the variable mutable which allows me to reassign its value inside of the callback. Using a `let` in your code sends a signal to fellow programmers that the variable is changing at some point. This adds readability and clarity to your JavaScript code.
+Use `let` instead of a `const` so we can change the value of the variable. This makes the variable mutable which allows me to reassign its value inside of the callback. Using a `let` in your code sends a signal to fellow programmers that the variable is changing at some point. This adds readability and clarity to your JavaScript code.
 
 This test gives me the confidence necessary to ensure the observer is working as I expect. With TDD, it is all about building reusable code in plain JavaScript. There are benefits to writing testable code in plain JavaScript. Test everything, and retain what is good for code reuse.
 
-With this, we have fleshed out the `EventObserver`. The question is, what can you build with this?
+With this, we have fleshed out the `EventObserver`. The question is, what can you build with this?
 
 ## The Observer Pattern in Action: A Blog Word Count Demo
 
@@ -162,7 +162,7 @@ const count = getWordCount(blogPost);
 assert.strictEqual(count, 9);
 ```
 
-Note the somewhat wacky input string inside `blogPost`. I intend for this function to cover as many edge cases as possible. As long as it gives me a proper word count we are heading, in fact, in the right direction.
+Note the somewhat wacky input string inside `blogPost`. I intend for this function to cover as many edge cases as possible. As long as it gives me a proper word count we are heading, in fact, in the right direction.
 
 As a side note, this is the real power of TDD. One can iterate on this implementation and cover as many use cases as possible. The unit test tells you how I expect this to behave. If the behavior has a flaw, for any reason, it is easy to iterate and tweak it. With the test, there is enough evidence left behind for any other person to make changes.
 
@@ -192,9 +192,9 @@ blogPost.addEventListener('keyup', () => blogObserver.broadcast(blogPost.value))
 
 ```
 
-Take all your reusable code and put in place the observer design pattern. This will track changes in the text area and give you a word count right beneath it. I'm using the `body.appendChild()` in the DOM API to add this new element. Then, attaching the event listeners to bring it to life.
+Take all your reusable code and put in place the observer design pattern. This will track changes in the text area and give you a word count right beneath it. I'm using the `body.appendChild()` in the DOM API to add this new element. Then, attaching the event listeners to bring it to life.
 
-Note with arrow functions it is possible to wire up one-liner events. In fact, you broadcast event-driven changes to all subscribers with this. The `() => blogObserver.broadcast()` does the bulk of the work here. It even passes in the latest changes to the text area right into the callback function. Yes, client-side scripting is super cool.
+Note with arrow functions it is possible to wire up one-liner events. In fact, you broadcast event-driven changes to all subscribers with this. The `() => blogObserver.broadcast()` does the bulk of the work here. It even passes in the latest changes to the text area right into the callback function. Yes, client-side scripting is super cool.
 
 No demo is complete without one you can touch and tweak, below is the CodePen:
 

@@ -6,18 +6,18 @@
 
 JavaScript evolved in a very short time from callbacks to promises (ES2015), and since ES2017 asynchronous JavaScript is even simpler with the async/await syntax.
 
-Async functions are a combination of promises and generators, and basically, they are a higher level abstraction over promises. Let me repeat: **async/await is built on promises**.
+Async functions are a combination of promises and generators, and basically, they are a higher level abstraction over promises. Let me repeat: **async/await is built on promises**.
 
 ## Why were async/await introduced?
 
 
 They reduce the boilerplate around promises, and the "don't break the chain" limitation of chaining promises.
 
-When Promises were introduced in ES2015, they were meant to solve a problem with asynchronous code, and they did, but over the 2 years that separated ES2015 and ES2017, it was clear that *promises could not be the final solution*.
+When Promises were introduced in ES2015, they were meant to solve a problem with asynchronous code, and they did, but over the 2 years that separated ES2015 and ES2017, it was clear that *promises could not be the final solution*.
 
-Promises were introduced to solve the famous *callback hell* problem, but they introduced complexity on their own, and syntax complexity.
+Promises were introduced to solve the famous *callback hell* problem, but they introduced complexity on their own, and syntax complexity.
 
-They were good primitives around which a better syntax could be exposed to the developers, so when the time was right we got **async functions**.
+They were good primitives around which a better syntax could be exposed to the developers, so when the time was right we got **async functions**.
 
 They make the code look like it's synchronous, but it's asynchronous and non-blocking behind the scenes.
 
@@ -33,7 +33,7 @@ const doSomethingAsync = () => {
 }
 ```
 
-When you want to **call** this function you prepend `await`, and **the calling code will stop until the promise is resolved or rejected**. One caveat: the client function must be defined as `async`. Here's an example:
+When you want to **call** this function you prepend `await`, and **the calling code will stop until the promise is resolved or rejected**. One caveat: the client function must be defined as `async`. Here's an example:
 
 ```javascript
 const doSomething = async () => {
@@ -44,7 +44,7 @@ const doSomething = async () => {
 ## Promise all the things
 
 
-Prepending the `async` keyword to any function means that the function will return a promise.
+Prepending the `async` keyword to any function means that the function will return a promise.
 
 Even if it's not doing so explicitly, it will internally make it return a promise.
 

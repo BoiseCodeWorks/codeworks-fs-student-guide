@@ -7,7 +7,7 @@ Promises are one of the ways we can deal with asynchronous operations in JavaScr
 
 Promises are a broad topic so I can't go into every detail in this article. But you'll find an overall introduction to what Promises are, explanations of terms like resolve, reject, and chaining, and a code example for creating and using Promises.
 
-> *Prerequisite:* To understand this article better, be sure that you have read up on **JavaScript Callbacks**.
+> *Prerequisite:* To understand this article better, be sure that you have read up on **JavaScript Callbacks**.
 
 ## What is a Promise?
 
@@ -21,9 +21,9 @@ This is also the same for promises in JavaScript. When we define a promise in Ja
 
 First of all, a Promise is an object. There are 3 states of the Promise object:
 
--   **Pending:** Initial State, before the Promise succeeds or fails
--   **Resolved:** Completed Promise
--   **Rejected:** Failed Promise
+-   **Pending:** Initial State, before the Promise succeeds or fails
+-   **Resolved:** Completed Promise
+-   **Rejected:** Failed Promise
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Ekran-Resmi-2020-06-06-12.21.27.png)
 
@@ -46,7 +46,7 @@ This is one of the greatest advantages of using Promises, but why?
 
 Callback functions have been used alone for asynchronous operations in JavaScript for many years. But in some cases, using Promises can be a better option.
 
-If there are multiple async operations to be done and if we try to use good-old Callbacks for them, we'll find ourselves quickly inside a situation called [Callback hell](http://callbackhell.com/):
+If there are multiple async operations to be done and if we try to use good-old Callbacks for them, we'll find ourselves quickly inside a situation called [Callback hell](http://callbackhell.com/):
 
 ```javascript
 firstRequest(function(response) {

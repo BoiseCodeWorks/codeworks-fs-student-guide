@@ -16,13 +16,13 @@ Actions can run in a variety of platforms, including Linux, macOS or Windows, an
 
 ## Understanding Workflows
 
-So, the main concept at the heart of GitHub actions is the workflow; this is done by creating a series of YAML files that contain a series of actions that determine your workflow in your repositories. These YAML files are stored in a special folder in the *.github/workflows* folder inside your repository. Here is an example:
+So, the main concept at the heart of GitHub actions is the workflow; this is done by creating a series of YAML files that contain a series of actions that determine your workflow in your repositories. These YAML files are stored in a special folder in the *.github/workflows* folder inside your repository. Here is an example:
 
 ![Image for post](https://miro.medium.com/max/4924/1*KFn2j_ZZT-eNckTso0EiJQ.png)
 
 > At the moment, you can create up to 20 yaml files at this time, and each of the workflow files will respond to a specific event. In addition to that, each one of these workflows can have a number of jobs that perform different actions, and this is also where you specify the platform that you want to run the action under.
 
-So, to demo this; I'm going to use [my Analog clock](https://github.com/YannMjl/Analog-Clock-JS) project which is build with simple Javascript vanilla. I made my project repository a [template](https://github.com/YannMjl/Analog-Clock-JS). You can go ahead and create a repository from this template and have something to play around with.
+So, to demo this; I'm going to use [my Analog clock](https://github.com/YannMjl/Analog-Clock-JS) project which is build with simple Javascript vanilla. I made my project repository a [template](https://github.com/YannMjl/Analog-Clock-JS). You can go ahead and create a repository from this template and have something to play around with.
 
 ![Image for post](https://miro.medium.com/max/5052/1*K-vOjDkUrnmjkbgeRpzzpg.png)
 
@@ -30,7 +30,7 @@ So, to demo this; I'm going to use [my Analog clock](https://github.com/YannMjl
 
 You can do this on your own projects if you want to, but it's actually better to start off by creating a template repository or a brand new repository to play around with actions.
 
-So let's go ahead and add actions. The first time you create a workflow, Github provides some templates that you can use to create your first workflow based on your project repository. In this case, I'm going to add a *Simple Workflow* action.
+So let's go ahead and add actions. The first time you create a workflow, Github provides some templates that you can use to create your first workflow based on your project repository. In this case, I'm going to add a *Simple Workflow* action.
 
 ![Image for post](https://miro.medium.com/max/3330/1*KvwRNsT3vxpZDLTzGCqObw.gif)
 
@@ -81,13 +81,13 @@ There are different types of events that you can call for whenever you're workin
 -   Webhooks
 -   External
 
-These workflow events manage the triggering of the actions. Something like a *push*, a *pull request*, or a *fork* that refers to changes in the repository.
+These workflow events manage the triggering of the actions. Something like a *push*, a *pull request*, or a *fork* that refers to changes in the repository.
 
 > Another type is something called a webhook event. That means some action that GitHub performs, like when somebody stars your repo or when a Wiki page gets created or edited.
 >
 > you can have an event triggered by an external process outside of GitHub. That's called a repository dispatch event. And you would use that when you want something external to communicate back with your GitHub repo
 
-To learn more about the full GitHub Actions documentation on workflows, please see the [*configuration workflows*](https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow).
+To learn more about the full GitHub Actions documentation on workflows, please see the [*configuration workflows*](https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow).
 
 ## GitHub Action Job
 
@@ -101,17 +101,17 @@ You can also run a job only if it meets certain conditions. Each job will also h
 
 The most important information about your repository is stored inside a GitHub object, but there's a few other, what are called contexts, that you can use, including information about the job that is running or the steps that are currently running as well.
 
-There's also a very special and pretty useful context called *secrets*, which lets you store information in GitHub itself that won't be seen by anyone else, including other people in your repository. To learn more visit [*Context and expression syntax for GitHub Actions*](https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#:~:text=Object%20filters-,About%20contexts%20and%20expressions,workflow%20files%20and%20access%20contexts.&text=When%20you%20use%20expressions%20in,if%20conditional%20as%20an%20expression.)*.*
+There's also a very special and pretty useful context called *secrets*, which lets you store information in GitHub itself that won't be seen by anyone else, including other people in your repository. To learn more visit [*Context and expression syntax for GitHub Actions*](https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#:~:text=Object%20filters-,About%20contexts%20and%20expressions,workflow%20files%20and%20access%20contexts.&text=When%20you%20use%20expressions%20in,if%20conditional%20as%20an%20expression.)*.*
 
 Now let's say that I have a project that I wan to deploy in my master branch which is my production branch. I'll add steps and restrictions related to whatever I'm trying to do in a job.
 
 Now, let's added:
 
 -   a second job called "*deploy"*
--   "*environment variables", *name and full name
--   if condition to run the deploy job only when the *build job* is completed successfully
+-   "*environment variables", *name and full name
+-   if condition to run the deploy job only when the *build job* is completed successfully
 -   and only run the deploy job on pull request
--   a *show_context* job that displays in JSON format all the GitHub context
+-   a *show_context* job that displays in JSON format all the GitHub context
 -   the name of the person who committed the code
 
 Our YAML file now looks like this:

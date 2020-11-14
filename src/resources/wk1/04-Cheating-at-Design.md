@@ -5,9 +5,9 @@
 
 Every web developer inevitably runs into situations where they need to make visual design decisions, whether they like it or not.
 
-Maybe the company you work for doesn't have a full-time designer and you need to implement the UI for a new feature on your own. Or maybe you're hacking on a side-project and you want it to look better than *yet-another-Bootstrap-site.*
+Maybe the company you work for doesn't have a full-time designer and you need to implement the UI for a new feature on your own. Or maybe you're hacking on a side-project and you want it to look better than *yet-another-Bootstrap-site.*
 
-It's easy to throw your hands up and say, *"I'll never be able to make this look good, I'm not an artist!"* but it turns out there are a ton of tricks you can use to level up your work that don't require a background in graphic design.
+It's easy to throw your hands up and say, *"I'll never be able to make this look good, I'm not an artist!"* but it turns out there are a ton of tricks you can use to level up your work that don't require a background in graphic design.
 
 Here are seven simple ideas you can use to improve your designs today*.*
 
@@ -22,24 +22,24 @@ A common mistake when styling UI text is relying too much on font size to contro
 
 *"Is this text secondary? Let's make it smaller."*
 
-Instead of leaving all of the heavy lifting to font size alone, try using color or font weight to do the same job.
+Instead of leaving all of the heavy lifting to font size alone, try using color or font weight to do the same job.
 
-*"Is this text important? **Let's make it bolder.**"*
+*"Is this text important? **Let's make it bolder.**"*
 
-*"Is this text secondary? **Let's use a lighter color.**"*
+*"Is this text secondary? **Let's use a lighter color.**"*
 
 Try and stick to two or three colors:
 
--   A dark ([but not black](https://ianstormtaylor.com/design-tip-never-use-black/)) color for primary content *(like the headline of an article)*
--   A grey for secondary content *(like the date an article was published)*
--   A lighter grey for ancillary content *(maybe the copyright notice in a footer)*
+-   A dark ([but not black](https://ianstormtaylor.com/design-tip-never-use-black/)) color for primary content *(like the headline of an article)*
+-   A grey for secondary content *(like the date an article was published)*
+-   A lighter grey for ancillary content *(maybe the copyright notice in a footer)*
 
 ![Image for post](https://miro.medium.com/max/3150/1*2YuCOOCjdMEJxg-Lb6G2FA.png)
 
 Similarly, two font weights is usually enough for UI work:
 
--   A normal font weight *(400 or 500 depending on the font)* for most text
--   A heavier font weight *(600 or 700)* for text you want to emphasize
+-   A normal font weight *(400 or 500 depending on the font)* for most text
+-   A heavier font weight *(600 or 700)* for text you want to emphasize
 
 ![Image for post](https://miro.medium.com/max/3150/1*AHrVF0vTtj-yoyhmBNHNLA.png)
 
@@ -52,7 +52,7 @@ Stay away from font weights under 400 for UI work; they can work for large headi
 
 Making text a lighter grey is a great way to de-emphasize it on white backgrounds, but it doesn't look so great on colored backgrounds.
 
-That's because the effect we're actually seeing with grey on white is *reduced contrast*.
+That's because the effect we're actually seeing with grey on white is *reduced contrast*.
 
 Making the text closer to the background color is what actually helps create hierarchy, not making it light grey.
 
@@ -89,7 +89,7 @@ This applies to inset shadows like you might use on wells or form inputs too:
 
 ![Image for post](https://miro.medium.com/max/3150/1*qWSsYovqBDKF87f1IVMHsQ.png)
 
-If you're interested in learning more about shadow design, the [Material Design Guidelines](https://material.io/guidelines/material-design/elevation-shadows.html) are a fantastic primer.
+If you're interested in learning more about shadow design, the [Material Design Guidelines](https://material.io/guidelines/material-design/elevation-shadows.html) are a fantastic primer.
 
 ## Use fewer borders
 <br>
@@ -98,7 +98,7 @@ If you're interested in learning more about shadow design, the [Material Design
 
 When you need to create separation between two elements, try to resist immediately reaching for a border.
 
-While borders are a great way to distinguish two elements from one another, they aren't the *only* way, and using too many of them can make your design feel busy and cluttered.
+While borders are a great way to distinguish two elements from one another, they aren't the *only* way, and using too many of them can make your design feel busy and cluttered.
 
 The next time you find yourself reaching for a border, try one of these ideas instead:
 
@@ -127,11 +127,11 @@ What better way to create separation between elements than to simply increase th
 
 ![Image for post](https://miro.medium.com/max/4590/1*57g05Gl-FjDtcCUtaPPOLw.png)
 
-If you're designing something that could use some large icons *(like maybe the "features" section of a landing page)*, you might instinctively grab a free icon set like [Font Awesome](https://fontawesome.com/) or [Zondicons](http://www.zondicons.com/) and bump up the size until they fit your needs.
+If you're designing something that could use some large icons *(like maybe the "features" section of a landing page)*, you might instinctively grab a free icon set like [Font Awesome](https://fontawesome.com/) or [Zondicons](http://www.zondicons.com/) and bump up the size until they fit your needs.
 
 They're vector images after all, so the quality isn't going to suffer if you increase the size right?
 
-While it's true that vector images won't degrade in quality when you increase their size, icons that were drawn at 16--24px are never going to look very professional when you blow them up to 3x or 4x their intended size. They lack detail, and always feel disproportionately "chunky".
+While it's true that vector images won't degrade in quality when you increase their size, icons that were drawn at 16--24px are never going to look very professional when you blow them up to 3x or 4x their intended size. They lack detail, and always feel disproportionately "chunky".
 
 ![Image for post](https://miro.medium.com/max/4080/1*dJyk3SNvrxuTEuZa7fiY0g.png)
 
@@ -141,7 +141,7 @@ If small icons are all you've got, try enclosing them inside another shape and g
 
 This lets you keep the actual icon closer to its intended size, while still filling the larger space.
 
-If you have the budget, you could also use a premium icon set designed to be used at larger sizes, like [Heroicons](http://www.heroicons.com/) or [Iconic](https://useiconic.com/).
+If you have the budget, you could also use a premium icon set designed to be used at larger sizes, like [Heroicons](http://www.heroicons.com/) or [Iconic](https://useiconic.com/).
 
 ## Use accent borders to add color to a bland design
 <br>
@@ -167,7 +167,7 @@ For example, along the side of an alert message:
 
 It doesn't take any graphic design talent to add a colored rectangle to your UI, and it can go a long way towards making your site feel more "designed."
 
-*Have a hard time picking colors? Try choosing from a constrained palette like *[*Dribbble's color search*](https://dribbble.com/colors)* to avoid feeling overwhelmed by the endless possibilities of a traditional color picker.*
+*Have a hard time picking colors? Try choosing from a constrained palette like *[*Dribbble's color search*](https://dribbble.com/colors)* to avoid feeling overwhelmed by the endless possibilities of a traditional color picker.*
 
 ## Not every button needs a background color
 <br>
@@ -184,25 +184,25 @@ Frameworks like Bootstrap sort of encourage this by giving you a menu of semanti
 
 *"Does this delete data? Make the button red."*
 
-Semantics are an important part of button design, but there's a more important dimension that's commonly forgotten: *hierarchy.*
+Semantics are an important part of button design, but there's a more important dimension that's commonly forgotten: *hierarchy.*
 
 Every action on a page sits somewhere in a pyramid of importance. Most pages only have one true primary action, a couple of less important secondary actions, and a few seldom used tertiary actions.
 
-When designing these actions, it's important to communicate their place in the hierarchy.
+When designing these actions, it's important to communicate their place in the hierarchy.
 
--   Primary actions should be obvious. Solid, high contrast background colors work great here.
--   Secondary actions should be clear but not prominent. Outline styles or lower contrast background colors are great options.
--   Tertiary actions should be discoverable but unobtrusive. Styling these actions like links is usually the best approach.
+-   Primary actions should be obvious. Solid, high contrast background colors work great here.
+-   Secondary actions should be clear but not prominent. Outline styles or lower contrast background colors are great options.
+-   Tertiary actions should be discoverable but unobtrusive. Styling these actions like links is usually the best approach.
 
 ![Image for post](https://miro.medium.com/max/2800/1*_tq33tZkr3DZuZgP08Jcrw.png)
 
 *"What about destructive actions, shouldn't they always be red?"*
 
-Not necessarily! If the destructive action isn't the *primary* action on the page, it might be better to give it a secondary or tertiary button treatment.
+Not necessarily! If the destructive action isn't the *primary* action on the page, it might be better to give it a secondary or tertiary button treatment.
 
 ![Image for post](https://miro.medium.com/max/2800/1*1CxYaUc6Bk-pTRXH5TQonw.png)
 
-Save the big, red, and bold styling for when that negative action actually *is* the primary action in the interface, like in a confirmation dialog:
+Save the big, red, and bold styling for when that negative action actually *is* the primary action in the interface, like in a confirmation dialog:
 
 ![Image for post](https://miro.medium.com/max/2800/1*cuYcwjOO26sKHImHaY6yFA.png)
 

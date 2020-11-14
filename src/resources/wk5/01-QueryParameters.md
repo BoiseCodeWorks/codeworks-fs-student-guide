@@ -7,19 +7,19 @@ Data can be passed into any request using a query string. Once passed, the data 
 
 ## How to Use Query Strings
 
-The [query string](https://en.wikipedia.org/wiki/Query_string) portion of a URL is the part of the URL after the question mark `?`. For example:
+The [query string](https://en.wikipedia.org/wiki/Query_string) portion of a URL is the part of the URL after the question mark `?`. For example:
 
 ```
 ?answer=42
 ```
 
-Each `key=value` pair is called a *query parameter*. If your query string has multiple query parameters, they're separated by `&`. For example, the below string has 2 query parameters, `a` and `b`.
+Each `key=value` pair is called a *query parameter*. If your query string has multiple query parameters, they're separated by `&`. For example, the below string has 2 query parameters, `a` and `b`.
 
 ```
 ?a=1&b=2
 ```
 
-Express automatically parses query parameters for you and stores them on the [request object](https://masteringjs.io/tutorials/express/req) as [`req.query`](http://expressjs.com/en/4x/api.html#req.query).
+Express automatically parses query parameters for you and stores them on the [request object](https://masteringjs.io/tutorials/express/req) as [`req.query`](http://expressjs.com/en/4x/api.html#req.query).
 
 ```javascript
 // Demo of making a request to the server
@@ -39,8 +39,8 @@ If a query parameter appears multiple times in the query string, Express will gr
 ?color=black&color=yellow
 ```
 
-Express will set `req.query.color` to an array `['black', 'yellow']`.
+Express will set `req.query.color` to an array `['black', 'yellow']`.
 
 If you use square brackets in a query string parameter, Express will parse that parameter as an object. 
 
-For example, Express will parse `?shoe[color]=white` into the object `{ shoe: { color: 'white' } }`
+For example, Express will parse `?shoe[color]=white` into the object `{ shoe: { color: 'white' } }`

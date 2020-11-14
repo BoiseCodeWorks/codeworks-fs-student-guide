@@ -4,9 +4,9 @@
 ![Image for post](https://miro.medium.com/max/3000/1*VWm67Y5nT9RR0zLGr-aMVQ.jpeg)
 
 
-> Update: This article is now part of my book "The Professional Programmer".
+> Update: This article is now part of my book "The Professional Programmer".
 >
-> Read the updated version of this content, and more programming advice at [jscomplete.com/pro-programmer](https://jscomplete.com/pro-programmer).
+> Read the updated version of this content, and more programming advice at [jscomplete.com/pro-programmer](https://jscomplete.com/pro-programmer).
 
 Let me make one thing clear first. If you are a beginner programmer, this article is not meant to make you feel bad about the mistakes that you might be making but rather to make you aware of them, teach you to spot signs of them, and remind you to avoid them.
 
@@ -18,9 +18,9 @@ These mistakes are not presented here in any particular order.
 
 High-quality written content, in general, cannot be created easily. It requires careful thinking and research. High-quality programs are no exception.
 
-Writing quality programs is a process with a flow:\
-Think. Research. Plan. Write. Validate. Modify.\
-Unfortunately, there is no good acronym for this. You need to create a habit to always go through the *right* amount of these activities.
+Writing quality programs is a process with a flow:
+Think. Research. Plan. Write. Validate. Modify.
+Unfortunately, there is no good acronym for this. You need to create a habit to always go through the *right* amount of these activities.
 
 One of the biggest mistakes I have made as a beginner programmer was to start writing code right away without much thinking and researching. While this might work for a small stand-alone application, it has a big, negative effect on larger applications.
 
@@ -46,7 +46,7 @@ Yes. Planning before jumping into writing code is a good thing, but even good th
 
 Do not look for a perfect plan. That does not exist in the world of programming. Look for a good-enough plan, something that you can use to get started. The truth is, your plan will change, but what it was good for is to force you into some structure that leads to more clarity in your code. Too much planning is simply a waste of your time.
 
-I am only talking about planning small features. Planning all the features at once should simply be outlawed! It is what we call the Waterfall Approach, which is a system linear plan with distinct steps that are to be finished one by one. You can imagine how much planning that approach needs. This is not the kind of planning I am talking about here. The waterfall approach does not work for most software projects. Anything complicated can only be implemented with agile adaptations to reality.
+I am only talking about planning small features. Planning all the features at once should simply be outlawed! It is what we call the Waterfall Approach, which is a system linear plan with distinct steps that are to be finished one by one. You can imagine how much planning that approach needs. This is not the kind of planning I am talking about here. The waterfall approach does not work for most software projects. Anything complicated can only be implemented with agile adaptations to reality.
 
 Writing programs has to be a responsive activity. You will add features you would never have thought of in a waterfall plan. You will remove features because of reasons you would never have considered in a waterfall plan. You need to fix bugs and adapt to changes. You need to be agile.
 
@@ -54,7 +54,7 @@ However, always plan your next few features. Do that very carefully because too 
 
 ## Underestimating the Importance of Code Quality
 
-If you can only focus on one aspect of the code that you write, it should be its readability. Unclear code is trash. It is not even recyclable.
+If you can only focus on one aspect of the code that you write, it should be its readability. Unclear code is trash. It is not even recyclable.
 
 Never underestimate the importance of code quality. Look at coding as a way to communicate implementations. Your main job as a coder is to clearly communicate the implementations of any solutions that you are working on.
 
@@ -67,14 +67,14 @@ One of my favorite quotes about programming is:
 Brilliant advice, John!
 
 Even the small things matter. For example, if you are not consistent with your indentation and capitalization, you should simply lose your license to code.
-
-tHIS is\
-  WAY MORE importantthan\
+```javascript
+tHIS is
+  WAY MORE importantthan
          you think
-
+```
 Another simple thing is the use of long lines. Anything beyond 80 characters is much harder to read. You might be tempted to place some long condition on the same line to keep an if-statement block more visible. Do not do that. Just never go beyond the 80 character limit, ever.
 
-Many of the simple problems like these can be easily fixed with linting and formatting tools. In JavaScript, we have two excellent tools that work perfectly together: ESLint and Prettier. Do yourself a favor and always use them.
+Many of the simple problems like these can be easily fixed with linting and formatting tools. In JavaScript, we have two excellent tools that work perfectly together: ESLint and Prettier. Do yourself a favor and always use them.
 
 Here are a few more mistakes related to code quality:
 
@@ -86,8 +86,8 @@ Here are a few more mistakes related to code quality:
 
 --- Using short, generic, or type-based variable names. Give your variables descriptive and non-ambiguous names.
 
-> There are only two hard things in Computer Science: cache invalidation and naming things.\
->\
+> There are only two hard things in Computer Science: cache invalidation and naming things.
+>
 > --- Phil Karlton
 
 --- Hard-coding primitive strings and numbers without descriptions. If you want to write logic that depends on a fixed primitive string or number value, put that value in a constant and give it a good name.
@@ -98,11 +98,11 @@ const answerToLifeTheUniverseAndEverything = 42;
 
 --- Thinking that longer code is better. Shorter code is better in most cases. Only write longer versions if they make the code more readable. For example, do not use clever one-liners and nested ternary expressions just to keep the code shorter, but also do not intentionally make the code longer when it does not need to be. Deleting unnecessary code is the best thing you can do in any program.
 
-> Measuring programming progress by lines of code is like measuring aircraft building progress by weight.\
->\
+> Measuring programming progress by lines of code is like measuring aircraft building progress by weight.
+>
 > --- Bill Gates
 
---- The excessive use of conditional logic. Most of what you think needs conditional logic can be accomplished without it. Consider all the alternatives and pick exclusively based on readability. Do not optimize for performance unless you can measure. Related: avoid [Yoda conditions](https://en.wikipedia.org/wiki/Yoda_conditions) and assignments within conditionals.
+--- The excessive use of conditional logic. Most of what you think needs conditional logic can be accomplished without it. Consider all the alternatives and pick exclusively based on readability. Do not optimize for performance unless you can measure. Related: avoid [Yoda conditions](https://en.wikipedia.org/wiki/Yoda_conditions) and assignments within conditionals.
 
 ## Picking the First Solution
 
@@ -110,7 +110,7 @@ When I was starting to program, I remember that when I got presented with a prob
 
 While the first solution might be tempting, the good solutions are usually discovered once you start questioning all the solutions that you find. If you cannot think of multiple solutions to a problem, that is probably a sign that you do not completely understand the problem.
 
-Your job as a professional programmer is not to find *a solution *to the problem. It is to find the simplest solution to the problem. By "simple" I mean the solution has to work correctly and perform adequately but still be simple enough to read, understand, and maintain.
+Your job as a professional programmer is not to find *a solution *to the problem. It is to find the simplest solution to the problem. By "simple" I mean the solution has to work correctly and perform adequately but still be simple enough to read, understand, and maintain.
 
 > There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies.
 >
@@ -118,7 +118,7 @@ Your job as a professional programmer is not to find *a solution *to the probl
 
 ## Not Quitting
 
-Another mistake that I have made more often than I cared to admit is sticking with the first solution even after I identify that it might not be the simplest approach. This is probably psychologically related to the "not-quitting" mentality. This is a good mentality to have in most activities, but it should not apply to programming. In fact, when it comes to writing programs, the right mentality is fail early and fail often.
+Another mistake that I have made more often than I cared to admit is sticking with the first solution even after I identify that it might not be the simplest approach. This is probably psychologically related to the "not-quitting" mentality. This is a good mentality to have in most activities, but it should not apply to programming. In fact, when it comes to writing programs, the right mentality is fail early and fail often.
 
 The minute you begin doubting a solution, you should consider throwing it away and re-thinking the problem. This is true no matter how much you were invested in that solution. Source control tools like GIT can help you branch off and experiment with many different solutions. Leverage that.
 
@@ -128,7 +128,7 @@ The minute you begin doubting a solution, you should consider throwing it away a
 
 There has been many instances where I wasted precious time trying to solve a problem when I should have just researched it first.
 
-Unless you are using a bleeding-edge technology, when you run into a problem, chances are someone else ran into the same problem and found a solution for it. Save yourself some time and Google It First.
+Unless you are using a bleeding-edge technology, when you run into a problem, chances are someone else ran into the same problem and found a solution for it. Save yourself some time and Google It First.
 
 Sometimes, Googling will reveal that what you think is a problem is really not, and what you need to do is not fix it but rather embrace it. Do not assume that you know everything needed to pick a solution to a problem. Google will surprise you.
 
@@ -146,25 +146,25 @@ This point is not about using the object-oriented paradigm. The use of the encap
 
 In an application, a feature should have only one place that handles it. That is usually the responsibility of a single object. That object should only reveal what is absolutely necessary for other objects of the application to use it. This is not about secrecy but rather about the concept of reducing dependencies between the different parts of an application. Sticking with these rules allows you to safely make changes in the internals of your classes, objects, and functions without worrying about breaking things on a bigger scale.
 
-Conceptual units of logic and state should get their own classes. By class, I mean a blueprint template. This can be an actual Class object or a Function object. You might also identify it as a Module or a Package.
+Conceptual units of logic and state should get their own classes. By class, I mean a blueprint template. This can be an actual Class object or a Function object. You might also identify it as a Module or a Package.
 
 Within a class of logic, self-contained pieces of tasks should get their own methods. Methods should do one thing and do that thing well. Similar classes should use the same method names.
 
 As a beginner programmer, I did not always have the instinct to start a new class for a conceptual unit and I often failed to identify what can be self-contained. If you see a "`Util`" class that has been used as a dumping ground for many things that do not belong together, that is a sign of newbie code. If you make a simple change and then discover that the change has a cascading effect and you need to do many changes elsewhere, that is another sign of newbie code.
 
-Before adding a method to a class or adding more responsibilities to a method, think and question your instincts. You need time here. Do not skip or think that you will refactor that later. Just do it right the first time.
+Before adding a method to a class or adding more responsibilities to a method, think and question your instincts. You need time here. Do not skip or think that you will refactor that later. Just do it right the first time.
 
-The big idea here is that you want your code to have High Cohesion and Low Coupling, which is just a fancy term that means keep related code together (in a class) and reduce the dependencies between different classes.
+The big idea here is that you want your code to have High Cohesion and Low Coupling, which is just a fancy term that means keep related code together (in a class) and reduce the dependencies between different classes.
 
 ## Planning for the Unknown
 
-It is often tempting to think beyond the solution that you are writing. All sort of what-ifs will pop into your head with every line of code that you write. This is a good thing for testing edge cases, but it is just wrong to use as a driver for potential needs.
+It is often tempting to think beyond the solution that you are writing. All sort of what-ifs will pop into your head with every line of code that you write. This is a good thing for testing edge cases, but it is just wrong to use as a driver for potential needs.
 
 You need to identify which of these two main categories your what-ifs belong to. Do not write code that you do not need today. Do not plan for the unknown future.
 
 Writing a feature because you think that you might need it in the future is simply wrong. Do not do it.
 
-Always write the minimum amount of code that you need today for the solution that you are implementing. Handle edge-cases, sure, but do not add *edge-features*.
+Always write the minimum amount of code that you need today for the solution that you are implementing. Handle edge-cases, sure, but do not add *edge-features*.
 
 > Growth for the sake of growth is the ideology of the cancer cell.
 >
@@ -196,13 +196,11 @@ When writing any code that requires some form of recursion, it is always temptin
 
 Optimizing recursive code depends on what recursive functions return. For example, optimizing a recursive function that returns two or more calls to itself is a lot harder than optimizing a recursive function that simply returns a single call to itself.
 
-What we tend to overlook as beginners is that there is an alternative to using recursive functions. You can just use a *Stack* structure. Push function calls to a Stack yourself and start popping them out when you are ready to traverse the calls back.
+What we tend to overlook as beginners is that there is an alternative to using recursive functions. You can just use a *Stack* structure. Push function calls to a Stack yourself and start popping them out when you are ready to traverse the calls back.
 
 ## Making Existing Code Worse
 
 Imagine that you were given a messy room like this:
-
-![Image for post](https://miro.medium.com/max/60/1*T6gU2PGfqll9h1zT6ApTUA.png?q=20)
 
 ![Image for post](https://miro.medium.com/max/974/1*T6gU2PGfqll9h1zT6ApTUA.png)
 
@@ -219,64 +217,64 @@ Here are a few wrong practices that usually make the code a bigger mess than wha
 -   Using unnecessary conditional statements and temporary variables. Every if-statement is a logic branch that needs to be at-least double tested. When you can avoid conditionals without sacrificing readability, you should. The major problem with this is extending a function with a branch logic instead of introducing another function. Every time you think you need an if-statement or a new function variable you should ask yourself: am I changing the code at the right level or should I go think about the problem at a higher level?
 
 On the topic of unnecessary if-statements, think about this code:
-
-function isOdd(number) {\
-  if (number % 2 === 1) {\
-    return true;\
-  } else {\
-    return false;\
-  }\
+```javascript
+function isOdd(number) {
+  if (number % 2 === 1) {
+    return true;
+  } else {
+    return false;
+  }
 }
-
-The `isOdd` function above has a few problems but can you see the most obvious one?
+```
+The `isOdd` function above has a few problems but can you see the most obvious one?
 
 It uses an unnecessary if-statement. Here is an equivalent code:
-
-function isOdd(number) {\
-  return (number % 2 === 1);\
+```javascript
+function isOdd(number) {
+  return (number % 2 === 1);
 };
-
+```
 ## Writing Comments About the Obvious Things
 
 I have learned the hard way to avoid writing comments when I can. Most comments can be replaced with better-named elements in your code.
 
 For example, instead of the following code:
-
-// This function sums only odd numbers in an array\
-const sum = (val) => {\
-  return val.reduce((a, b) => {\
-    if (b % 2 === 1) { // If the current number is odd\
-      a+=b;            // Add current number to accumulator\
-    } return a;          // The accumulator\
-  }, 0);\
+```javascript
+// This function sums only odd numbers in an array
+const sum = (val) => {
+  return val.reduce((a, b) => {
+    if (b % 2 === 1) { // If the current number is odd
+      a+=b;            // Add current number to accumulator
+    } return a;          // The accumulator
+  }, 0);
 };
-
+```
 The same code can be written without comments like this:
-
-const sumOddValues = (array) => {\
-  return array.reduce((accumulator, currentNumber) => {\
-    if (isOdd(currentNumber)) {\
-      return accumulator + currentNumber;\
-    } return accumulator;\
-  }, 0);\
+```javascript
+const sumOddValues = (array) => {
+  return array.reduce((accumulator, currentNumber) => {
+    if (isOdd(currentNumber)) {
+      return accumulator + currentNumber;
+    } return accumulator;
+  }, 0);
 };
-
+```
 Just using better names for functions and arguments simply makes most comments unnecessary. Keep that in mind before writing any comment.
 
-However, sometimes you are forced into situations where the only clarity you can add to the code is via comments. This is when you should structure your comments to answer the question of *WHY this code* rather than the question of *WHAT is this code doing*.
+However, sometimes you are forced into situations where the only clarity you can add to the code is via comments. This is when you should structure your comments to answer the question of *WHY this code* rather than the question of *WHAT is this code doing*.
 
 If you are strongly tempted to write a WHAT comment to clarify the code, please do not point out the obvious. Here is an example of some useless comments that only add noise to the code:
-
-// create a variable and initialize it to 0\
-let sum = 0;// Loop over array\
-array.forEach(\
-  // For each number in the array\
-  (number) => {\
-    // Add the current number to the sum variable\
-    sum += number;\
-  }\
+```javascript
+// create a variable and initialize it to 0
+let sum = 0;// Loop over array
+array.forEach(
+  // For each number in the array
+  (number) => {
+    // Add the current number to the sum variable
+    sum += number;
+  }
 );
-
+```
 Do not be that programmer. Do not accept that code. Remove comments like these if you have to deal with them. Most importantly, educate programmers who write comments like these of how bad they are. If you happen to be employing programmers who write comments like the above, let them know that they might actually lose their job over this. Yep... That's how bad it is.
 
 ## Not Writing Tests
@@ -293,29 +291,27 @@ TDD is not for everyone and it does not work well for every project, but if you 
 
 ## Assuming That If Things are Working then Things are Right
 
-Take a look at this function that implements the `sumOddValues` feature. Is there anything wrong with it?
-
-const sumOddValues = (array) => {\
-  return array.reduce((accumulator, currentNumber) => {\
-    if (currentNumber % 2 === 1) {\
-      return accumulator + currentNumber;\
-    } return accumulator;\
-  });\
+Take a look at this function that implements the `sumOddValues` feature. Is there anything wrong with it?
+```javascript
+const sumOddValues = (array) => {
+  return array.reduce((accumulator, currentNumber) => {
+    if (currentNumber % 2 === 1) {
+      return accumulator + currentNumber;
+    } return accumulator;
+  });
 };
-
-console.assert(\
-  sumOddValues([1, 2, 3, 4, 5]) === 9\
+console.assert(
+  sumOddValues([1, 2, 3, 4, 5]) === 9
 );
+```
 
 The assertion passes. Life is good. Right, RIGHT?
 
 The problem with the code above is that it not complete. It correctly handles a few cases (and the assertion used happens to be one of these cases) but it has many problems beyond that. Let me go through a few of them:
 
---- Problem #1: There is no handling for empty input. What should happen when the function is called without any arguments? Right now you get an error revealing the function's implementation when that happens:
+--- Problem #1: There is no handling for empty input. What should happen when the function is called without any arguments? Right now you get an error revealing the function's implementation when that happens:
 
 TypeError: Cannot read property 'reduce' of undefined.
-
-![Image for post](https://miro.medium.com/max/60/1*DBFKfU-dhTK7xrTI8Ye-iQ.png?q=20)
 
 ![Image for post](https://miro.medium.com/max/974/1*DBFKfU-dhTK7xrTI8Ye-iQ.png)
 
@@ -326,17 +322,17 @@ That is usually a sign of bad code for two main reasons.
 
 TypeError: Cannot execute function for empty list.
 
-Maybe instead of throwing an error, you need to design your function to just ignore empty input and return a sum of `0`. Regardless, something has to be done for this case.
+Maybe instead of throwing an error, you need to design your function to just ignore empty input and return a sum of `0`. Regardless, something has to be done for this case.
 
---- Problem #2: There is no handling of invalid input. What should happen if the function is called with a string, an integer, or an object value instead of an array?
+--- Problem #2: There is no handling of invalid input. What should happen if the function is called with a string, an integer, or an object value instead of an array?
 
 Here is what the function would throw now:
 
 sumOddValues(42);TypeError: array.reduce is not a function
 
-Well, that is unfortunate because `array.reduce` is definitely a function!
+Well, that is unfortunate because `array.reduce` is definitely a function!
 
-Since we named the function's argument `array`, anything you call the function with (`42` in the example above) is labeled as `array` within the function. The error is basically saying that `42.reduce` is not a function.
+Since we named the function's argument `array`, anything you call the function with (`42` in the example above) is labeled as `array` within the function. The error is basically saying that `42.reduce` is not a function.
 
 You see how that error is confusing, right? Maybe a more helpful error would have been:
 
@@ -346,7 +342,7 @@ Problems #1 and #2 are sometimes referred to as edge-cases. These are some commo
 
 sumOddValues([1, 2, 3, 4, 5, -13]) // => still 9
 
-Well, `-13` is an odd number. Is this the behavior that you want this function to have? Should it throw an error? Should it include the negative numbers in the sum? Or should it simply just ignore negative numbers like it is doing now? Maybe you will realize that the function should have been named `sumPositiveOddNumbers`.
+Well, `-13` is an odd number. Is this the behavior that you want this function to have? Should it throw an error? Should it include the negative numbers in the sum? Or should it simply just ignore negative numbers like it is doing now? Maybe you will realize that the function should have been named `sumPositiveOddNumbers`.
 
 Making a decision on this case is easy. The more important point is, if you do not write a test case to document your decision, future maintainers of your function will have no clue if your ignoring of negative numbers was intentional or buggy.
 
@@ -354,15 +350,15 @@ Making a decision on this case is easy. The more important point is, if you do n
 >
 > --- Someone who forgot a test case
 
---- Problem #3: Not all valid cases are tested. Forget edge-cases, this function has a legitimate and very simple case that it does not handle correctly:
-
+--- Problem #3: Not all valid cases are tested. Forget edge-cases, this function has a legitimate and very simple case that it does not handle correctly:
+```javascript
 sumOddValues([2, 1, 3, 4, 5]) // => 11
+```
+The `2` above was included in sum when it should not have been.
 
-The `2` above was included in sum when it should not have been.
+The solution is simple, `reduce` accepts a second argument to be used as the initial value for the `accumulator`. If that argument is not provided (like in the code above), `reduce` will just use the *first* value in the collection as the initial value for the `accumulator`. This is why the first even value in the test case above was included in the sum.
 
-The solution is simple, `reduce` accepts a second argument to be used as the initial value for the `accumulator`. If that argument is not provided (like in the code above), `reduce` will just use the *first* value in the collection as the initial value for the `accumulator`. This is why the first even value in the test case above was included in the sum.
-
-While you might have spotted this problem right away or when the code was written, this test case that revealed it should have been included in the tests, in the first place, along with many other test cases, like all-even numbers, a list that has `0` in it, and an empty list.
+While you might have spotted this problem right away or when the code was written, this test case that revealed it should have been included in the tests, in the first place, along with many other test cases, like all-even numbers, a list that has `0` in it, and an empty list.
 
 If you see minimal tests that do not handle many cases or ignore edge-cases, that is another sign of newbie code.
 
@@ -374,7 +370,7 @@ What is worse is that if the bad code uses bad practices, the beginner might be 
 
 Some code looks bad but it might have a special condition around it that forced the developer to write it that way. This is a good place for a detailed comment that teaches beginners about that condition and why the code is written that way.
 
-As a beginner, you should just assume that any undocumented code that you do not understand is a candidate for being bad. Question it. Ask about it. `git blame` it!
+As a beginner, you should just assume that any undocumented code that you do not understand is a candidate for being bad. Question it. Ask about it. `git blame` it!
 
 If the author of that code is long gone or cannot remember it, research that code and try to understand everything about it. Only when you completely understand the code you get to form an opinion whether it is bad or good. Do not assume anything before that.
 
@@ -382,7 +378,7 @@ If the author of that code is long gone or cannot remember it, research that cod
 
 I think the term "best practices" is actually harmful. It implies that no further research is needed. Here is the BEST practice ever. Do not question it!
 
-There are no best practices. There are probably *good* practices *today* and *for this programming language*.
+There are no best practices. There are probably *good* practices *today* and *for this programming language*.
 
 Some of what we previously identified as best practices in programming are labeled today as bad practices.
 
@@ -412,7 +408,7 @@ Do not waste your time optimizing unmeasured performance problems.
 
 What is the easiest way to add a feature to an application? Look at it from the point of view of yourself, or how it fits in the current User Interface. Right? If the feature is to capture some kind of input from the user, then append it to that form that you already have. If that feature is to add a link to a page, then add it to that nested menu of links that you already have.
 
-Do not be that developer. Be one of the professional ones who put themselves in their end-users' shoes. They imagine what the users of this particular feature need and how they might behave. They think about the ways to make the feature easy for the users to find and use, not about the easy way to make the feature exist in the application somehow without any thoughts about that feature's discoverability and usability.
+Do not be that developer. Be one of the professional ones who put themselves in their end-users' shoes. They imagine what the users of this particular feature need and how they might behave. They think about the ways to make the feature easy for the users to find and use, not about the easy way to make the feature exist in the application somehow without any thoughts about that feature's discoverability and usability.
 
 ## Not Picking the Right Tool for the Job
 
@@ -442,11 +438,11 @@ How do you protect yourself from problems like these? You can simply use multipl
 
 Familiarize yourself with database constraints and use all of them when you add columns and tables to your database:
 
--   A NOT NULL constraint on a column means that null values will be rejected for that column. If your application assumes the existence of a value for that field, its source should be defined as not null in your database.
--   A UNIQUE constraint on a column means that the column cannot have duplicate values across the whole table. For example, this is great for a username or email field on a Users table.
--   A CHECK constraint is a custom expression that has to evaluate to true for the data to be accepted. For example, if you have a normal percentage column whose values have to be between 0 and 100, you can use a check constraint to enforce that.
--   A PRIMARY KEY constraint means that the column's values are both not-null and unique as well. You are probably using this one. Each table in the database should have a primary key to identify its records.
--   A FOREIGN KEY constraint means that the column's values have to match values in another table column, which is usually a primary key.
+-   A NOT NULL constraint on a column means that null values will be rejected for that column. If your application assumes the existence of a value for that field, its source should be defined as not null in your database.
+-   A UNIQUE constraint on a column means that the column cannot have duplicate values across the whole table. For example, this is great for a username or email field on a Users table.
+-   A CHECK constraint is a custom expression that has to evaluate to true for the data to be accepted. For example, if you have a normal percentage column whose values have to be between 0 and 100, you can use a check constraint to enforce that.
+-   A PRIMARY KEY constraint means that the column's values are both not-null and unique as well. You are probably using this one. Each table in the database should have a primary key to identify its records.
+-   A FOREIGN KEY constraint means that the column's values have to match values in another table column, which is usually a primary key.
 
 Another newbie problem that is related to data integrity is the lack of thinking in terms of transactions. If multiple operations need to change the same data source and they depend on each other, they HAVE to be wrapped in a transaction that can be rolled back when one of these operations fail.
 
@@ -458,7 +454,7 @@ For example, if you need a wheel that spins at different speeds based on the tim
 
 It is sometimes challenging to pick the brand of the needed wheel among the many available options. Do some research and try before you buy! The cool thing about software "wheels" is that most of them are free and open for you to see their internal design. You can easily judge coding wheels by their internal design quality. Use open-source wheels if you can. Open-source packages can be debugged and fixed easily. They can also be replaced easily. In addition, it is easier to support them in-house.
 
-However, if you need a wheel, do not buy a whole new car and put the car that you are maintaining on top of that new car. Do not include a whole library just to use a function or two out of it. The best example about this is the lodash library in JavaScript. If you just need to shuffle an array, just import the `shuffle` method. Do not import the whole freaking lodash library.
+However, if you need a wheel, do not buy a whole new car and put the car that you are maintaining on top of that new car. Do not include a whole library just to use a function or two out of it. The best example about this is the lodash library in JavaScript. If you just need to shuffle an array, just import the `shuffle` method. Do not import the whole freaking lodash library.
 
 ## Having the Wrong Attitude Towards Code Reviews
 
@@ -472,7 +468,7 @@ Sometimes, the reviewer will be wrong and it will be your turn to teach them som
 
 ## Not Using Source Control
 
-Newbies sometimes underestimate the power of a good source/revision control system, and by good I mean Git.
+Newbies sometimes underestimate the power of a good source/revision control system, and by good I mean Git.
 
 Source control is not about just pushing your changes for others to have and build on. It is a lot bigger than that. Source control is about clear history. Code will be questioned and the history of the progress of that code will help answer some of the tough questions. This is why we care about commit messages. They are yet another channel to communicate your implementations and using them with small commits help future maintainers of your code figure out how the code reached the state that it is in right now.
 
@@ -480,7 +476,7 @@ Commit often and commit early and for the love of consistency use present tense 
 
 Do not include anything unnecessary in your commit messages. For example, do not list the files that were added, modified, or deleted in your commit summaries. That list exists in the commit object itself and can be easily displayed with some Git command arguments. It would simply be noise in the summary message. Some teams like to have different summaries per file changed and I see that as another sign of a commit that is too big.
 
-Source control is also about discoverability. If you encounter a function and you start questioning its need or design, you can find the commit that introduced it and see the context of that function. Commits can even help you identify what code introduced a bug into the program. Git even offers a binary search within commits (the `bisect` command) to locate the single guilty commit that introduced a bug.
+Source control is also about discoverability. If you encounter a function and you start questioning its need or design, you can find the commit that introduced it and see the context of that function. Commits can even help you identify what code introduced a bug into the program. Git even offers a binary search within commits (the `bisect` command) to locate the single guilty commit that introduced a bug.
 
 Source control can also be leveraged in wonderful ways even before the changes become official commits. The use of features like staging changes, patching selectively, resetting, stashing, amending, applying, diffing, reversing and many others add some rich tools to your coding flow. Understand them, learn them, use them, and appreciate them.
 

@@ -8,11 +8,11 @@ We will start with a look at the One-To-One (1:1) relationship then moving on to
 
 ## One-To-One (1:1)
 
-The *1:1* relationship describes a relationship between two entities. In this case the *Author* has a single *Address* relationship where an *Author* lives at a single *Address* and an *Address* only contains a single *Author*.
+The *1:1* relationship describes a relationship between two entities. In this case the *Author* has a single *Address* relationship where an *Author* lives at a single *Address* and an *Address* only contains a single *Author*.
 
 ![A One to One Relational Example](http://learnmongodbthehardway.com/images/originals/one-to-one.png)
 
-The *1:1* relationship can be modeled in two ways using MongoDB. The first is to embed the relationship as a document, the second is as a link to a document in a separate collection. Let's look at both ways of modeling the one to one relationship using the following two documents:
+The *1:1* relationship can be modeled in two ways using MongoDB. The first is to embed the relationship as a document, the second is as a link to a document in a separate collection. Let's look at both ways of modeling the one to one relationship using the following two documents:
 
 ### Model
 
@@ -37,7 +37,7 @@ Figure: An example Address document
 
 ### Embedding
 
-The first approach is simply to embed the *Address* document as an embedded document in the *User* document.
+The first approach is simply to embed the *Address* document as an embedded document in the *User* document.
 
 ```javascript
 {
@@ -53,11 +53,11 @@ The first approach is simply to embed the *Address* document as an embedded do
 
 Figure: An example User document with Embedded Address
 
-The strength of embedding the *Address* document directly in the *User* document is that we can retrieve the user and its addresses in a single read operation versus having to first read the user document and then the address documents for that specific user. Since addresses have a strong affinity to the user document the embedding makes sense here.
+The strength of embedding the *Address* document directly in the *User* document is that we can retrieve the user and its addresses in a single read operation versus having to first read the user document and then the address documents for that specific user. Since addresses have a strong affinity to the user document the embedding makes sense here.
 
 ### Linking
 
-The second approach is to link the address and user document using a `foreign key`.
+The second approach is to link the address and user document using a `foreign key`.
 
 ```javascript
 {
@@ -91,11 +91,11 @@ In the one to one relationship Embedding is the preferred way to model the relat
 
 ## One-To-Many (1:N)
 
-The *1:N* relationship describes a relationship where one side can have more than one relationship while the reverse relationship can only be single sided. An example is a *Blog* where a blog might have many *Comments* but a *Comment* is only related to a single *Blog*.
+The *1:N* relationship describes a relationship where one side can have more than one relationship while the reverse relationship can only be single sided. An example is a *Blog* where a blog might have many *Comments* but a *Comment* is only related to a single *Blog*.
 
 ![A One to Many Relational Example](http://learnmongodbthehardway.com/images/originals/one-to-many.png)
 
-The *1:N* relationship can be modeled in several different ways using MongoDB. In this chapter we will explore three different ways of modeling the *1:N* relationship. The first is embedding, the second is linking and the third is a bucketing strategy that is useful for cases like time series. Let's use the model of a `Blog Post` and its `Comments`.
+The *1:N* relationship can be modeled in several different ways using MongoDB. In this chapter we will explore three different ways of modeling the *1:N* relationship. The first is embedding, the second is linking and the third is a bucketing strategy that is useful for cases like time series. Let's use the model of a `Blog Post` and its `Comments`.
 
 ### Model
 
@@ -132,7 +132,7 @@ For each Blog Post we can have one or more Comments.
 
 ### Embedding
 
-The first approach is to embed the Comments in the `Blog Post`.
+The first approach is to embed the Comments in the `Blog Post`.
 
 ```javascript
 {
@@ -154,22 +154,22 @@ The first approach is to embed the Comments in the `Blog Post`.
 
 Figure: A Blog Post with Embedded documents
 
-The embedding of the `comments` in the *Blog* post means we can easily retrieve all the comments belong to a particular *Blog* post. Adding new comments is as simple as appending the new comment document to the end of the `comments` array.
+The embedding of the `comments` in the *Blog* post means we can easily retrieve all the comments belong to a particular *Blog* post. Adding new comments is as simple as appending the new comment document to the end of the `comments` array.
 
 However, there are three potential problems associated with this approach that one should be aware off.
 
--   The first is that the `comments` array might grow larger than the maximum document size of `16 MB`.
+-   The first is that the `comments` array might grow larger than the maximum document size of `16 MB`.
 -   The second aspects relates to write performance. As comments get added to Blog Post over time, it becomes hard for MongoDB to predict the correct document padding to apply when a new document is created. MongoDB would need to allocate new space for the growing document. In addition, it would have to copy the document to the new memory location and update all indexes. This could cause a lot more IO load and could impact overall write performance.
 
 ##### IMPORTANT
 
-It's important to note that this only matters for *high write* traffic and might not be a problem for smaller applications. What might not be acceptable for a *high write* volume application might be tolerable for an application with *low write* load.
+It's important to note that this only matters for *high write* traffic and might not be a problem for smaller applications. What might not be acceptable for a *high write* volume application might be tolerable for an application with *low write* load.
 
--   The third problem is exposed when one tries to perform pagination of the comments. There is no way to limit the comments returned from the `Blog Post` using normal finds so we will have to retrieve the whole blog document and filter the comments in our application.
+-   The third problem is exposed when one tries to perform pagination of the comments. There is no way to limit the comments returned from the `Blog Post` using normal finds so we will have to retrieve the whole blog document and filter the comments in our application.
 
 ### Linking
 
-The second approach is to link comments to the `Blog Post` using a more traditional `foreign` key.
+The second approach is to link comments to the `Blog Post` using a more traditional `foreign` key.
 
 ```javascript
 {
@@ -201,7 +201,7 @@ Figure: An example Blog Post document
 
 Figure: Some example Comment documents with Foreign Keys
 
-An advantage this model has is that additional comments will not grow the original `Blog Post` document, making it less likely that the applications will run in the maximum document size of `16 MB`. It's also much easier to return paginated comments as the application can slice and dice the comments more easily. On the downside if we have 1000 comments on a blog post, we would need to retrieve all 1000 documents causing a lot of reads from the database.
+An advantage this model has is that additional comments will not grow the original `Blog Post` document, making it less likely that the applications will run in the maximum document size of `16 MB`. It's also much easier to return paginated comments as the application can slice and dice the comments more easily. On the downside if we have 1000 comments on a blog post, we would need to retrieve all 1000 documents causing a lot of reads from the database.
 
 ### Bucketing
 
@@ -255,16 +255,16 @@ Typical cases where bucketing is appropriate are ones such as bucketing data by 
 
 ## Many-To-Many (N:M)
 
-An *N:M* relationship is an example of a relationship between two entities where they both might have many relationships between each other. An example might be a *Book* that was written by many *Authors*. At the same time an *Author* might have written many *Books*.
+An *N:M* relationship is an example of a relationship between two entities where they both might have many relationships between each other. An example might be a *Book* that was written by many *Authors*. At the same time an *Author* might have written many *Books*.
 
 ![A Many to Many Relational Example](http://learnmongodbthehardway.com/images/originals/many-to-many.png)
 
-*N:M* relationships are modeled in the relational database by using a join table. A good example is the relationship between books and authors.
+*N:M* relationships are modeled in the relational database by using a join table. A good example is the relationship between books and authors.
 
 -   An author might have authored multiple books (1:N).
 -   A book might have multiple authors (1:M).
 
-This leads to an *N:M* relationship between authors of books. Let's look at how this can be modeled.
+This leads to an *N:M* relationship between authors of books. Let's look at how this can be modeled.
 
 ### Two Way Embedding
 
@@ -272,7 +272,7 @@ Embedding the books in an Author document
 
 ### Model
 
-In `Two Way Embedding` we will include the *Book* `foreign keys` under the `books` field.
+In `Two Way Embedding` we will include the *Book* `foreign keys` under the `books` field.
 
 ```javascript
 {
@@ -288,7 +288,7 @@ In `Two Way Embedding` we will include the *Book* `foreign keys` under the�
 
 ```
 
-Mirroring the *Author* document, for each *Book* we include the *Author* `foreign keys` under the *Author* field.
+Mirroring the *Author* document, for each *Book* we include the *Author* `foreign keys` under the *Author* field.
 
 ```javascript
 {
@@ -337,13 +337,13 @@ As can be seen, we have to perform two queries in both directions. The first is 
 
 `Uneven n:m relationships`
 
-Let's take the category `drama` that might have thousands of books in it and with many new books consistently being added and removed. This makes it impracticable to embed all the books in a category document. Each book, however, can easily have categories embedded within it, as the rate of change of categories for a specific book might be very low.
+Let's take the category `drama` that might have thousands of books in it and with many new books consistently being added and removed. This makes it impracticable to embed all the books in a category document. Each book, however, can easily have categories embedded within it, as the rate of change of categories for a specific book might be very low.
 
-In this case we should consider `One way embedding` as a strategy.
+In this case we should consider `One way embedding` as a strategy.
 
 ### One Way Embedding
 
-The One Way Embedding strategy chooses to optimize the read performance of a *N:M* relationship by embedding the references in one side of the relationship. An example might be where several books belong to a few categories but a couple categories have many books. Let's look at an example, pulling the categories out into a separate document.
+The One Way Embedding strategy chooses to optimize the read performance of a *N:M* relationship by embedding the references in one side of the relationship. An example might be where several books belong to a few categories but a couple categories have many books. Let's look at an example, pulling the categories out into a separate document.
 
 ### Model
 
@@ -397,7 +397,7 @@ var books = booksCollection.find({categories: category.id}).toArray();
 >
 >`Establish Relationship Balance`
 >
->Establish the maximum size of `N` and the size of `M`. For example if `N` is a maximum of 3 categories for a book and `M` is a maximum of 500000 books in a category you should pick One Way Embedding. If `N` is a maximum of 3 and `M` is a maximum of 5 then Two Way Embedding might work well.
+>Establish the maximum size of `N` and the size of `M`. For example if `N` is a maximum of 3 categories for a book and `M` is a maximum of 500000 books in a category you should pick One Way Embedding. If `N` is a maximum of 3 and `M` is a maximum of 5 then Two Way Embedding might work well.
 
 <br>
 <br>
