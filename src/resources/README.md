@@ -8,6 +8,7 @@
 - Bootstrap Documentation: [(https://getbootstrap.com/](https://getbootstrap.com/)
 - HTML 5 Semantic Tags: [https://www.w3schools.com/tags/default.asp](https://www.w3schools.com/tags/default.asp)
 - CSS Grid: [https://gridbyexample.com/examples/](https://gridbyexample.com/examples/)
+- Essential Meta Tags: [https://css-tricks.com/essential-meta-tags-social-media/](https://css-tricks.com/essential-meta-tags-social-media/)
 
 ## Javascript 
 - Eloquent Javascript, The Art of Programming: [https://eloquentjavascript.net/](https://eloquentjavascript.net/)
