@@ -1,7 +1,8 @@
 # Command Line
 
+**Command-Line Interface** (CLI) processes commands to a computer program in the form of lines of text. The program which handles the interface is called a command-line interpreter or command-line processor. Operating systems implement a command-line interface in a shell for interactive access to operating system functions or services.
 
-## Basic Command Line Commands
+## Basic Command Line inputs
 
 -   x /? = provides syntax info and complete list of all parameters for x (a command, like "cd")
 -   cd = change directory
