@@ -49,3 +49,10 @@ The solution that we arrived at for the scenario I described above was to run 2 
 ## It's All About...
 
 Implementing Scrum or other agile development methodologies is about making adjustments and compromises where it makes sense. Sometimes that is best done by creating a hybrid approach that consists of aspects of multiple methodologies, and sometimes it is doing things "by the book." In the two examples shared in this article, it was about understanding our communication patterns and figuring out how best to optimize them. It was also about understanding and accepting trade-offs and team buy-in to the larger goal. Don't be afraid to try multiple approaches and see what sticks. Ultimately agile is about doing things rapidly, so keep trying new approaches with your small team until you figure out what works.
+
+
+<br>
+<br>
+<hr>
+<small>Brown, M. (2020, April 02). How to Make Agile Scrum Work for Small Teams. Retrieved November 16, 2020, from https://www.midtowncg.com/post/agile-scrum-for-small-teams</small>
+<br>
