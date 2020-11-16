@@ -1,5 +1,7 @@
 name: Build and Deploy
-on: [push]
+on:
+  push:
+    branches: main
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -16,7 +18,9 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          REPOSITORY_NAME: codeworksacademy/fs-student-guide 
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: src/.vuepress/dist # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
+          SINGLE_COMMIT: true # Removes git history on deployed branch

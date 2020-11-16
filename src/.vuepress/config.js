@@ -1,12 +1,14 @@
 const fs = require("fs");
 const path = require("path");
+const { config } = require("vuepress-theme-hope");
 
-module.exports = {
-  base: "/",
+
+module.exports = config({
+  base: "/fs-student-guide/",
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Codeworks Workbook',
+  title: 'Codeworks FS Student Guide',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -18,9 +20,16 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'theme-color', content: '#3093d9' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['meta', { name: 'application-name', content: 'CodeWorks FS Student Guide' }],
+    ['meta', { name: 'ROBOTS', content: 'FOLLOW' }],
+    ['meta', { name: 'og:image', content: 'https://bcw.blob.core.windows.net/public/img/8600856373152463' }],
+    ['meta', { name: 'og:type', content: 'article' }],
+    ['meta', { name: 'og:url', content: 'https://codeworksacademy.com/fs-student-guide' }],
+    ['meta', { name: 'og:title', content: 'Learn to Code. Develop Your Future' }],
+    ['meta', { name: 'og:locale', content: 'en_US' }]
   ],
 
   /**
@@ -29,9 +38,21 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    editLinks: false,
-    editLinkText: '',
-    lastUpdated: false,
+    logo: 'https://bcw.blob.core.windows.net/public/img/2900578872732848',
+    editLinks: true,
+    repo: 'BoiseCodeWorks/codeworks-fs-student-guide',
+    repoLabel: 'Contribute!',
+    docsDir: 'src',
+    docsBranch: 'main',
+    darkmode: "switch",
+    themeColor: {
+      blue: "#2196f3",
+      red: "#f26d6d",
+      green: "#00ffdc",
+      orange: "#fb9b5f",
+      purple: "#8e44ad",
+      banana: "#ffe135"
+    },
     nav: [
       {
         text: 'Resources',
@@ -48,19 +69,32 @@ module.exports = {
     ],
     sidebar: {
       '/vocab/': [...getSideBar('vocab', 'Vocabulary')],
-      '/resources/': [...getSideBar('resources', 'Student Resources'), ...getSideBar('resources/wk1', 'Week 1'), ...getSideBar('resources/wk2', 'Week 2')]
-    }
+      '/resources/': [
+        ...getSideBar('resources', 'Student Resources'),
+        ...getSideBar('resources/wk1', 'Building Blocks Of Web Development'),
+        ...getSideBar('resources/wk2', 'Intro To Js'),
+        ...getSideBar('resources/wk3', 'Advancing with JS'),
+        ...getSideBar('resources/wk4', 'Asynchronous Code'),
+        ...getSideBar('resources/wk5', 'Servers with Node/Express'),
+        ...getSideBar('resources/wk6', 'Frontend Frameworks with Vue3'),
+        ...getSideBar('resources/wk8-9', 'Working In a Professional Environment'),
+        ...getSideBar('resources/wk10', 'Foundations of C#'),
+        ...getSideBar('resources/wk11', 'Dotnet WebApi\'s')
+      ]
+    },
   },
-
+  markdown:{
+    lineNumbers:true
+  },
 
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
     '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
+    ["@mr-hope/sitemap", { hostname: 'https://codeworksacademy.com/fs-student-guide' }],
   ]
-}
+})
 
 function getSideBar(folder, title) {
   const extension = [".md"];
