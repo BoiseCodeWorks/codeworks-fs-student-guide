@@ -25,6 +25,13 @@
 The \<script> element either contains scripting statements, or it points to an external script file through the src attribute.
 Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content.
 
+ <style>
+ img{
+   border-radius: 5px
+   }
+   </style>
+ <img src="https://hostingfacts.com/wp-content/uploads/2016/06/HTML_CHEAT_SHEET_PNG.png" width="850px">
+
 
 ## CSS
 <hr>
@@ -45,5 +52,12 @@ Common uses for JavaScript are image manipulation, form validation, and dynamic 
    }
    </style>
  <img src="https://www.w3schools.com/css/selector.gif" width="600px">
+
+ **CSS Options**  
+ img{
+   border-radius: 5px
+   }
+   </style>
+ <img src="https://bcw.blob.core.windows.net/public/img/courses/css-cheatsheet-1.png" width="850px">
 
  
