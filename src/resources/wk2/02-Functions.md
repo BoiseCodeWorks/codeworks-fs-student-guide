@@ -18,10 +18,7 @@ A Function Declaration defines a named function. To create a function declaratio
 
 ``` javascript
 function name(parameters) {
-
-    -statements
-
-        *
+    // statements
 }
 ```
 
@@ -29,9 +26,7 @@ A Function Expressions defines a named or anonymous function. An anonymous funct
 
 ``` javascript
 let name = function(parameters) {
-
-    -statements * \
-
+    // statements
 }
 ```
 
@@ -39,9 +34,7 @@ An Arrow Function Expression is a shorter syntax for writing function expression
 
 ``` javascript
 let name = (parameters) => {
-
-    -statements *
-
+    // statements
 }
 ```
 
