@@ -1,4 +1,4 @@
-# SQL injection? 
+# SQL Injection
 ### *How these attacks work and how to prevent them*
 <br>
 
