@@ -365,8 +365,6 @@ Figure: A Category document
 }
 ```
 
-Figure: A Book with Foreign Keys for Categories
-
 The reason we choose to embed all the references to categories in the books is due to there being lot more books in the drama category than categories in a book. If one embeds the books in the category document it's easy to foresee that one could break the 16MB max document size for certain broad categories.
 
 ### Queries
@@ -392,6 +390,53 @@ var category = categoriesCollection.findOne({name: "drama"});
 var books = booksCollection.find({categories: category.id}).toArray();
 ```
 
+### Third Collection Embedding
+
+The last and most effective way of managing these relationships is using a third collection to manage the relationship. This process is common when you are anticipating several relationships, and are not able to effectively manage the adding and removing of relationships in either of the above designs. In the Third Collection design we create a third collection that specifically holds the relationship with two foreign keys, then we can use something like 'populate' depending on how we are retrieving the data.
+
+### Model
+
+```javascript
+// user
+{
+  _id: 1,
+  name: "Joe Example"
+}
+
+// book
+{
+  _id: 23,
+  title: "A tale of two people",
+  categories: [1],
+  authors: [1, 2]
+}
+
+// favorite
+{
+  _id: 1,
+  user: 1,
+  book: 23
+}
+```
+
+Here we can manage the favorites of a user on a third collection, this would allow us to query the relationship quickly from either side, and in addition if either piece of data is deleted (book or author) it is much easier to remove the existing relationships.
+
+### Queries
+
+Example 3: Fetch favorite books for a user
+```javascript
+var db = db.getSisterDB("library");
+var favoritesCol = db.favorites;
+var favorites = favoritesCol.find({user: 1}).populate('book')
+```
+
+
+Example 4: Fetch all users who favorited a book
+```javascript
+var db = db.getSisterDB("library");
+var favoritesCol = db.favorites;
+var favorites = favoritesCol.find({book: 1}).populate('user')
+```
 
 > TIP
 >

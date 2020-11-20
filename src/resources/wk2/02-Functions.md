@@ -14,7 +14,7 @@
 
 There are a few different ways to define a function in JavaScript:
 
-A Function Declaration defines a named function. To create a function declaration you use the  `function`  keyword followed by the name of the function. When using function declarations, the function definition is hoisted, thus allowing the function to be used before it is defined.
+A *Function Declaration* defines a named function. To create a function declaration you use the  `function`  keyword followed by the name of the function. When using function declarations, the function definition is hoisted, thus allowing the function to be used before it is defined.
 
 ``` javascript
 function name(parameters) {
@@ -22,7 +22,7 @@ function name(parameters) {
 }
 ```
 
-A Function Expressions defines a named or anonymous function. An anonymous function is a function that has no name. Function Expressions are not hoisted, and therefore cannot be used before they are defined. In the example below, we are setting the anonymous function object equal to a variable.
+A *Function Expressions* defines a named or anonymous function. An anonymous function is a function that has no name. Function Expressions are not hoisted, and therefore cannot be used before they are defined. In the example below, we are setting the anonymous function object equal to a variable.
 
 ``` javascript
 let name = function(parameters) {
@@ -30,7 +30,7 @@ let name = function(parameters) {
 }
 ```
 
-An Arrow Function Expression is a shorter syntax for writing function expressions. Arrow functions do not create their own  `this`  value.
+An *Arrow Function Expression* is a shorter syntax for writing function expressions. Arrow functions do not create their own  `this`  value.
 
 ``` javascript
 let name = (parameters) => {
@@ -40,23 +40,23 @@ let name = (parameters) => {
 
 ## Parameters vs. Arguments.
 
-If you're new to JavaScript, you may have heard the terms *parameters* and *arguments *used interchangeably. While very similar, there is an important distinction to make between these two keywords.
+If you're new to JavaScript, you may have heard the terms *parameters* and *arguments* used interchangeably. While very similar, there is an important distinction to make between these two keywords.  
 
-Parameters are used when defining a function, they are the *names* created in the function definition. In fact, during a function definition, we can pass in up to 255 parameters! Parameters are separated by commas in the  `()` . Here's an example with two parameters ---  `param1`  &  `param2` :
+Parameters are used when defining a function, they are the *names* created in the function definition. In fact, during a function definition, we can pass in up to 255 parameters! Parameters are separated by commas in the  `()`.
+
+Arguments, on the other hand, are the *values* the function receives from each parameter when the function is executed (invoked). 
 
 ``` javascript
-const param1 = true;
-const param2 = false;
+const arg1 = true;
+const arg2 = false;
 
 function twoParams(param1, param2) {
-
-    -console.log(param1, param2);
-
-    *
+ // function statements
 }
+twoParams(arg1, arg2);
 ```
 
-Arguments, on the other hand, are the *values* the function receives from each parameter when the function is executed (invoked). In the above example, our two arguments are  `true`  &  `false` .
+In the above example, our two arguments are arg1 `true` & arg2 `false`, where as our parameters are param1 and param2. It is important to understand this distinction so we know that in order for a function to receive a value for its parameter we must pass it as an argument
 
 ## Invoking a Function.
 
@@ -66,14 +66,11 @@ Lets explore an example.
 
 > If you're using Google Chrome, open up your dev console so you can code along with these examples: [WINDOWS]: Ctrl + Shift + J [MAC]: Cmd + Opt + J
 
-First, we'll define a function named  `logIt` . This function will take one parameter,   `name` . When executed, the function will log that  `name`  back to the console:
+First, we'll define a function named  `logIt` . This function will take one parameter, `name` . When executed, the function will log that  `name`  back to the console:
 
 ``` javascript
 function logIt(name) {
-
-    -console.log(name);
-
-    *
+    // statement
 }
 ```
 
@@ -87,12 +84,9 @@ If your function has no parameters, you can invoke it with an empty set of paren
 
 ``` javascript
 function logIt2() {
-
-    -console.log('The second one');
-
-    *
+    // statement
 }
-logIt2(); // The second one
+logIt2();
 ```
 
 ## Function Return.
@@ -161,7 +155,7 @@ The first return statement immediately stops execution of our function and cause
 
 Functions are function objects. In JavaScript, anything that is not a primitive type (  `undefined` ,   `null` , `boolean` ,   `number` , or  `string` ) is an object. Objects in JavaScript are *extremely *versatile. Because of this, we can even pass a function as a parameter into another function.
 
-When a function accepts another function as a parameter, or returns a function, it is called a higher-order function. You've probably already used a bunch of higher order functions and don't even know it:  `Array.prototype.map` and  `Array.prototype.filter`  are higher order functions (Just to name a couple). *You can check out some of my previous articles to learn more about objects and higher order functions in JavaScript...*
+When a function accepts another function as a parameter, or returns a function, it is called a higher-order function. You've probably already used a bunch of higher order functions and don't even know it:  `Array.prototype.map` and  `Array.prototype.filter`  are higher order functions (Just to name a couple).
 
 ## Key Takeaways.
 
