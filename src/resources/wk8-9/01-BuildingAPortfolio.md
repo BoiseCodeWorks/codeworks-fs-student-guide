@@ -1,6 +1,6 @@
 # An Honest Guide to Building a Powerful Developer Portfolio
 
-## ### How to effectively show off your skills
+### How to effectively show off your skills
 
 ![A guide for building a dev portfolio](https://miro.medium.com/max/1884/1*_D5k02kTySygDTttM3UeTA.png)
 
