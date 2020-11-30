@@ -3,7 +3,7 @@
 
 ## HTML
 
-**HTML**: (Hyper Text Markdown Language) a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages. 
+**HTML**: (Hyper Text Markup Language) a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages. 
 
 **Elements**: HTML elements are the building blocks of a HTML page. An HTML element is defined by a start tag, some content, and an end tag (\<tagname>content goes here \<tagname>)
 **\<html>**
