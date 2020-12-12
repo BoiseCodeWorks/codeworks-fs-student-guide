@@ -2,9 +2,8 @@
 
 
 ## HTML
-<hr>
 
-**HTML**: (Hyper Text Markdown Language) a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages. 
+**HTML**: (Hyper Text Markup Language) a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages. 
 
 **Elements**: HTML elements are the building blocks of a HTML page. An HTML element is defined by a start tag, some content, and an end tag (\<tagname>content goes here \<tagname>)
 **\<html>**
@@ -34,7 +33,6 @@ Common uses for JavaScript are image manipulation, form validation, and dynamic 
 
 
 ## CSS
-<hr>
 
 **CSS**: CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS files.
 
