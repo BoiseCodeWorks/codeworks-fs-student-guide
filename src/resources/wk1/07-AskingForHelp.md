@@ -1,4 +1,4 @@
-# The Developers guide to asking for help 
+# Asking for Help
 
 When you're just getting started as a programmer and you need help frequently, asking for help can feel daunting, like you'll lose either way. Ask too soon and you'll end up feeling stupid for not having figured out the answer on your own. And if you don't ask for help, your senior can get annoyed that you're taking too long to solve the problem.
 
