@@ -6,7 +6,7 @@ Remember in lesson one we discussed how SQL databases are strongly dependent on 
 
 ## Primary Keys
 
-Primary keys are pieces of unique information that are used to identify records on a table. Primary key values must be unique (not repeated, all values must be different from each other), and they may not contin Null values. 
+Primary keys are pieces of unique information that are used to identify records on a table. Primary key values must be unique (not repeated, all values must be different from each other), and they may not contain Null values. 
 
 Imagine you're creating a database for a car rental business and they have a lot of the same cars in their inventory (e.g., multiple Toyota Camry's). A good way to tell them all apart from each other might be a license plate number - license plate numbers are unique to vehicles in that they do not repeat themselves and all cars should have a license plate (so you should not have null values). This would make a great Primary key.
 
