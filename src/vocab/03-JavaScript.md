@@ -124,7 +124,7 @@ Logical operators are used to determine the logic between variables or values.
 
 **Functions** are one of the fundamental building blocks in JavaScript. A function is a reusable set of statements to perform a task or calculate a value. Functions can be passed one or more values and can return a value at the end of their execution. 
 
-**Function Parameters**: An input to the function when the funciton is declared or defined.  Parameters are used as variables inside the functions body.  When this a function is call these parameters will have the value of whatever is passed in as ***arguments***
+**Function Parameters**: An input to the function when the function is declared or defined.  Parameters are used as variables inside the functions body.  When the function is called, these parameters will have the value of whatever is passed in as ***arguments***
 
 **Function Return**: Functions return (pass back) values using the return keyword. return ends function execution and returns the specified value to the location where it was called.
 
@@ -142,7 +142,7 @@ Logical operators are used to determine the logic between variables or values.
 
 ## Loops
 
-**Loops** are blocks of code used to do the same thing, over and over again.  Often refferd to as **iteration**.  A loop will usually have one or more of the following elements:
+**Loops** are blocks of code used to do the same thing, over and over again.  Often referred to as **iteration**.  A loop will usually have one or more of the following elements:
 
 **Initializer**: this is the starting point of the loop, and generally will count as each new itteration of the loop runs.
 
