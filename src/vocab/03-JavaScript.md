@@ -136,7 +136,7 @@ Logical operators are used to determine the logic between variables or values.
 <li><b>if</b> is used to specity a block of code to executed, <i>if</i> a condition is 'truthy' </li>
 <li><b>else</b>is used to specify a block of code to executed, if the same condition of a proceeding <i>if</i> statement is 'falsy'</li>
 <li><b>else if</b> is used to specify a new condition to test if the first condition is false</li>
-<li><b>switch</b> this is used to specify many alternative conditions and cooresponding blocks of code to be executed</li>
+<li><b>switch</b> this is used to specify many alternative conditions and corresponding blocks of code to be executed</li>
 </ul>
 
 
