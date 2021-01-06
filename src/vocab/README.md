@@ -8,7 +8,7 @@
 **Elements**: HTML elements are the building blocks of a HTML page. An HTML element is defined by a start tag, some content, and an end tag (\<tagname>content goes here \<tagname>)
 **\<html>**
 
-**Attribute**: HTML attributes are a modifier of an HTML element type. An attribute either modifies the default functionality of an element type or provides functionality to certain element types unable to function correctly without them. In HTML syntax, an attribute is added to an HTML start tag.  Attribures are always defined in the start tag. 
+**Attribute**: HTML attributes are a modifier of an HTML element type. An attribute either modifies the default functionality of an element type or provides functionality to certain element types unable to function correctly without them. In HTML syntax, an attribute is added to an HTML start tag.  Attributes are always defined in the start tag. 
 
 ### Tags
 
