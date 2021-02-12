@@ -131,3 +131,26 @@ A value type variable cannot be null because it holds value, not a memory addres
 <hr>
 <small>TutorialsTeacher. (2020). Value Type and Reference Type. Retrieved November 12, 2020, from https://www.tutorialsteacher.com/csharp/csharp-value-type-and-reference-type</small>
 <br>
+
+## Pointer Types
+A pointer type declaration takes one of the following forms:
+
+C#
+
+```csharp
+type* identifier;
+void* identifier; //allowed but not recommended
+```
+The type specified before the * in a pointer type is called the referent type. Only an unmanaged type can be a referent type.
+
+Pointer types do not inherit from object and no conversions exist between pointer types and object. Also, boxing and unboxing do not support pointers. However, you can convert between different pointer types and between pointer types and integral types.
+
+When you declare multiple pointers in the same declaration, the asterisk (*) is written together with the underlying type only; it is not used as a prefix to each pointer name. For example:
+
+C#
+
+```csharp
+int* p1, p2, p3;   // Ok
+int *p1, *p2, *p3;   // Invalid in C#
+```
+A pointer cannot point to a reference or to a struct that contains references, because an object reference can be garbage collected even if a pointer is pointing to it. The garbage collector does not keep track of whether an object is being pointed to by any pointer types.
