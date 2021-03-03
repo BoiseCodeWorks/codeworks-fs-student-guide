@@ -3,7 +3,7 @@
 ## About Query Strings
 A query string allows you to pass information to and from a website by simply adding, or “appending,” that information to the end of a URL. This information is stored in the query string and is captured by the website when it reads the URL.
 
-Data can be passed into any request using a query string. Once passed, the data can be captured in node from the request object. This data can be used for anything you like, from a filter, to adding additinoal context to a request.
+Data can be passed into any request using a query string. Once passed, the data can be captured in node from the request object. This data can be used for anything you like, from a filter, to adding additional context to a request.
 
 ## How to Use Query Strings
 
