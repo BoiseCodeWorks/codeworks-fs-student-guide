@@ -40,7 +40,7 @@ Mongoose splits the definiton of virtual fields into `GET` and `SET` methods.
 
 ### Get Method
 
-The virtuals `get` method is a function returning a the virtual value. You can do complex processing or just concatenate single document field values.
+The virtuals `get` method is a function returning the virtual value. You can do complex processing or just concatenate single document field values.
 
 ```javascript
 userSchema.virtual('fullname').get(function() {
