@@ -40,7 +40,7 @@ Common uses for JavaScript are image manipulation, form validation, and dynamic 
 
  **Selector**: The selector points to the HTML element you want to style. (body, .card, #myElement)
 
- **Propery**: This part of the rule determines which attribute of the element will change. (width, height, opacity, font-color)
+ **Property**: This part of the rule determines which attribute of the element will change. (width, height, opacity, font-color)
 
  **Value**: this part of the rule sets the value of the property. (12px, 5em, blue)
  
