@@ -64,7 +64,7 @@ variable keywords are used to declare the value of a variable.
 <ul>
 <li><b>var</b> declares a varible with global scope</li>
 <li><b>let</b> declares a variable with a local scope</li>
-<li><b>const</b> declares a variable with a local scope, however the it's value cannot be changed after declaration.</li>
+<li><b>const</b> declares a variable with a local scope, however it's value cannot be changed after declaration.</li>
 </ul>
 
 ## Operators
