@@ -95,3 +95,13 @@ I compared software engineering to mechanical engineering to make a few points a
 <hr>
 <small>Dascalu, C. (2018, April 27). Unit testing - why? Retrieved November 16, 2020, from https://medium.com/@corneliu/unit-testing-why-3490d08e89f2</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What is Software Development Testing?
+
+2. What are the benefits of Testing in software development?
+
+3. What are some potential drawbacks of Testing in software development?

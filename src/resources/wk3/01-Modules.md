@@ -214,3 +214,12 @@ You should also know that ES6 modules are not supported in all browsers. For pro
 <hr>
 <small>Ayodeji, Bolaji. “Introduction to ES6 Modules.” Medium, Backticks &amp; Tildes, 17 May 2019, medium.com/backticks-tildes/introduction-to-es6-modules-49956f580da. </small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What problem does using exports solve?
+
+2. How does `export` differ from `export default`?
+
+3. What is a benefit of using the Module System?

@@ -199,3 +199,12 @@ Proxy Objects only just came into my radar after going through [this article abo
 <hr>
 <small>Seelan, Abinav. “An Intro to Javascript Proxy Objects.” Medium, Campvanilla, 23 Dec. 2017, blog.campvanilla.com/advanced-guide-javascript-proxy-objects-introduction-301c0fce9432. </small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What are the two common operations that we will set in the handler?
+
+2. What do you have to make sure you are doing with every Get to insure the value does not become `undefined`?
+
+3. What are some of the benefits of the proxy object that we are using in our structure for applications?

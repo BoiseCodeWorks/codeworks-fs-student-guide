@@ -56,3 +56,13 @@ Implementing Scrum or other agile development methodologies is about making adju
 <hr>
 <small>Brown, M. (2020, April 02). How to Make Agile Scrum Work for Small Teams. Retrieved November 16, 2020, from https://www.midtowncg.com/post/agile-scrum-for-small-teams</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. Why is communication on a small team important?
+
+2. What adjustments from traditional sized scrum teams need to be made to use the agile methodology effectively in a small team?
+
+3. What is the unattainable triangle? What are the tradeoffs of each side?

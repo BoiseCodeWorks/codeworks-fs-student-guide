@@ -276,3 +276,13 @@ Enums are lists of strongly typed constants with members that are symbolic names
 <hr>
 <small>Friedman, J. (2019, June 18). C# Enum: Learning the Essentials in Lesson 17. Retrieved November 12, 2020, from http://csharp-station.com/Tutorial/CSharp/Lesson17</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What is an Enum?
+
+2. What are some use cases for Enum's?
+
+3. How can you modify an Enum?

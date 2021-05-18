@@ -348,3 +348,18 @@ LIMIT 50 50; -- Retrieve rows 51 - 100
 ### Challenge yourself
 
 These are only a few ways that you can focus your searches to make them more efficient. I encourage you to think of other ways you might need to select information. What if you wanted to use multiple conditions? How would you do AND statements or OR statements with SQL?
+
+<br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. In a SQL table, what is the difference between information in a row and information in a column?
+
+2. Demonstrate the basic structure for creating a new table called `characters` with the values `name, age, description` as strings, and an `int` id.
+
+3. What is the difference between the following statements: 
+```sql
+DELETE FROM table_name;
+DROP TABLE table_name;
+```

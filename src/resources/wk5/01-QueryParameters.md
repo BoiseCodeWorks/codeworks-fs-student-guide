@@ -44,3 +44,16 @@ Express will set `req.query.color` to an array `['black', 'yellow']`.
 If you use square brackets in a query string parameter, Express will parse that parameter as an object. 
 
 For example, Express will parse `?shoe[color]=white` into the object `{ shoe: { color: 'white' } }`
+
+<br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1.  What is the purpose of a Query String?
+
+2. What is the format of a query parameter? How does it start? How do you distinguish between one parameter and the next?
+
+3. When do you think Query parameters would be helpful when writing your server?
+
+### Complete Week 5 Quiz

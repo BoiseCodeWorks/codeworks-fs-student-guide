@@ -232,3 +232,12 @@ I hope you see how much, with a little discipline and effort, you can do in plai
 <hr>
 <small>Reyes, Camilo. JavaScript Design Patterns: The Observer Pattern. 17 June 2018, www.sitepoint.com/javascript-design-patterns-observer-pattern/. </small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What problems does the Observer Pattern seek to solve?
+
+2. What are the three mechanisms of the observer pattern?
+
+3. Review the code generated from the bcw-template and reflect on the proxy objects from yesterday, and your understanding of the observer pattern today. With this knowledge, explain how the `magic` of the bcw-template uses these two concepts to manage and update the dom.

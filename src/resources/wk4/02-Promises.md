@@ -152,3 +152,12 @@ Thank you for reading!
 <hr>
 <small>Eygi, Cem. “JavaScript Promise Tutorial: Resolve, Reject, and Chaining in JS and ES6.” FreeCodeCamp.org, FreeCodeCamp.org, 12 June 2020, www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/. </small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What are the three states of a `Promise`?
+
+2. How do `promise`s seek to resolve the issues of "callback hell"?
+
+3. What is the difference between `.then()` and `.catch()`?

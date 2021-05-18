@@ -203,3 +203,13 @@ GitHub Actions has a very strong community of developers with several templates 
 <hr>
 <small>Mulonda, Y. (2020, July 06). What are GitHub Actions and How to Use Them. Retrieved November 10, 2020, from https://blog.bitsrc.io/what-are-github-actions-and-how-to-use-them-e89904201a41</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What is a Github action and how do they work?
+
+2. What benefits do Github actions provide?
+
+3. What types of trigger actions can a workflow use? What do they do?

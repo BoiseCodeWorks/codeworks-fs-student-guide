@@ -87,3 +87,13 @@ Empirical
 <hr>
 <small>Alliance, A. (2019, September 25). Pair Programming: Does It Really Work? Retrieved November 16, 2020, from https://www.agilealliance.org/glossary/pairing/</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What is Pair Programming? What are the roles and how do they work?
+
+2. What are some benefits of Pair Programming?
+
+3. What are some drawbacks to Pair Programming?

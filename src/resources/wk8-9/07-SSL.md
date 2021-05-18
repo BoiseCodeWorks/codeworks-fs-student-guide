@@ -135,3 +135,13 @@ The next time you visit a website, check its encryption status. I love knowing t
 <hr>
 <small>Vocell, J. (2020). A Beginner's Guide to SSL: What It is &amp; Why It Makes Your Website More Secure. Retrieved November 16, 2020, from https://blog.hubspot.com/marketing/what-is-ssl</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What is an SSL certificate?
+
+2. What are the different types of certificates? What are they used for?
+
+3. What are some benefits of using SSL certificates?

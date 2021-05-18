@@ -211,3 +211,12 @@ Save the big, red, and bold styling for when that negative action actually *is* 
 <hr>
 <small> Source:  Schoger, Adam Wathan &amp; Steve. 7 Practical Tips for Cheating at Design. 16 Jan. 2019, medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886. </small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 1. What is your favorite tip that you think is the most beneficial to improving your design? 
+
+ 2. Compile a couple resources that you think might be helpful when trying to review examples of good design ideas.
+
+ 3. How do you think good design influences people when visiting a website and what sorts of things could you convey through design alone?

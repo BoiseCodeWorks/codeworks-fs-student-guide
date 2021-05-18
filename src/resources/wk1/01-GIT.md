@@ -224,6 +224,18 @@ Now you know the basics of how to use Git!
 For more practice with github, check out [this tutorial from github](https://guides.github.com/activities/hello-world/)
 <br>
 <br>
+
 <hr>
 <small>Citation: Sridhar, Aditya. “An Introduction to Git: What It Is, and How to Use It.” FreeCodeCamp.org, FreeCodeCamp.org, 21 Oct. 2019, www.freecodecamp.org/news/what-is-git-and-how-to-use-it-c341b049ae61/ </small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions 
+ 1. In your own words, why do we use `Git`?
+
+ 2. What are the benefits of having multiple branches?
+
+ 3. What is the difference between `Git` and `GitHub`
+
+ ### Complete Week 1 Quiz

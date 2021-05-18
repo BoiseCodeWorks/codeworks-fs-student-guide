@@ -297,3 +297,12 @@ console.log(updated)
 <hr>
 <small>Liew, Z. (2019, December 18). Mongoose 101: Working with subdocuments. Retrieved November 10, 2020, from https://zellwk.com/blog/mongoose-subdocuments/</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. In simple terms what is a sub-document?
+
+2. When might you use a sub-document?
+
+3. How do you add to a collection of sub-documents? What about editing them? 

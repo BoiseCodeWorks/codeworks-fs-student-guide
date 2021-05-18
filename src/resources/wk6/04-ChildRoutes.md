@@ -201,3 +201,13 @@ Other things to keep in mind on the topic --- we could have routes defined with 
 <hr>
 <small>Mohan, P. (2020, May 02). Using Nested Routes in Vue.js. Retrieved November 13, 2020, from https://www.digitalocean.com/community/tutorials/vuejs-nested-routes</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What are lifecycle hooks?
+
+2. What are lifecycle hooks used for?
+
+3. What are mounting hooks? When might you use them?

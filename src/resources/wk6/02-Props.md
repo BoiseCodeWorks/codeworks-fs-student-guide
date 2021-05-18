@@ -371,3 +371,13 @@ In order to keep learning more about Vue, and to learn things as I figure them o
 <hr>
 <small>Thiessen, M. (2019, July). How to Use Props in Vue: The Ultimate Guide (with Examples). Retrieved November 12, 2020, from https://michaelnthiessen.com/vue-props-ultimate-guide/</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What are props?
+
+2. What are props used for?
+
+3. Where can props be used or accessed?

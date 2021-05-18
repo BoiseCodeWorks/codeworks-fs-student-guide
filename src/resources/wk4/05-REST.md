@@ -91,3 +91,14 @@ This means that the data the server sends contain information about whether or n
 This constraint is optional --- an API can be RESTful even without providing code on demand.
 
 The client can request code from the server, and then the response from the server will contain some code, usually in the form of a script, when the response is in HTML format. The client then can execute that code.
+
+<br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What does REST stand for, and in simple terms what does it mean?
+
+2. What does Stateless mean?
+
+3. What URL pattern is used when writing a RESTful API?

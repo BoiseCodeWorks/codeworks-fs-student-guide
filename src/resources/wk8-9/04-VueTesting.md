@@ -169,3 +169,13 @@ TestCafe is a Node.js based end-to-end framework that aims to provide easy setup
 <hr>
 <small>You, E. (2020). # Testing. Retrieved November 11, 2020, from https://v3.vuejs.org/guide/testing.html</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What are the three main types of testing we can accomplish in Vue? What does each method provide?
+
+2. What testing method do you think is the most useful? Why?
+
+3. What testing method do you think is the least useful? Why?

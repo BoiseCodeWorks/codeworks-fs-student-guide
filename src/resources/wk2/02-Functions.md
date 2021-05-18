@@ -173,3 +173,12 @@ This is a lot of information to digest. Here's a list of the important stuff:
 <hr>
 <small>Morelli, Brandon. “JavaScript Functions - Understanding The Basics.” Medium, Codeburst, 14 Feb. 2018, codeburst.io/javascript-functions-understanding-the-basics-207dbf42ed99.</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What are the three ways to syntactically write a function? What are the differences in how the function acts (if any)?
+
+2. What is the difference between Parameters and Arguments?
+
+3. What are higher order functions? Can you provide an example?

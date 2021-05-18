@@ -107,3 +107,12 @@ By using interfaces, you can remove the unnecessary couplings in your code and m
 <hr>
 <small>Kanjilal, M., &amp; Kanjilal, J. (2019, May 06). How not to use interfaces in C#. Retrieved November 12, 2020, from https://www.infoworld.com/article/3391960/how-not-to-use-interfaces-in-c.html</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What are `interfaces`?
+
+2. What does it mean to 'Program to an interface, not an implementation'?
+
+3. What is `YAGNI`?

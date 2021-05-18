@@ -86,3 +86,12 @@ SQL injection is the lowest of the low-hanging web application security fruit. T
 <hr>
 <small>Porup, J. (2018, October 02). What is SQL injection? How these attacks work and how to prevent them. Retrieved November 13, 2020, from https://www.csoonline.com/article/3257429/what-is-sql-injection-how-these-attacks-work-and-how-to-prevent-them.html</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What is `SQL` injection?
+
+2. How can injection be used to attack databases or steal information? 
+
+3. How do we protect our `SQL` databases from `SQL` injection?

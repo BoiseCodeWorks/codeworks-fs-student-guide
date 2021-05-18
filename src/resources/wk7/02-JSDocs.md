@@ -284,3 +284,13 @@ On the other hand, it is really that hard to add documentation after finishing a
 <hr>
 <small>Gagliardi, V. (2020, February 02). Code documentation for JavaScript with JSDoc: An introduction. Retrieved November 16, 2020, from https://www.valentinog.com/blog/jsdoc/</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What is Code Documentation? What are some of the ways to document code?
+
+2. What are some benefits of Code Documentation?
+
+3. How important is Code documentation and why?
