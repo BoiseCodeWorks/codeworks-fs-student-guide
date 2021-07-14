@@ -41,3 +41,15 @@ You don't need me to tell you that CBA is gaining a lot of traction in the devel
 <hr>
 <small>Shapiro, D. (2016, June 16). Understanding Component-Based Architecture. Retrieved November 11, 2020, from https://medium.com/@dan.shapiro1210/understanding-component-based-architecture-3ff48ec0c238</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What is Component based architecture?
+
+2. What are some benefits of Component based architecture?
+
+3. What are some drawbacks to Component based architecture?
+
+### Complete Week 6 Quiz

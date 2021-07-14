@@ -294,3 +294,15 @@ See also: [Composition API lifecycle hooks](https://v3.vuejs.org/guide/compositi
 In this article, you were introduced to different lifecycle hooks available in the Vue.js Instance Lifecycle. You explored the different use cases for creation hooks, mounting hooks, updating hooks, and destruction hooks.
 
 If you'd like to learn more about Vue.js, check out [our Vue.js topic page](https://www.digitalocean.com/community/tags/vue-js) for exercises and programming projects.
+
+<br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What are lifecycle hooks?
+
+2. What are lifecycle hooks used for?
+
+3. What are mounting hooks? When might you use them?

@@ -140,3 +140,12 @@ Async/await makes this very easy because to the compiler it's just like synchron
 <hr>
 <small>NodeJs, Team. Modern Asynchronous JavaScript with Async and Await, nodejs.dev/learn/modern-asynchronous-javascript-with-async-and-await. </small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What is the purpose of `Async`/`Await`?
+
+2. What must you do in order to  `await` a promise inside of a function?
+
+3. What are some of the primary benefits of `Async`/`Await`?

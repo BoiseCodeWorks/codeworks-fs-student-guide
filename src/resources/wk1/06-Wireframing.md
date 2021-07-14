@@ -145,3 +145,14 @@ So there we have it: everything you need to know (and then some) about wireframe
 <hr>
 <small>Hannah, Jaye. What Exactly Is Wireframing? A Comprehensive Guide. careerfoundry.com/en/blog/ux-design/what-is-a-wireframe-guide/.</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+
+1. What is the purpose of wire-framing? 
+
+2. What are the different levels of detail in wire-frames and why is each one useful?
+
+3. Do you think wire-frames are worth the Time, Energy, and Effort that they require? Why or Why not?
+

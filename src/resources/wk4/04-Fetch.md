@@ -162,3 +162,12 @@ Let's start fetching !!
 <hr>
 <small>Bangare, Swapnil. “The Fetch API.” Medium, Beginner's Guide to Mobile Web Development, 25 Apr. 2018, medium.com/beginners-guide-to-mobile-web-development/the-fetch-api-2c962591f5c. </small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What  is a `XMLHttpRequest`?
+
+2. What are some ways `fetch` improves on standard XML requests?
+
+3. What is the `options` object used for with a `fetch` request?

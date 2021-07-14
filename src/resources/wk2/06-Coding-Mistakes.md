@@ -515,3 +515,12 @@ This has been a long post. You deserve a break.
 <hr>
 <small>Buna, Samer. “The Mistakes I Made As a Beginner Programmer.” Medium, EdgeCoders, 21 Mar. 2019, medium.com/edge-coders/the-mistakes-i-made-as-a-beginner-programmer-ac8b3e54c312.</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What are the benefits of making a plan before starting to just write the code?
+
+2. How do you find answers when you are stuck?
+
+3. From the entire article what are your biggest takeaways?

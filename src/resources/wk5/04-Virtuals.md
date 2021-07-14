@@ -97,3 +97,12 @@ As you see, virtual properties aren't static model properties. They are addition
 <hr>
 <small>Pöhls on March 05 2015, M. (n.d.). Understanding Virtuals in Mongoose. Retrieved November 11, 2020, from https://futurestud.io/tutorials/understanding-virtuals-in-mongoose</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What is a virtual property?
+
+2. When might you use a virtual property? 
+
+3. How do you search by a virtual properties value?

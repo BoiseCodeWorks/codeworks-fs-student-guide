@@ -221,3 +221,13 @@ To close this post, let's make it clear that all that we've covered today is jus
 <hr>
 <small>Schults, C. (2019, October 01). C# Inheritance: A Complete but Gentle Introduction. Retrieved November 12, 2020, from https://blog.submain.com/c-inheritance-complete-introduction/</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What does Inheritance accomplish for us in C#?
+
+2. How does Member inheritance work in C#? Does a class inherit all members of the base class?
+
+3. How does accessibility affect inheritance?

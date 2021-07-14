@@ -154,3 +154,16 @@ int* p1, p2, p3;   // Ok
 int *p1, *p2, *p3;   // Invalid in C#
 ```
 A pointer cannot point to a reference or to a struct that contains references, because an object reference can be garbage collected even if a pointer is pointing to it. The garbage collector does not keep track of whether an object is being pointed to by any pointer types.
+
+
+<br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What are the three categories of data types? How are they different?
+
+2. What are the Value-type data types? What differences do you notice from JavaScript?
+
+3. How do Reference types work?

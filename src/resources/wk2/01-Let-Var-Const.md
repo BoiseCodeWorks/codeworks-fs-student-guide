@@ -231,3 +231,14 @@ So just in case, you missed the differences, here they are :
 <hr>
 <small>Chima, Sarah. Var, Let and Const- What's the Difference? 8 Jan. 2020, dev.to/sarah_chima/var-let-and-const--whats-the-difference-69e. </small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What is Scope ?
+
+2. What is Hoisting ?
+
+3. In what cases might you use `let` vs `const` vs `var`?
+
+### Complete Week 2 Vocabulary

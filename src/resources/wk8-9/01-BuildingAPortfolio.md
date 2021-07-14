@@ -111,3 +111,13 @@ You don't want to go for the complex route here. Don't distract people from the 
 <hr>
 <small>Borrelli, P. (2020, June 10). An Honest Guide to Build a Decent and Powerful Developer Portfolio. Retrieved November 16, 2020, from https://medium.com/better-programming/an-honest-guide-to-build-a-decent-and-powerful-developer-portfolio-2319f2cc2c19</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What function does a developer Portfolio provide?
+
+2. What makes a Developer Portfolio effective?
+
+3. What projects do you have that you would include in your Portfolio? Why?

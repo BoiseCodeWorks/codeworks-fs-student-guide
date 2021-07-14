@@ -207,3 +207,14 @@ If the request was successful, but your code is still not behaving correctly, be
 The value of these tools should be self evident. The ability to debug code is absolutely necessary in the world of software development, and these tools provide a way to view your code in great depth.
 
 Your DevTools should always be open when you're working on web applications. You should feel blind when they are closed. Foolish are those who do not use their DevTools, yet claim to know everything.
+
+<br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What are the main ways to write information to the console? Why/when should you use each style.
+
+2. Which tab allows you to see the breakdown of HTML/CSS and how can this tab be useful when debugging HTML?
+
+3. Outside of writing everything to the console, what is a better way to debug your code?

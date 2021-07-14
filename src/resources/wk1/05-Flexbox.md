@@ -145,3 +145,12 @@ Even though we've just scratched the surface of Flexbox, these commands should b
 <hr>
 <small> Source: freeCodeCamp.org. How Flexbox Works - Explained with Big, Colorful, Animated Gifs. 19 Jan. 2017, www.freecodecamp.org/news/an-animated-guide-to-flexbox-d280cf6afc35/. </small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 1. Describe what `Justify Content` and `Align Items` do in the context of a `Flex-box` container. 
+
+ 2. What does the align self CSS rule do?
+
+ 3. When you are building out your `HTML` page, what is the default display type of your elements?

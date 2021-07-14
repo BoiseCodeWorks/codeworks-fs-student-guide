@@ -135,3 +135,12 @@ I still have a strong preference for [factory functions](https://medium.com/java
 <hr>
 <small>Elliott, Eric. “Encapsulation in JavaScript.” Medium, JavaScript Scene, 27 Aug. 2020, medium.com/javascript-scene/encapsulation-in-javascript-26be60e325b4. </small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What is the purpose of Encapsulation?
+
+2. What were some of the problems with closures and the underscore prefix?
+
+3. How do we create private variables in a ES6 Class? Why would you do this?

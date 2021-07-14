@@ -587,3 +587,14 @@ Both of these avenues for styling are bad practices and should in almost all cas
   <img height="300px" src="https://bcw.blob.core.windows.net/public/cssUnit/4011155663073649">
 </div>
 <div style="text-align: center;"><b>Note</b> - This doesn't work and in seriousness don't use them!</div>
+<br>
+<br>
+
+## Daily Journal
+
+### ASnswer the following questions
+ 1. What is a Pseudo-Class and what are some of the most common ones you think you will use
+
+ 2. What is Specificity and how might you use it to your benefit?
+
+ 3. What problems do you think you could run into if you over-utilized the `!important` feature? 

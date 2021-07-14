@@ -169,3 +169,12 @@ For example, `Object.assign` is a great way of improving factories while keeping
 <hr>
 <small>S, Rajat. Understanding JavaScript's Prototypal Inheritance. 28 Mar. 2019, blog.bitsrc.io/understanding-javascripts-prototypal-inheritance-354292253bcb.</small> 
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What is the difference between a `Constructor` in comparison to a regular `Function`?
+
+2. What is a prototype?
+
+3. What is `inheritance` and how can it be used?

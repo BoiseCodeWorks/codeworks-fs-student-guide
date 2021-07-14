@@ -115,3 +115,14 @@ The commands to delete files are `rm` (Unix) and `del` (Windows). They can be us
 Once all the files have been removed from a directory, then we can delete it too. Move to the parent directory (using `cd ..`) and type in the command `rmdir` (Unix command for remove directory) or `rd` (the Windows version) with the name of the directory, as in: `rmdir my-folder` to get rid of the folder named “my-folder.”
 
 *Please note that files and folders deleted in this way cannot be retrieved from the “recycling bin,” so don’t clean house using the command line unless you’re sure that you won’t be wanting those files in the future!*
+
+<br>
+<br>
+
+## Daily Journal
+### Answer the following questions 
+ 1. What is a `Path` and how are they used?
+
+ 2. What CLI command would you use to see all files in your `Current Working Directory` (CWD), including those that start with a '.'
+
+ 3. How can a user retrieve files deleted by the `rm` command?

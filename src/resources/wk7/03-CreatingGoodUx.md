@@ -70,3 +70,13 @@ Designing strong UX doesn't need to be complicated, and you don't need to be tec
 <hr>
 <small>Pinto, R. (2018, August). 4 steps to creating good UX design - Think with Google. Retrieved November 16, 2020, from https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/strong-audience-design/</small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+ 
+1. What is a User Experience? What should be considered when developing a User Experience?
+
+2. What are some benefits of taking into account the User Experience?
+
+3. Why is the User Experience important?

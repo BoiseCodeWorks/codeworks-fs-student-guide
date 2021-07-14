@@ -310,3 +310,12 @@ Regular expression can be fairly complex at times, but having a proper understan
 <hr>
 <small>Arora, Sukhjinder. “A Practical Guide to Regular Expressions (RegEx) In JavaScript.” Medium, Bits and Pieces, 29 Mar. 2019, blog.bitsrc.io/a-beginners-guide-to-regular-expressions-regex-in-javascript-9c58feb27eb4. </small>
 <br>
+<br>
+
+## Daily Journal
+### Answer the following questions
+1. What are regular expressions or `regex`?
+
+2. Give an example of where a `regex` could in an application.
+
+3. Give an example of a `regex` expression that would match an email address.
