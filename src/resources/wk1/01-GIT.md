@@ -238,4 +238,3 @@ For more practice with github, check out [this tutorial from github](https://gui
 
  3. What is the difference between `Git` and `GitHub`
 
- ### Complete Week 1 Quiz
