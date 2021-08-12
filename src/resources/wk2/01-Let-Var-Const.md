@@ -240,5 +240,3 @@ So just in case, you missed the differences, here they are :
 2. What is Hoisting ?
 
 3. In what cases might you use `let` vs `const` vs `var`?
-
-### Complete Week 2 Vocabulary
