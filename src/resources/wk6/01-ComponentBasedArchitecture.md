@@ -51,5 +51,3 @@ You don't need me to tell you that CBA is gaining a lot of traction in the devel
 2. What are some benefits of Component based architecture?
 
 3. What are some drawbacks to Component based architecture?
-
-### Complete Week 6 Quiz
