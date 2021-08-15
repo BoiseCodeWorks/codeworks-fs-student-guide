@@ -1,13 +1,15 @@
 <template>
     <div class="book-card theme-default-content mb-5 flex-wrap">
         <img :src="img" :alt="title">
-        <div class="book-content">
-            <h3 class="text-uppercase">{{title}}</h3>
+        <div class="book-content mt-3">
+            <h3 class="bg-dark-base d-flex align-items-center justify-content-center">
+              <span class="text-success lighten-30">{{title}}</span>
+            </h3>
             <div>
               <p>
                 <slot />
               </p>
-              <a class="btn" target="_blank" :href="link" v-if="link">READ</a>
+              <a class="text-uppercase hover-card bg-dark-base text-white rounded p-2" target="_blank" :href="link" v-if="link">More</a>
             </div>
         </div>
     </div>
@@ -35,8 +37,7 @@ export default {
  h3 
   display flex
   margin 0
-  text-transform uppercase
-  border-bottom 1px solid var(--accent-color)
+  border-bottom 3px solid var(--accent-color)
 
  
 .book-content
