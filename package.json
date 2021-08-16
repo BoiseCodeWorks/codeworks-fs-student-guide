@@ -13,12 +13,10 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.5.3"
-  },
-  "dependencies": {
-    "@mr-hope/vuepress-plugin-sitemap": "^1.5.5",
-    "@vuepress/plugin-back-to-top": "^1.7.1",
-    "@vuepress/plugin-medium-zoom": "^1.7.1",
-    "vuepress-theme-hope": "^1.5.5"
+    "@mr-hope/vuepress-plugin-sitemap": "^1.19.1",
+    "vuepress": "^1.8.2",
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-medium-zoom": "^1.8.2",
+    "vuepress-theme-hope": "^1.19.2"
   }
 }
