@@ -5,8 +5,20 @@ const { config } = require("vuepress-theme-hope");
 
 module.exports = config({
   base: "/fs-student-guide/",
+  /**
+   * Ref：https://v1.vuepress.vuejs.org/config/#title
+   */
   title: 'Codeworks FS Student Guide',
+  /**
+   * Ref：https://v1.vuepress.vuejs.org/config/#description
+   */
   description: "Resource for Codeworks Immersive FullStack Students",
+
+  /**
+   * Extra tags to be injected to the page HTML `<head>`
+   *
+   * ref：https://v1.vuepress.vuejs.org/config/#head
+   */
   head: [
     ['meta', { name: 'theme-color', content: '#3093d9' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
@@ -19,14 +31,28 @@ module.exports = config({
     ['meta', { name: 'og:title', content: 'Learn to Code. Develop Your Future' }],
     ['meta', { name: 'og:locale', content: 'en_US' }]
   ],
+
+  /**
+   * Theme configuration, here is the default theme configuration for VuePress.
+   *
+   * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
+   */
   themeConfig: {
-    pwa: false,
     logo: 'https://bcw.blob.core.windows.net/public/img/2900578872732848',
     editLinks: true,
     repo: 'BoiseCodeWorks/codeworks-fs-student-guide',
     repoLabel: 'Contribute!',
     docsDir: 'src',
     docsBranch: 'main',
+    darkmode: "switch",
+    themeColor: {
+      blue: "#2196f3",
+      red: "#f26d6d",
+      green: "#00ffdc",
+      orange: "#fb9b5f",
+      purple: "#8e44ad",
+      banana: "#ffe135"
+    },
     nav: [
       {
         text: 'Resources',
@@ -58,13 +84,16 @@ module.exports = config({
       ]
     },
   },
-  // @ts-ignore
   markdown: {
     lineNumbers: true
   },
+
+  /**
+   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
+   */
   plugins: [
-    // '@vuepress/plugin-back-to-top',
-    // ["@mr-hope/sitemap", { hostname: 'https://codeworksacademy.com/fs-student-guide' }],
+    '@vuepress/plugin-back-to-top',
+    ["@mr-hope/sitemap", { hostname: 'https://codeworksacademy.com/fs-student-guide' }],
   ]
 })
 
