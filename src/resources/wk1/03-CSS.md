@@ -592,7 +592,7 @@ Both of these avenues for styling are bad practices and should in almost all cas
 
 ## Daily Journal
 
-### ASnswer the following questions
+### Answer the following questions
  1. What is a Pseudo-Class and what are some of the most common ones you think you will use
 
  2. What is Specificity and how might you use it to your benefit?
