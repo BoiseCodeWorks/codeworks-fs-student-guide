@@ -120,12 +120,15 @@ a:before, button:before
 a:hover::before, button:hover::before 
   opacity 0.1
 
-a.sidebar-link
-  color #111927 !important
 
-a.sidebar-link.active
-  background-color #111927 !important
-  color white !important
+
+body:not(.theme-dark)
+  a.sidebar-link
+    color #111927 !important
+
+  a.sidebar-link.active
+    background-color #111927 !important
+    color white !important
 
 .meta-item.contributors
   text-align left !important
@@ -174,8 +177,6 @@ blockquote
 
 .theme-default-content.content__default
   padding-top 0
-  a
-    color #111927
 
 .go-to-top
   color var(--accent-color-l10)!important
