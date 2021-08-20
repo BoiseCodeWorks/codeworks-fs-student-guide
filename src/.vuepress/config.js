@@ -84,6 +84,7 @@ module.exports = config({
       ]
     },
   },
+  // @ts-ignore
   markdown: {
     lineNumbers: true
   },
@@ -93,7 +94,7 @@ module.exports = config({
    */
   plugins: [
     '@vuepress/plugin-back-to-top',
-    ["@mr-hope/sitemap", { hostname: 'https://codeworksacademy.com/fs-student-guide' }],
+    ["@mr-hope/sitemap", { hostname: 'https://codeworksacademy.com/fs-student-guide' }]
   ]
 })
 

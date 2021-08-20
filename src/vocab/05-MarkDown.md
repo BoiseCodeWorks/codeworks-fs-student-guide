@@ -212,12 +212,12 @@ But let's throw in a <b>tag</b>.
 
 ```
 
-```source-js
+```js
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
 
-```source-python
+```python
 s = "Python syntax highlighting"
 print s
 ```
