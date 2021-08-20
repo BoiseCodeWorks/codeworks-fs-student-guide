@@ -120,7 +120,15 @@ a:before, button:before
 a:hover::before, button:hover::before 
   opacity 0.1
 
-
+body.theme-dark
+  .sidebar, .page, .page-info, .navbar, .sidebar-heading
+    background-color #111927 !important
+    color #d2e2ef
+  a
+    color: #92e5a5 !important
+    background-color unset !important
+    &.active::before
+      opacity .1 !important
 
 body:not(.theme-dark)
   a.sidebar-link
