@@ -14,7 +14,7 @@
     <div class="feature">
       <a href="/fs-student-guide/vocab" title="Vocabulary">
         <h2>Vocabulary</h2> 
-        <p>All the key phrases and terms you will need to be successful as a software developer</p>
+        <p>All the key phrases and terms you will need to be successful as a software developer!</p>
       </a>
     </div>
   </div>
