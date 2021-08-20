@@ -120,24 +120,6 @@ a:before, button:before
 a:hover::before, button:hover::before 
   opacity 0.1
 
-body.theme-dark
-  .sidebar, .page, .page-info, .navbar, .sidebar-heading
-    background-color #111927 !important
-    color #d2e2ef
-  a
-    color: #92e5a5 !important
-    background-color unset !important
-    &.active::before
-      opacity .1 !important
-
-body:not(.theme-dark)
-  a.sidebar-link
-    color #111927 !important
-
-  a.sidebar-link.active
-    background-color #111927 !important
-    color white !important
-
 .meta-item.contributors
   text-align left !important
   max-width 50% !important
@@ -212,3 +194,24 @@ html body #app
           a
             text-decoration none
 
+body.theme-dark
+  background-color #111927 !important
+  .sidebar, .page, .page-info, .navbar, .sidebar-heading
+    background-color #111927 !important
+    color #d2e2ef
+  a
+    color: #92e5a5 !important
+    background-color unset !important
+    &.active::before
+      opacity .1 !important
+  footer
+    background-color #111927 !important
+
+
+body:not(.theme-dark)
+  a.sidebar-link
+    color #111927 !important
+
+  a.sidebar-link.active
+    background-color #111927 !important
+    color white !important
